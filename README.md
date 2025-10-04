@@ -6,31 +6,35 @@ A comprehensive Windows 11 desktop environment configuration featuring tiling wi
 
 This repository contains configuration files for a fully customized Windows 11 development and daily-use environment. The setup prioritizes keyboard-driven workflow, visual consistency, and seamless integration between components.
 
-### Core Components
+<details>
+<summary><strong>Core Components</strong></summary>
 
-**Window Management**
+### Window Management
 - **GlazeWM**: Primary tiling window manager with 9 workspaces across dual monitors
 - **komorebi**: Alternative tiling window manager (identical workspace configuration)
 - **YASB**: Custom status bar with system monitoring, workspace indicators, and media controls
 - **tacky-borders**: Visual window border effects
 - **whkd**: Windows hotkey daemon for global keybindings
 
-**Terminal Environment**
+### Terminal Environment
 - **WezTerm**: GPU-accelerated terminal emulator with modular Lua configuration
 - **PowerShell 7**: Primary shell with extensive customization
 - **oh-my-posh**: Cross-shell prompt theme engine (Catppuccin Mocha)
 - **starship**: Alternative cross-shell prompt
 - **fastfetch**: System information display with custom CHRON0'S-R1G branding
 
-**Shell Enhancement Tools**
+### Shell Enhancement Tools
 - **zoxide**: Smart directory navigation (replaces cd)
 - **eza**: Modern ls replacement with icons
 - **Terminal-Icons**: File and folder icons in terminal
 - **posh-git**: Git status integration in prompt
 
+</details>
+
 ## Architecture Highlights
 
-### Modular Terminal Configuration
+<details>
+<summary><strong>Modular Terminal Configuration</strong></summary>
 
 WezTerm uses a split-module architecture for maintainability:
 
@@ -45,7 +49,10 @@ wezterm/
 
 This separation allows easy customization of specific aspects without touching unrelated configuration.
 
-### Dual Monitor Workspace Layout
+</details>
+
+<details>
+<summary><strong>Dual Monitor Workspace Layout</strong></summary>
 
 Workspaces are distributed across two monitors for optimal workflow:
 
@@ -62,7 +69,10 @@ Workspaces are distributed across two monitors for optimal workflow:
 - Workspace 6: Multimedia (Spotify)
 - Workspace 7: Streaming/Broadcasting
 
-### Intelligent Window Rules
+</details>
+
+<details>
+<summary><strong>Intelligent Window Rules</strong></summary>
 
 Both window managers implement sophisticated rules for gaming applications:
 
@@ -81,7 +91,10 @@ Both window managers implement sophisticated rules for gaming applications:
 
 This prevents window manager interference with fullscreen games while keeping launchers accessible.
 
-## PowerShell Profile Features
+</details>
+
+<details>
+<summary><h2>PowerShell Profile Features</h2></summary>
 
 The PowerShell profile (`windows/pwsh/Microsoft.PowerShell_profile.ps1`) implements a robust initialization sequence:
 
@@ -99,7 +112,10 @@ The PowerShell profile (`windows/pwsh/Microsoft.PowerShell_profile.ps1`) impleme
 - `eza` → Enhanced file listing with icons
 - `wal` → pywal color scheme management
 
-## YASB Status Bar
+</details>
+
+<details>
+<summary><h2>YASB Status Bar</h2></summary>
 
 The status bar is organized into three logical groupers:
 
@@ -123,7 +139,10 @@ The status bar is organized into three logical groupers:
 - Bluetooth status
 - Power menu
 
-## WezTerm Keybinding Philosophy
+</details>
+
+<details>
+<summary><h2>WezTerm Keybinding Philosophy</h2></summary>
 
 Custom keybindings designed to minimize conflicts with PowerShell and other applications:
 
@@ -146,7 +165,10 @@ Custom keybindings designed to minimize conflicts with PowerShell and other appl
 **Disabled Keybindings**
 - `Shift+Ctrl+Left/Right`: Preserved for PowerShell word navigation
 
-## Configuration Locations
+</details>
+
+<details>
+<summary><h2>Configuration Locations</h2></summary>
 
 Standard configuration paths follow Windows conventions:
 
@@ -163,6 +185,8 @@ C:\Users\nucle\
 ├── scoop\apps\oh-my-posh\current\themes\
 └── Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 ```
+
+</details>
 
 ## Quick Start Commands
 
@@ -199,7 +223,8 @@ Get-Command oh-my-posh, fastfetch, zoxide, eza | Format-Table Name, Source
 Get-Module
 ```
 
-## Workspace Navigation
+<details>
+<summary><h2>Workspace Navigation</h2></summary>
 
 ### GlazeWM Shortcuts
 
@@ -219,7 +244,10 @@ Get-Module
 
 **Resize Mode**: `Alt+Shift+R` (then use H/J/K/L or arrow keys)
 
-## Integration Features
+</details>
+
+<details>
+<summary><h2>Integration Features</h2></summary>
 
 ### WSL Support
 
@@ -252,7 +280,10 @@ YASB includes live OBS recording status:
 - Blinking icon during recording
 - Hidden when not recording
 
-## Development Notes
+</details>
+
+<details>
+<summary><h2>Development Notes</h2></summary>
 
 ### Safe Module Loading Pattern
 
@@ -290,7 +321,10 @@ is_windows_11 = tonumber(build) >= 22000
 
 This enables Windows 11-specific features like acrylic effects and modern window decorations.
 
-## Troubleshooting
+</details>
+
+<details>
+<summary><h2>Troubleshooting</h2></summary>
 
 ### Window Manager Conflicts
 
@@ -328,7 +362,10 @@ zoxide query --list  # Should show tracked directories
 3. Review YASB logs (if available)
 4. Restart via GlazeWM startup commands
 
-## Version Control
+</details>
+
+<details>
+<summary><h2>Version Control</h2></summary>
 
 This repository uses conventional commits for clear history:
 
@@ -345,7 +382,10 @@ git commit -m "feat(wezterm)!: restructure keybindings
 BREAKING CHANGE: Ctrl+Shift arrow keys now reserved for pane navigation"
 ```
 
-## Security Notes
+</details>
+
+<details>
+<summary><h2>Security Notes</h2></summary>
 
 **API Keys and Tokens**: Several configuration files contain hardcoded credentials:
 - YASB weather API key
@@ -353,6 +393,10 @@ BREAKING CHANGE: Ctrl+Shift arrow keys now reserved for pane navigation"
 - GitHub token (currently empty)
 
 Consider using environment variables for sensitive data in production setups.
+
+</details>
+
+---
 
 ## License
 
