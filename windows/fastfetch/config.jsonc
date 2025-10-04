@@ -1,0 +1,114 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+        "source": "C:\\Users\\nucle\\.config\\fastfetch\\chrono-terminal-matrix.txt",
+        "type": "file",
+        "color": {
+            "1": "1;32",
+            "2": "1;35", 
+            "3": "1;33"
+        }
+    },  
+   "display": {
+        "separator": ": ",
+        "color": {
+            "keys": "38;2;0;255;0",
+            "title": "38;2;255;0;255",
+            "output": "38;2;0;255;255"	
+        },
+        "key": {
+            "width": 25              // Aligns keys to this width
+        },
+        "bar": {
+            "width": 20,
+            "char": {
+                "elapsed": "█",
+                "total": "░"
+            },
+            "border": {
+                "left": "[",
+                "right": "]"
+            }
+        },
+        "percent": {
+            "type": 9,
+            "color": {
+                "green": "38;2;0;255;0",
+                "yellow": "38;2;255;255;0", 
+                "red": "38;2;255;0;0"
+            }
+        },
+    },
+    "modules": [
+        {
+            "type": "title",
+            "format": "🔥 {6}{7}{8} 🔥"
+        },
+        "separator",
+        {
+            "type": "os",
+            "keyIcon": "🎯",
+            "key": "TARGET_OS",
+            "format": "{2} {8}"
+        },
+        {
+            "type": "kernel",
+            "keyIcon": "⚡",
+            "key": "KERNEL_VER",
+            "format": "{1} {2} {5}"
+        },
+        {
+            "type": "uptime",
+            "key": "ONLINE_TIME",
+            "keyIcon": "⏱️"
+        },
+        {
+            "type": "custom",
+            "key": "SECURITY_STATUS",
+            "format": "🔒 ENCRYPTED | 🛡️ PROTECTED | ⚡ ACTIVE"
+        },
+        "packages",
+        {
+            "type": "custom",
+            "key": "Display 1",
+            "format": "Samsung G7 Odyssey 27\" (Curved, 2560x1440@240hz)"
+        },
+        {
+            "type": "custom",
+            "key": "Display 2",
+            "format": "Samsung G7 Odyssey 27\" (Curved, 2560x1440@240hz)"
+        },
+        {
+            "type": "custom",
+            "key": "WM",
+            "format": "GlazeWM with YASB"
+        },
+        {
+        	  "type": "cpu",
+        	  "key": "PROCESSOR",
+             "keyIcon": "🔥"
+        },
+        {
+	    	 "type": "gpu",
+	    	 "hideType": "discrete"
+	   },
+	   {
+	       "type": "custom",
+	       "key": "GRAPHICS_UNIT",
+            "keyIcon": "🖥️",
+	       "format": "NVIDIA GeForce RTX 3070 Ti (8 GiB) - 45°C [Discrete]"
+	   },
+        {
+            "type": "memory",
+            "key": "RAM_USAGE",
+            "keyIcon": "💾"
+        },
+        "disk",
+        "localip",
+	   {
+		    "type": "custom", 
+		    "key": "HACK_TOOLS",
+		    "format": "🔍 NMAP | 🕷️ METASPLOIT | 🐍 PYTHON | 🔧 BURP_SUITE"
+	   }
+    ]
+}

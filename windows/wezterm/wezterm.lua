@@ -1,0 +1,90 @@
+-- HeyItsGilbert dotfiles -- chrono edit
+
+-- Pull in the wezterm API
+local wezterm = require("wezterm")
+local keys = require("keys")
+local fonts = require("fonts")
+local decoration = require("decoration")
+local haswork, work = pcall(require, "work")
+
+-- local mux = wezterm.mux
+-- This will hold the configuration.
+
+local act = wezterm.action
+local config = wezterm.config_builder()
+
+local launch_menu = {}
+local is_windows_11 = true
+
+--- Setup PowerShell options
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	--- Grab the ver info for later use.
+	local _, stdout, _ = wezterm.run_child_process({ "cmd.exe", "ver" })
+	local _, _, build, _ = stdout:match("Version ([0-9]+)%.([0-9]+)%.([0-9]+)%.([0-9]+)")
+	is_windows_11 = tonumber(build) >= 22000
+
+	--- Make it look cool.
+	if is_windows_11 then
+		wezterm.log_info("We're running Windows 11!")
+	end
+
+	--- Set Pwsh as the default on Windows
+	config.default_prog = { "pwsh.exe", "-NoLogo" }
+	table.insert(launch_menu, {
+		label = "Pwsh",
+		args = { "pwsh.exe", "-NoLogo" },
+	})
+	table.insert(launch_menu, {
+		label = "PowerShell",
+		args = { "powershell.exe", "-NoLogo" },
+	})
+	table.insert(launch_menu, {
+		label = "Pwsh No Profile",
+		args = { "pwsh.exe", "-NoLogo", "-NoProfile" },
+	})
+	table.insert(launch_menu, {
+		label = "PowerShell No Profile",
+		args = { "powershell.exe", "-NoLogo", "-NoProfile" },
+	})
+else
+	--- Non-Windows Machine
+	table.insert(launch_menu, {
+		label = "Pwsh",
+		args = { "/usr/local/bin/pwsh", "-NoLogo" },
+	})
+	table.insert(launch_menu, {
+		label = "Pwsh No Profile",
+		args = { "/usr/local/bin/pwsh", "-NoLogo", "-NoProfile" },
+	})
+end
+
+-- Configure WSL2 Domains
+config.wsl_domains = {
+  {
+    name = 'WSL:Ubuntu',
+    distribution = 'Ubuntu',
+  },
+  {
+    name = 'WSL:Kali',
+    distribution = 'kali-linux',
+  }
+}
+
+-- Set default domain if you want to start in WSL
+-- config.default_domain = 'WSL:Kali'
+
+--- Default config settings
+config.scrollback_lines = 7000
+config.hyperlink_rules = wezterm.default_hyperlink_rules()
+config.launch_menu = launch_menu
+
+-- Allow overwriting for work stuff
+if haswork then
+	work.apply_to_config(config)
+end
+
+fonts.setup(config)
+keys.setup(config)
+decoration.setup(config, is_windows_11)
+
+return config

@@ -1,0 +1,289 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.37/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "cross_boundary_behaviour": "Monitor",
+  "default_workspace_padding": 10,
+  "default_container_padding": 12,
+  "border": true,
+  "border_width": 2,
+  "border_offset": -1,
+  "border_colours": {
+    "single": "#8dbcff",
+    "stack": "#8dbcff",
+    "monocle": "#8dbcff",
+    "unfocused": "#a1a1a1"
+  },
+  "focus_follows_cursor": false,
+  "mouse_follows_focus": true,
+  "window_container_behaviour": "Create",
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "1) 🎮 gaming",
+          "layout": "BSP"
+        },
+        {
+          "name": "8) 🔧 tools",
+          "layout": "BSP"
+        },
+        {
+          "name": "9) 📺 tv/movies",
+          "layout": "BSP"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "2) 🌐 web",
+          "layout": "BSP"
+        },
+        {
+          "name": "3) 📄 editor",
+          "layout": "BSP"
+        },
+        {
+          "name": "4) 🧑🏻‍💻 hacking",
+          "layout": "BSP"
+        },
+        {
+          "name": "5) 📧 messaging",
+          "layout": "BSP"
+        },
+        {
+          "name": "6) 🎶 multimedia",
+          "layout": "BSP"
+        },
+        {
+          "name": "7) 🖥🛜 streaming",
+          "layout": "BSP"
+        }
+      ]
+    }
+  ],
+  "float_rules": [
+    {
+      "kind": "Exe",
+      "id": "LeagueClient.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "LeagueClientUx.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "LeagueClientUxRender.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "RiotClientServices.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "RiotClient.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "EpicGamesLauncher.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "steam.exe",
+      "matching_strategy": "Equals"
+    }
+  ],
+  "ignore_rules": [
+    {
+      "kind": "Exe",
+      "id": "League of Legends.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "League of Legends (TM) Client",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "FortniteClient-Win64-Shipping.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Class",
+      "id": "LaunchUnrealUWindowsClient",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Class",
+      "id": "UnrealWindow",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "javaw.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "java.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "MinecraftLauncher.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Class",
+      "id": "SDL_app",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Class",
+      "id": "Unity",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "zebar.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "Picture-in-Picture",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Title",
+      "id": "picture-in-picture",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Exe",
+      "id": "PowerToys.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "Lively.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "Steam - News",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Title",
+      "id": "Friends List",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Title",
+      "id": "Steam Guard",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Class",
+      "id": "vguiPopupWindow",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Class",
+      "id": "Steam",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "Steam notification",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Title",
+      "id": "Steam Overlay",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Class",
+      "id": "Chrome_WidgetWin_0",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Class",
+      "id": "Intermediate D3D Window",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "Achievement Unlocked",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Title",
+      "id": "Screenshot",
+      "matching_strategy": "Contains"
+    }
+  ],
+  "workspace_rules": [
+    {
+      "kind": "Exe",
+      "id": "steam.exe",
+      "matching_strategy": "Equals",
+      "monitor": 0,
+      "workspace": "1) 🎮 gaming"
+    }
+  ],
+  "initial_workspace_rules": [
+    {
+      "kind": "Exe",
+      "id": "chrome.exe",
+      "matching_strategy": "Equals",
+      "monitor": 1,
+      "workspace": "2) 🌐 web"
+    },
+    {
+      "kind": "Exe",
+      "id": "firefox.exe",
+      "matching_strategy": "Equals",
+      "monitor": 1,
+      "workspace": "2) 🌐 web"
+    },
+    {
+      "kind": "Exe",
+      "id": "Code.exe",
+      "matching_strategy": "Equals",
+      "monitor": 1,
+      "workspace": "3) 📄 editor"
+    },
+    {
+      "kind": "Exe",
+      "id": "Windsurf.exe",
+      "matching_strategy": "Equals",
+      "monitor": 1,
+      "workspace": "3) 📄 editor"
+    },
+    {
+      "kind": "Exe",
+      "id": "Discord.exe",
+      "matching_strategy": "Equals",
+      "monitor": 1,
+      "workspace": "5) 📧 messaging"
+    },
+    {
+      "kind": "Exe",
+      "id": "Spotify.exe",
+      "matching_strategy": "Equals",
+      "monitor": 1,
+      "workspace": "6) 🎶 multimedia"
+    }
+  ]
+}

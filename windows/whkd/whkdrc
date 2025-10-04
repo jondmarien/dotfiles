@@ -1,0 +1,82 @@
+# Komorebi hotkey configuration - translated from GlazeWM
+# Focus windows in directions
+alt + h                 : komorebic focus left
+alt + left              : komorebic focus left
+alt + l                 : komorebic focus right
+alt + right             : komorebic focus right
+alt + k                 : komorebic focus up
+alt + up                : komorebic focus up
+alt + j                 : komorebic focus down
+alt + down              : komorebic focus down
+
+# Move windows in directions
+alt + shift + h         : komorebic move left
+alt + shift + left      : komorebic move left
+alt + shift + l         : komorebic move right
+alt + shift + right     : komorebic move right
+alt + shift + k         : komorebic move up
+alt + shift + up        : komorebic move up
+alt + shift + j         : komorebic move down
+alt + shift + down      : komorebic move down
+
+# Resize windows
+alt + u                 : komorebic resize-axis horizontal decrease
+alt + p                 : komorebic resize-axis horizontal increase
+alt + i                 : komorebic resize-axis vertical decrease
+alt + o                 : komorebic resize-axis vertical increase
+
+# Window state management
+alt + shift + space     : komorebic toggle-float
+alt + shift + t         : komorebic toggle-tiling
+alt + shift + f         : komorebic toggle-monocle
+alt + shift + m         : komorebic minimize
+
+# Close window
+alt + shift + q         : komorebic close
+
+# Komorebi management
+alt + shift + c         : komorebic start
+alt + shift + e         : komorebic stop
+alt + shift + r         : komorebic reload-configuration
+alt + shift + w         : komorebic retile
+alt + shift + p         : komorebic toggle-pause
+
+# Toggle tiling direction
+alt + v                 : komorebic flip-layout horizontal
+
+# Cycle focus between windows
+alt + space             : komorebic cycle-focus next
+
+# Focus workspaces
+shift + alt + 1         : komorebic focus-named-workspace "1) 🎮 gaming"
+shift + alt + 2         : komorebic focus-named-workspace "2) 🌐 web"
+shift + alt + 3         : komorebic focus-named-workspace "3) 📄 editor"
+shift + alt + 4         : komorebic focus-named-workspace "4) 🧑🏻‍💻 hacking"
+shift + alt + 5         : komorebic focus-named-workspace "5) 📧 messaging"
+shift + alt + 6         : komorebic focus-named-workspace "6) 🎶 multimedia"
+shift + alt + 7         : komorebic focus-named-workspace "7) 🖥🛜 streaming"
+shift + alt + 8         : komorebic focus-named-workspace "8) 🔧 tools"
+shift + alt + 9         : komorebic focus-named-workspace "9) 📺 tv/movies"
+
+# Move windows to workspaces (and follow)
+ctrl + shift + alt + 1  : komorebic move-to-named-workspace "1) 🎮 gaming"
+ctrl + shift + alt + 2  : komorebic move-to-named-workspace "2) 🌐 web"
+ctrl + shift + alt + 3  : komorebic move-to-named-workspace "3) 📄 editor"
+ctrl + shift + alt + 4  : komorebic move-to-named-workspace "4) 🧑🏻‍💻 hacking"
+ctrl + shift + alt + 5  : komorebic move-to-named-workspace "5) 📧 messaging"
+ctrl + shift + alt + 6  : komorebic move-to-named-workspace "6) 🎶 multimedia"
+ctrl + shift + alt + 7  : komorebic move-to-named-workspace "7) 🖥🛜 streaming"
+ctrl + shift + alt + 8  : komorebic move-to-named-workspace "8) 🔧 tools"
+ctrl + shift + alt + 9  : komorebic move-to-named-workspace "9) 📺 tv/movies"
+
+# Swap current workspace between monitors
+alt + shift + a         : komorebic swap-workspaces-with-monitor left  
+alt + shift + f         : komorebic swap-workspaces-with-monitor right
+
+# Move workspaces between monitors  
+alt + shift + d         : komorebic move-workspace-to-monitor up
+alt + shift + s         : komorebic move-workspace-to-monitor down
+
+# Focus next/prev workspace (GlazeWM equivalent)
+alt + shift + ctrl + s  : komorebic cycle-workspace next
+alt + shift + ctrl + a  : komorebic cycle-workspace previous
