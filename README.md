@@ -173,7 +173,7 @@ Custom keybindings designed to minimize conflicts with PowerShell and other appl
 Standard configuration paths follow Windows conventions:
 
 ```
-C:\Users\nucle\
+C:\Users\USER\
 ├── .config\
 │   ├── fastfetch\config.jsonc
 │   ├── komorebi\komorebi.json
@@ -267,10 +267,10 @@ The YASB wallpaper widget integrates with pywal for automatic color scheme gener
 ```yaml
 run_after:
   - "wal -i '{image}'"
-  - "pwsh -File C:\Users\nucle\.config\yasb\inject-wal-colors.ps1"
+  - "pwsh -File C:\Users\USER\.config\yasb\inject-wal-colors.ps1"
 ```
 
-Wallpapers are loaded from: `C:\Users\nucle\Downloads\wALLpapers`
+Wallpapers are loaded from: `C:\Users\USER\Downloads\wALLpapers`
 
 ### OBS Integration
 
@@ -358,7 +358,7 @@ zoxide query --list  # Should show tracked directories
 ### YASB Status Bar Issues
 
 1. Verify GlazeWM is running: `Get-Process glazewm`
-2. Check config syntax: `C:\Users\nucle\.config\yasb\config.yaml`
+2. Check config syntax: `C:\Users\USER\.config\yasb\config.yaml`
 3. Review YASB logs (if available)
 4. Restart via GlazeWM startup commands
 
@@ -404,4 +404,5 @@ Personal dotfiles configuration - use and modify as needed.
 
 ## Additional Resources
 
-For detailed architecture information and development guidance, see `WARP.md`.
+For detailed architecture information and development guidance, see `chronoblaze` on discord.
+
