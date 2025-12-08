@@ -44,7 +44,8 @@ bars:
           "home",
           "bin",
           "update_check",
-          "wm_controls"
+          "wm_controls",
+          "launchpad"
         ]
       center:
         [
@@ -1027,3 +1028,51 @@ widgets:
         color: "#57948a"
         background_color: "#23334e"
         animation: true
+
+  launchpad:
+    type: "yasb.launchpad.LaunchpadWidget"
+    options:
+      label: "<span>\udb85\udcde</span>"
+      search_placeholder: "Search apps..."
+      app_icon_size: 64
+      window:
+        fullscreen: false
+        width: 900
+        height: 650
+        overlay_block: true
+      window_style:
+        enable_blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "#798985"
+      window_animation:
+        fade_in_duration: 200
+        fade_out_duration: 200
+      animation:
+        enabled: true
+        type: "fadeInOut"
+        duration: 200
+      callbacks:
+        on_left: "toggle_launchpad"
+        on_middle: "do_nothing"
+        on_right: "do_nothing"
+      shortcuts:
+        add_app: "Ctrl+N"
+        edit_app: "F2"
+        show_context_menu: "Shift+F10"
+        delete_app: "Delete"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+      app_title_shadow:
+        enabled: true
+        color: "#000000CC"
+        offset: [0, 2]
+        radius: 4
+      app_icon_shadow:
+        enabled: true
+        color: "#000000AA"
+        offset: [0, 8]
+        radius: 16

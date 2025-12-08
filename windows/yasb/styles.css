@@ -1974,3 +1974,324 @@ Example: "Windows Media" becomes "windows-media" */
     background-color: #23334E;
     color: #798985;
 }
+
+/***----------------------------------      • Launchpad Widget •      -----------------------------------***/
+
+/* Widget style */
+.launchpad-widget {
+    padding: 0 6px;
+}
+
+.launchpad-widget .label {
+    color: #aec4be;
+}
+
+.launchpad-widget .icon {
+    font-size: 16px;
+    color: #578875;
+}
+
+/* Launchpad context menu style */
+.launchpad .context-menu,
+.launchpad .context-menu .menu-checkbox {
+    background-color: #060A08;
+    border: 1px solid #798985;
+    border-radius: 8px;
+    padding: 4px 0px;
+    font-family: "JetBrainsMono NFP";
+    font-size: 12px;
+    color: #aec4be;
+    font-weight: 600;
+}
+
+.launchpad .context-menu::right-arrow {
+    width: 8px;
+    height: 8px;
+    padding-right: 24px;
+}
+
+.launchpad .context-menu::item,
+.launchpad .context-menu .menu-checkbox {
+    background-color: transparent;
+    padding: 8px 14px;
+    margin: 2px 6px;
+    border-radius: 6px;
+    min-width: 120px;
+}
+
+.launchpad .context-menu::item:selected,
+.launchpad .context-menu .menu-checkbox:hover {
+    background-color: #30504E;
+    color: #aec4be;
+}
+
+.launchpad .context-menu::item:pressed {
+    background-color: #23334E;
+}
+
+.launchpad .context-menu::separator {
+    height: 1px;
+    background-color: #798985;
+    margin: 4px 8px;
+}
+
+.launchpad .context-menu::item:disabled {
+    color: #798985;
+    background-color: transparent;
+}
+
+.launchpad .context-menu .menu-checkbox .checkbox {
+    border: none;
+    padding: 8px 16px;
+    font-size: 12px;
+    margin: 0;
+    color: #aec4be;
+    font-family: "JetBrainsMono NFP";
+}
+
+.launchpad .context-menu .submenu::item:disabled {
+    margin: 0;
+    padding-left: 16px;
+}
+
+.launchpad .context-menu .menu-checkbox .checkbox:unchecked {
+    color: #798985;
+}
+
+.launchpad .context-menu .menu-checkbox .checkbox::indicator {
+    width: 12px;
+    height: 12px;
+    margin-left: 0px;
+    margin-right: 8px;
+}
+
+.launchpad .context-menu .menu-checkbox .checkbox::indicator:unchecked {
+    background: #23334E;
+    border-radius: 2px;
+}
+
+.launchpad .context-menu .menu-checkbox .checkbox::indicator:checked {
+    background: #578875;
+    border-radius: 2px;
+}
+
+.launchpad .context-menu .menu-checkbox .checkbox:focus {
+    outline: none;
+}
+
+.launchpad .context-menu::item:checked {
+    background-color: #578875;
+    color: #060A08;
+}
+
+/* Launchpad App dialog style */
+.launchpad .app-dialog {
+    font-family: "JetBrainsMono NFP";
+    background-color: #060A08;
+}
+
+.launchpad .app-dialog .buttons-container {
+    background-color: #23334E;
+    margin-top: 16px;
+    border-top: 1px solid #798985;
+    max-height: 80px;
+    min-height: 80px;
+    padding: 0 20px;
+}
+
+.launchpad .app-dialog .message {
+    color: #aec4be;
+    font-family: "JetBrainsMono NFP";
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.launchpad .app-dialog .title-field,
+.launchpad .app-dialog .path-field,
+.launchpad .app-dialog .icon-field {
+    background-color: #23334E;
+    border: 1px solid #798985;
+    border-radius: 4px;
+    padding: 0 6px;
+    font-family: "JetBrainsMono NFP";
+    font-size: 12px;
+    font-weight: 600;
+    color: #aec4be;
+    margin: 10px 0px 5px 0;
+    min-height: 30px;
+}
+
+.launchpad .app-dialog .title-field:focus,
+.launchpad .app-dialog .path-field:focus,
+.launchpad .app-dialog .icon-field:focus {
+    border-bottom-color: #578875;
+}
+
+.launchpad .app-dialog .button {
+    background-color: #30504E;
+    border: none;
+    border-radius: 4px;
+    font-family: "JetBrainsMono NFP";
+    font-size: 12px;
+    font-weight: 600;
+    color: #aec4be;
+    min-width: 80px;
+    padding: 0 6px;
+    margin: 10px 0 5px 6px;
+    min-height: 28px;
+    outline: none;
+}
+
+.launchpad .app-dialog .buttons-container .button {
+    margin: 10px 0 5px 0px;
+    font-size: 13px;
+}
+
+.launchpad .app-dialog .button:focus {
+    border: 2px solid #aec4be;
+}
+
+.launchpad .app-dialog .button:focus,
+.launchpad .app-dialog .button:hover {
+    background-color: #4C6B61;
+}
+
+.launchpad .app-dialog .button:pressed {
+    background-color: #30504E;
+}
+
+.launchpad .app-dialog .button.add,
+.launchpad .app-dialog .button.save {
+    background-color: #578875;
+    color: #060A08;
+}
+
+.launchpad .app-dialog .button.add:focus,
+.launchpad .app-dialog .button.save:focus,
+.launchpad .app-dialog .button.add:hover,
+.launchpad .app-dialog .button.save:hover {
+    background-color: #4C6B61;
+}
+
+.launchpad .app-dialog .button.add:pressed,
+.launchpad .app-dialog .button.save:pressed {
+    background-color: #30504E;
+}
+
+.launchpad .app-dialog .button.delete {
+    background-color: #23334E;
+    color: #aec4be;
+}
+
+.launchpad .app-dialog .button.delete:focus,
+.launchpad .app-dialog .button.delete:hover {
+    background-color: #4C6B61;
+}
+
+.launchpad .app-dialog .button.delete:pressed {
+    background-color: #30504E;
+}
+
+.launchpad .app-dialog .warning-message {
+    background-color: #23334E;
+    border: 1px solid #798985;
+    border-radius: 4px;
+    color: #aec4be;
+    font-family: "JetBrainsMono NFP";
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 12px;
+    margin: 4px 0px;
+}
+
+/* Launchpad popup style */
+.launchpad .drop-overlay {
+    background-color: rgba(6, 10, 8, 0.8);
+    border: 4px dashed #578875;
+}
+
+.launchpad .drop-overlay .text {
+    color: #aec4be;
+    font-family: "JetBrainsMono NFP";
+    font-size: 64px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.launchpad .launchpad-container {
+    background-color: rgba(6, 10, 8, 0.85);
+}
+
+.launchpad .search-container {
+    border-bottom: 1px solid rgba(121, 137, 133, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
+    min-height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+.launchpad .search-input {
+    max-width: 400px;
+    padding: 8px 12px;
+    font-size: 14px;
+    min-height: 24px;
+    max-height: 24px;
+    font-family: "JetBrainsMono NFP";
+    border-radius: 20px;
+    border: 2px solid #798985;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #aec4be;
+}
+
+.launchpad .search-input:focus {
+    border: 2px solid #578875;
+    background-color: rgba(48, 80, 78, 0.2);
+}
+
+.launchpad .launchpad-scroll-area {
+    background-color: transparent;
+    border: none;
+}
+
+.launchpad .app-icon {
+    background-color: transparent;
+    border-radius: 16px;
+    border: 3px solid transparent;
+    padding: 12px;
+    margin: 12px 20px 20px 20px;
+    max-width: 140px;
+    min-width: 140px;
+    min-height: 140px;
+    max-height: 140px;
+}
+
+.launchpad .app-icon:focus {
+    border: 3px solid #578875;
+    background-color: rgba(48, 80, 78, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.launchpad .app-icon:hover {
+    border: 3px solid #578875;
+    background-color: rgba(48, 80, 78, 0.35);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.launchpad .app-icon .title {
+    color: #aec4be;
+    font-family: "JetBrainsMono NFP";
+    font-size: 12px;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+/* URL app icons */
+.launchpad .app-icon.url .title {
+    color: #526784;
+}
+
+.launchpad .app-icon .icon {
+    padding: 0;
+    margin: 0;
+}
