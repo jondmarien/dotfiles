@@ -61,31 +61,12 @@ bars:
           "memory",
           "gpu",
           "traffic",
-          "media_grouper",
           "system_monitor",
           "power_menu"
         ]
 
 widgets:
   # Grouper Widgets
-  media_grouper:
-    type: "yasb.grouper.GrouperWidget"
-    options:
-      class_name: "media-grouper"
-      hide_empty: true  # Hide when no media playing
-      widgets: ["media"]
-      collapse_options:
-        enabled: true
-        exclude_widgets: []
-        expanded_label: "\uf054"
-        collapsed_label: "\uf053"
-        label_position: "right"
-      container_shadow:
-        enabled: false
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-
   wm_controls:
     type: "yasb.grouper.GrouperWidget"
     options:
@@ -127,7 +108,7 @@ widgets:
     options:
       class_name: "system-monitor"
       hide_empty: false
-      widgets: ["disk", "volume", "wifi", "bluetooth"]
+      widgets: ["media", "disk", "volume", "wifi", "bluetooth"]
       collapse_options:
         enabled: true  # Enable collapse for system monitor
         exclude_widgets: []  # All widgets can be collapsed
