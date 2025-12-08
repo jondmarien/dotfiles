@@ -3,9 +3,9 @@
 /*VARIABLES AND SOME DEFAULT SETTINGS*/
 :root {
     /* Special */
-    --backgroundcol: var(--colors0);
-    --foregroundcol: var(--colors15);
-    --cursorcol: var(--colors15);
+    --backgroundcol: #060A08;
+    --foregroundcol: #aec4be;
+    --cursorcol: #aec4be;
     /* 16 pywal colors */
     --colors0: #060A08;
     --colors1: #23334E;
@@ -43,17 +43,17 @@
 /* 1. Layout and Containers                                                                           */
 /* -------------------------------------------------------------------------------------------------- */
 
-/* Global styles - only apply to the bar, not popups */
-.yasb-bar * {
+/* Global styles */
+* {
 	font-size: 12px;
-	color: var(--text);
+	color: #aec4be;
 	font-weight: 600;
 	font-family: "JetBrainsMono NFP";
 }
 .yasb-bar {
 	padding: 0 4px;
 	margin: 0;
-	background-color: var(--mantle);
+	background-color: #060A08;
 	border-radius: 8px;
 }
 
@@ -163,7 +163,7 @@
 .calendar .calendar-table,
 .calendar .calendar-table::item {
     background-color: transparent;
-    color: var(--colors15);
+    color: #aec4be;
     font-family: "JetBrainsMono NFP", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 4px;
@@ -173,8 +173,8 @@
 }
 
 .calendar .calendar-table::item:selected {
-    background-color: rgba(var(--colors4-rgb, 160, 52, 137), 0.7);
-    color: var(--colors15);
+    background-color: rgba(76, 107, 97, 0.7);
+    color: #aec4be;
     font-weight: bold;
     border-radius: 4px;
 }
@@ -183,7 +183,7 @@
 .calendar .month-label,
 .calendar .date-label {
     font-family: "JetBrainsMono NFP", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--colors15);
+    color: #aec4be;
     font-weight: 700;
     min-width: 180px;
     max-width: 180px;
@@ -192,21 +192,21 @@
 
 .calendar .month-label {
     font-weight: normal;
-    color: var(--colors7);
+    color: #aec4be;
     margin-bottom: 8px;
 }
 
 .calendar .date-label {
     font-size: 24px;
     font-weight: 900;
-    color: var(--colors4);
+    color: #4C6B61;
     margin: 8px 0;
 }
 
 .calendar .day-label {
     margin-top: 12px;
     margin-bottom: 8px;
-    color: var(--colors8);
+    color: #798985;
     font-size: 14px;
 }
 
@@ -219,7 +219,7 @@
 }
 
 .systray .unpinned-container {
-    background: rgba(var(--colors4-rgb, 160, 52, 137), 0.1);
+    background: rgba(76, 107, 97, 0.1);
     border-radius: 6px;
     padding: 2px 4px;
     margin: 0 2px;
@@ -230,57 +230,48 @@
 }
 
 .systray .pinned-container[forceshow=true] {
-    background: rgba(var(--colors4-rgb, 160, 52, 137), 0.2);
+    background: rgba(76, 107, 97, 0.2);
 }
 
 .systray .button {
     border-radius: 4px;
     padding: 2px;
     margin: 0 1px;
-    transition: all 0.2s ease;
 }
 
 .systray .button:hover {
-    background: rgba(var(--colors4-rgb, 160, 52, 137), 0.3);
+    background: rgba(76, 107, 97, 0.3);
 }
 
 .systray .button[dragging=true] {
-    background: var(--colors4);
-    border-color: var(--colors12);
+    background: #4C6B61;
+    border-color: #4C6B61;
 }
 
 .systray .unpinned-visibility-btn {
     border-radius: 4px;
     height: 20px;
     width: 16px;
-    color: var(--colors15);
+    color: #aec4be;
     background: transparent;
-    transition: all 0.2s ease;
 }
 
 .systray .unpinned-visibility-btn:checked {
-    background: rgba(var(--colors4-rgb, 160, 52, 137), 0.2);
+    background: rgba(76, 107, 97, 0.2);
 }
 
 .systray .unpinned-visibility-btn:hover {
-    border: 1px solid var(--colors8);
-    background: rgba(var(--colors4-rgb, 160, 52, 137), 0.15);
+    border: 1px solid #798985;
+    background: rgba(76, 107, 97, 0.15);
 }
 
 /*** System Stats Group */
 .system-stats {
-    background: linear-gradient(
-        90deg,
-        rgba(var(--colors0-rgb, 17, 17, 27), 0.5) 0%,
-        rgba(var(--colors1-rgb, 84, 78, 127), 0.3) 50%,
-        rgba(var(--colors0-rgb, 17, 17, 27), 0.5) 100%
-    );
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    background: #060A08;
     border-radius: 6px;
     padding: 0 8px;
     margin: 0 2px;
-    border: 1px solid rgba(var(--colors8-rgb, 100, 100, 120), 0.2);
+    border: 1px solid rgba(121, 137, 133, 0.2);
 }
 
 .system-stats .widget {
@@ -298,35 +289,33 @@
 
 /*** GitHub Widget Styles */
 .github-menu {
-    background-color: rgba(var(--colors0-rgb, 17, 17, 27), 0.85);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    background-color: rgba(6, 10, 8, 0.85);
     max-height: 500px;
     min-height: 500px;
     min-width: 420px;
     border-radius: 8px;
-    border: 1px solid var(--colors8);
+    border: 1px solid #798985;
 }
 
 .github-menu .header {
-    border-bottom: 1px solid var(--colors8);
+    border-bottom: 1px solid #798985;
     font-size: 15px;
     font-weight: 600;
     font-family: "JetBrainsMono NFP", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 12px 16px;
-    color: var(--colors15);
-    background-color: rgba(var(--colors0-rgb, 17, 17, 27), 0.8);
+    color: #aec4be;
+    background-color: rgba(6, 10, 8, 0.8);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
 .github-menu .footer {
-    border-top: 1px solid var(--colors8);
+    border-top: 1px solid #798985;
     font-size: 12px;
     padding: 8px 16px;
     font-family: "JetBrainsMono NFP", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--colors8);
-    background-color: rgba(var(--colors0-rgb, 17, 17, 27), 0.8);
+    color: #798985;
+    background-color: rgba(6, 10, 8, 0.8);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
@@ -348,7 +337,7 @@
 }
 
 .github-menu .scroll-area QScrollBar::handle:vertical {
-    background: var(--colors8);
+    background: #798985;
     border-radius: 4px;
     min-height: 20px;
 }
@@ -361,20 +350,18 @@
 .github-menu .contents .item {
     min-height: 44px;
     padding: 10px 16px;
-    border-bottom: 1px solid rgba(var(--colors8-rgb, 100, 100, 120), 0.15);
-    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(121, 137, 133, 0.15);
 }
 
 .github-menu .contents .item:hover {
-    background-color: rgba(var(--colors4-rgb, 160, 52, 137), 0.1);
+    background-color: rgba(76, 107, 97, 0.1);
     border-bottom-color: transparent;
 }
 
 .github-menu .contents .item .title,
 .github-menu .contents .item .description {
-    color: var(--colors15);
+    color: #aec4be;
     font-family: "JetBrainsMono NFP", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: color 0.2s ease;
 }
 
 .github-menu .contents .item .title {
@@ -390,19 +377,18 @@
 
 .github-menu .contents .item.new .title,
 .github-menu .contents .item.new .description {
-    color: var(--colors15);
+    color: #aec4be;
     font-weight: 600;
 }
 
 .github-menu .contents .item .icon {
     font-size: 16px;
     padding-right: 12px;
-    color: var(--colors8);
-    transition: color 0.2s ease;
+    color: #798985;
 }
 
 .github-menu .contents .item.new .icon {
-    color: var(--colors11);
+    color: #2A5363;
 }
 
 /*** GlazeWM Workspaces Widget - Custom Style (Transparent, No Shadow) */
@@ -424,33 +410,32 @@
     border: none;
     padding: 2px 8px;
     margin: 0 2px;
-    color: var(--foregroundcol);
+    color: #aec4be;
     border-radius: 5px;
-    transition: background 0.15s, color 0.15s;
     box-shadow: none;
 }
 
 /*** Active and populated workspace: accent color foreground, subtle background */
 .glazewm-workspaces .ws-btn.active_populated {
-    color: var(--colors4);
-    background: rgba( var(--colors4-rgb, 160,52,137), 0.25 ); /* fallback to #A03489 if --colors4-rgb not set */
+    color: #4C6B61;
+    background: rgba(76, 107, 97, 0.25); /* fallback to #A03489 if --colors4-rgb not set */
 }
 
 /*** Active but empty workspace: faded accent, subtle background */
 .glazewm-workspaces .ws-btn.active_empty {
-    color: var(--colors8);
-    background: rgba( var(--colors8-rgb, 107,102,125), 0.18 ); /* fallback to #6b667d if --colors8-rgb not set */
+    color: #798985;
+    background: rgba(121, 137, 133, 0.18); /* fallback to #6b667d if --colors8-rgb not set */
 }
 
 /*** Populated workspace: accent color */
 .glazewm-workspaces .ws-btn.populated {
-    color: var(--colors4);
+    color: #4C6B61;
     background: transparent;
 }
 
 /*** Empty workspace: faded accent color */
 .glazewm-workspaces .ws-btn.empty {
-    color: var(--colors8);
+    color: #798985;
     background: transparent;
 }
 
@@ -458,14 +443,14 @@
 .glazewm-workspaces .ws-btn:hover,
 .glazewm-workspaces .ws-btn.populated:hover,
 .glazewm-workspaces .ws-btn.empty:hover {
-    background: rgba(var(--colors4-rgb, 160,52,137), 0.18 );
-    color: var(--colors4);
+    background: rgba(76, 107, 97, 0.18);
+    color: #4C6B61;
     cursor: pointer;
 }
 
 /*** Offline status: use pywal red or warning color */
 .glazewm-workspaces .offline-status {
-    color: var(--colors1);
+    color: #23334E;
     font-style: italic;
     padding: 0 6px;
     background: transparent;
@@ -500,11 +485,8 @@
 .bar-right:has(.cpu-widget + .memory-widget + .system-widget) .memory-widget,
 .bar-right:has(.cpu-widget + .memory-widget + .system-widget) .system-widget {
     background: rgba(20, 20, 30, 0.75);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
     border: 1px solid rgba(120,120,140,0.16);
-    color: var(--colors15);
-    transition: background 0.2s, border 0.2s;
+    color: #aec4be;
 }
 
 /*** Fallback for browsers without :has() support: use direct adjacent selectors */
@@ -526,7 +508,7 @@
 .memory-widget:hover,
 .system-widget:hover {
     background: rgba(40, 40, 60, 0.85);
-    border-color: var(--colors4);
+    border-color: #4C6B61;
 }
 
 /***-------------------------------      • Komorebi Workspaces •      --------------------------------***/
@@ -549,41 +531,40 @@
     border: none;
     padding: 2px 8px;
     margin: 0 2px;
-    color: var(--foregroundcol);
+    color: #aec4be;
     border-radius: 5px;
-    transition: background 0.15s, color 0.15s;
     box-shadow: none;
 }
 
 .komorebi-workspaces .ws-btn.active,
 .komorebi-workspaces .ws-btn.populated {
-    color: var(--colors4);
-    background: rgba(var(--colors4-rgb, 160,52,137), 0.25);
+    color: #4C6B61;
+    background: rgba(76, 107, 97, 0.25);
 }
 
 .komorebi-workspaces .ws-btn.active:not(.populated) {
-    color: var(--colors8);
-    background: rgba(var(--colors8-rgb, 107,102,125), 0.18);
+    color: #798985;
+    background: rgba(121, 137, 133, 0.18);
 }
 
 .komorebi-workspaces .ws-btn.populated:not(.active) {
-    color: var(--colors4);
+    color: #4C6B61;
     background: transparent;
 }
 
 .komorebi-workspaces .ws-btn.empty {
-    color: var(--colors8);
+    color: #798985;
     background: transparent;
 }
 
 .komorebi-workspaces .ws-btn:hover {
-    background: rgba(var(--colors4-rgb, 160,52,137), 0.18 );
-    color: var(--colors4);
+    background: rgba(76, 107, 97, 0.18);
+    color: #4C6B61;
     cursor: pointer;
 }
 
 .komorebi-workspaces .offline-status {
-    color: var(--colors1);
+    color: #23334E;
     font-style: italic;
     padding: 0 6px;
     background: transparent;
@@ -600,7 +581,7 @@
 }
 
 .komorebi-workspaces .ws-btn.active .icon {
-    color: var(--colors4);
+    color: #4C6B61;
 }
 
 
@@ -623,9 +604,8 @@
     margin: 2px 1px;
     border-radius: 6px;
     padding: 4px 6px;
-    background: rgba(var(--colors0-rgb, 30, 24, 54), 0.6);
-    border: 1px solid rgba(var(--colors8-rgb, 100, 100, 120), 0.3);
-    transition: all 0.2s ease;
+    background: rgba(6, 10, 8, 0.6);
+    border: 1px solid rgba(121, 137, 133, 0.3);
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -634,37 +614,37 @@
 }
 
 .taskbar-widget .app-container:hover {
-    background: rgba(var(--colors4-rgb, 160, 52, 137), 0.2);
-    border-color: rgba(var(--colors4-rgb, 160, 52, 137), 0.5);
+    background: rgba(76, 107, 97, 0.2);
+    border-color: rgba(76, 107, 97, 0.5);
     transform: translateY(-1px);
 }
 
 .taskbar-widget .app-container.foreground {
-    background: rgba(var(--colors4-rgb, 160, 52, 137), 0.3);
-    border-color: var(--colors4);
-    box-shadow: 0 0 8px rgba(var(--colors4-rgb, 160, 52, 137), 0.4);
+    background: rgba(76, 107, 97, 0.3);
+    border-color: #4C6B61;
+    box-shadow: 0 0 8px rgba(76, 107, 97, 0.4);
 }
 
 .taskbar-widget .app-container.flashing {
-    background: rgba(var(--colors1-rgb, 231, 130, 132), 0.4);
-    border-color: var(--colors1);
+    background: rgba(35, 51, 78, 0.4);
+    border-color: #23334E;
     animation: taskbar-flash 1s infinite alternate;
 }
 
 @keyframes taskbar-flash {
     0% { 
-        background: rgba(var(--colors1-rgb, 231, 130, 132), 0.4);
-        box-shadow: 0 0 4px rgba(var(--colors1-rgb, 231, 130, 132), 0.3);
+        background: rgba(35, 51, 78, 0.4);
+        box-shadow: 0 0 4px rgba(35, 51, 78, 0.3);
     }
     100% { 
-        background: rgba(var(--colors1-rgb, 231, 130, 132), 0.6);
-        box-shadow: 0 0 12px rgba(var(--colors1-rgb, 231, 130, 132), 0.6);
+        background: rgba(35, 51, 78, 0.6);
+        box-shadow: 0 0 12px rgba(35, 51, 78, 0.6);
     }
 }
 
 .taskbar-widget .app-container .app-icon {
     font-size: 16px;
-    color: var(--colors15);
+    color: #aec4be;
     line-height: 1;
     display: flex;
     align-items: center;
@@ -673,14 +653,14 @@
 }
 
 .taskbar-widget .app-container.foreground .app-icon {
-    color: var(--colors4);
+    color: #4C6B61;
 }
 
 .taskbar-widget .app-container .app-title {
     padding-left: 6px;
     font-size: 12px;
     font-weight: 500;
-    color: var(--colors15);
+    color: #aec4be;
     font-family: "JetBrainsMono NFP", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     white-space: nowrap;
     overflow: hidden;
@@ -688,19 +668,19 @@
 }
 
 .taskbar-widget .app-container.foreground .app-title {
-    color: var(--colors4);
+    color: #4C6B61;
     font-weight: 600;
 }
 
 /***-------------------------------      • Power Menu Widget •      --------------------------------***/
 
 .power-menu-popup {
-	background: var(--mantle);
+	background: #060A08;
 	border-radius: 8px;
 }
 
 .power-menu-widget .label {
-	color: var(--icon);
+	color: #aec4be;
 	font-size: 16px;
         padding: 0
 }
@@ -716,7 +696,7 @@ div.power-menu-popup .button,
 	max-width: 120px !important;
 	max-height: 120px !important;
 	border-radius: 8px !important;
-	background-color: var(--base) !important;
+	background-color: #23334E !important;
 	color: white !important;
 	display: flex !important;
 	flex-direction: column !important;
@@ -728,24 +708,24 @@ div.power-menu-popup .button,
 	cursor: pointer !important;
 }
 .power-menu-popup .button.hover {
-	background-color: var(--surface1);
+	background-color: #30504E;
 }
 .power-menu-popup .button .label {
 	margin-bottom: 0px;
 	font-size: 16px;
 	font-weight: 600;
-	color: var(--icon);
+	color: #aec4be;
 }
 .power-menu-popup .button .icon {
 	font-size: 36px !important;
 	margin-bottom: 8px !important;
-	color: var(--icon) !important;
+	color: #aec4be !important;
 	line-height: 1 !important;
 }
 /* Power Menu Button-Specific Styles */
 .power-menu-popup .button.shutdown,
 .power-menu-popup .button.force_shutdown {
-	background-color: var(--red) !important;
+	background-color: #23334E !important;
 }
 .power-menu-popup .button.shutdown .icon,
 .power-menu-popup .button.force_shutdown .icon,
@@ -756,7 +736,7 @@ div.power-menu-popup .button,
 
 .power-menu-popup .button.restart,
 .power-menu-popup .button.force_restart {
-	background-color: var(--yellow) !important;
+	background-color: #E5C890 !important;
 }
 .power-menu-popup .button.restart .icon,
 .power-menu-popup .button.force_restart .icon,
@@ -767,7 +747,7 @@ div.power-menu-popup .button,
 
 .power-menu-popup .button.sleep,
 .power-menu-popup .button.hibernate {
-	background-color: var(--blue) !important;
+	background-color: #8CAAEE !important;
 }
 .power-menu-popup .button.sleep .icon,
 .power-menu-popup .button.hibernate .icon,
@@ -777,7 +757,7 @@ div.power-menu-popup .button,
 }
 
 .power-menu-popup .button.signout {
-	background-color: var(--green) !important;
+	background-color: #A6D189 !important;
 }
 .power-menu-popup .button.signout .icon,
 .power-menu-popup .button.signout .label {
@@ -785,18 +765,17 @@ div.power-menu-popup .button,
 }
 
 .power-menu-popup .button.cancel {
-	background-color: var(--surface1) !important;
+	background-color: #30504E !important;
 }
 .power-menu-popup .button.cancel .icon,
 .power-menu-popup .button.cancel .label {
-	color: var(--red) !important;
+	color: #23334E !important;
 }
 
 /***-------------------------------      • Clock Widget •      --------------------------------***/
 
 .clock-widget {
     padding: 0 8px;
-    transition: all 0.2s ease;
 }
 
 .clock-widget .widget-container {
@@ -805,21 +784,20 @@ div.power-menu-popup .button,
 }
 
 .clock-widget .widget-container .label {
-    color: var(--colors15);
+    color: #aec4be;
     font-weight: bold;
     padding: 4px 8px;
     border-radius: 4px;
-    background-color: rgba(var(--colors4-rgb, 160,52,137), 0.1);
-    transition: all 0.2s ease;
+    background-color: rgba(76, 107, 97, 0.1);
 }
 
 .clock-widget .widget-container .label.alt {
-    color: var(--colors15);
-    background-color: rgba(var(--colors4-rgb, 160,52,137), 0.15);
+    color: #aec4be;
+    background-color: rgba(76, 107, 97, 0.15);
 }
 
 .clock-widget .widget-container .icon {
-    color: var(--colors4);
+    color: #4C6B61;
     margin-right: 6px;
     font-size: 14px;
 }
@@ -831,15 +809,15 @@ div.power-menu-popup .button,
 	font-size: 16px;
 }
 .volume-widget .icon {
-	color: var(--icon);
+	color: #aec4be;
 	margin: 1px 2px 0 0;
 }
 .start-menu .icon {
 	font-size: 18px;
-	color: var(--icon)
+	color: #aec4be
 }
 .clock-widget .icon {
-	color: var(--icon);
+	color: #aec4be;
 	font-size: 14px;
 	margin-right: 6px;
 }
@@ -848,7 +826,7 @@ div.power-menu-popup .button,
 
 }
 .apps-widget .label {
-    color: var(--icon);
+    color: #aec4be;
     font-size: 17px;
     padding-left: 4px;
     padding-right: 4px;
@@ -857,30 +835,30 @@ div.power-menu-popup .button,
 /***-------------------------------      • Recycle Bin Widget •      --------------------------------***/
 
 .recycle-bin-widget .icon {
-    color: var(--icon);
+    color: #aec4be;
 } 
 .recycle-bin-widget .label {
     font-size: 11px;
-    color : var(--text);
+    color : #aec4be;
     font-weight: 800;
 }
 
 /***---------------------------------      • Weather Icons •      ----------------------------------***/
 
 .weather-widget .icon {
-    color: var(--icon);
+    color: #aec4be;
     padding-right: 3;
 }
 
 /***----------------------------------      • Weather Card •      -----------------------------------***/
 
 .weather-card {
-	background-color: var(--mantle);
+	background-color: #060A08;
 }
 .weather-card-today {
 	border-radius: 8px;
-	background-color: var(--mantle);
-	color: var(--text);
+	background-color: #060A08;
+	color: #aec4be;
 }
 .weather-card-today .label {
 	font-size: 12px;
@@ -900,7 +878,7 @@ div.power-menu-popup .button,
 }
 .weather-card-day {
 	border-radius: 8px;
-	background-color: var(--mantle);
+	background-color: #060A08;
 }
 .weather-card-day .label {
 	font-size: 12px;
@@ -909,7 +887,7 @@ div.power-menu-popup .button,
 /***----------------------------------      • Home Menu •      -----------------------------------***/
 
 .home-menu {
-	background-color: var(--mantle);
+	background-color: #060A08;
 	border-radius: 8px;
 	padding: 16px 0;
 	margin-left: 0px;
@@ -922,10 +900,9 @@ div.power-menu-popup .button,
 	padding: 18px 48px 18px 48px;
 	font-size: 15px;
 	font-weight: 600;
-    color: var(--text);
+    color: #aec4be;
     margin: 4px 16px;
     border-radius: 6px;
-    transition: all 0.2s ease;
     border-left: 3px solid transparent;
     line-height: 1.6;
     min-height: 28px;
@@ -933,32 +910,32 @@ div.power-menu-popup .button,
     white-space: nowrap;
 }
 .home-menu .menu-item:hover {
-	background-color: rgba(var(--colors4-rgb, 87, 136, 117), 0.15);
-	color: var(--home-accent);
-	border-left: 3px solid var(--home-accent);
+	background-color: rgba(76, 107, 97, 0.15);
+	color: #578875;
+	border-left: 3px solid #578875;
 	transform: translateX(2px);
 }
-.home-menu .menu-item:nth-child(1) { color: var(--colors4); } /* Home */
-.home-menu .menu-item:nth-child(2) { color: var(--colors6); } /* Downloads */
-.home-menu .menu-item:nth-child(3) { color: var(--colors5); } /* Documents */
-.home-menu .menu-item:nth-child(4) { color: var(--colors13); } /* Pictures */
-.home-menu .menu-item:nth-child(5) { color: var(--colors12); } /* Videos */
-.home-menu .menu-item:nth-child(6) { color: var(--colors11); } /* Games */
-.home-menu .menu-item:nth-child(7) { color: var(--colors10); } /* Streamio */
-.home-menu .menu-item:nth-child(8) { color: var(--colors9); } /* Steam */
-.home-menu .menu-item:nth-child(9) { color: var(--colors8); } /* Zen */
-.home-menu .menu-item:nth-child(10) { color: var(--colors14); } /* iCUE */
+.home-menu .menu-item:nth-child(1) { color: #4C6B61; } /* Home */
+.home-menu .menu-item:nth-child(2) { color: #526784; } /* Downloads */
+.home-menu .menu-item:nth-child(3) { color: #578875; } /* Documents */
+.home-menu .menu-item:nth-child(4) { color: #578875; } /* Pictures */
+.home-menu .menu-item:nth-child(5) { color: #4C6B61; } /* Videos */
+.home-menu .menu-item:nth-child(6) { color: #2A5363; } /* Games */
+.home-menu .menu-item:nth-child(7) { color: #30504E; } /* Streamio */
+.home-menu .menu-item:nth-child(8) { color: #23334E; } /* Steam */
+.home-menu .menu-item:nth-child(9) { color: #798985; } /* Zen */
+.home-menu .menu-item:nth-child(10) { color: #526784; } /* iCUE */
 .home-menu .separator {
 	height: 1px;
-	background: linear-gradient(90deg, transparent, var(--home-muted), transparent);
+	background: #060A08;
 	margin: 8px 16px;
 	border: none;
 }
 
 .home-widget .label{
-    color: var(--icon);
+    color: #aec4be;
     font-size: 12px;
-    background-color: var(--mantle);
+    background-color: #060A08;
     padding: 6px 12px;
     border-radius: 6px;
     font-weight: 600;
@@ -970,7 +947,7 @@ div.power-menu-popup .button,
     padding: 0 6px 0 6px;
 }
 .disk-group {
-    background-color: var(--mantle);
+    background-color: #060A08;
 }
 .disk-group-row {
     min-width: 220px;
@@ -992,19 +969,19 @@ div.power-menu-popup .button,
     border-radius: 4px;
 }
 .disk-group-label-bar::chunk{
-    background-color: var(--icon);
+    background-color: #aec4be;
     border-radius: 4px;
 }
 .disk-group-label {
     font-size: 10px;
-    color: var(--icon);
+    color: #aec4be;
 }
 .disk-group-label-size {
     font-size: 10px;
-    color: var(--icon);
+    color: #aec4be;
 }
 .disk-widget .icon {
-  color: var(--icon);
+  color: #aec4be;
 }
 
 /***----------------------------------      • Cava •      -----------------------------------***/
@@ -1014,25 +991,25 @@ div.power-menu-popup .button,
     margin: 0;
 }
 .cava-widget .icon {
-    color: var(--icon);
+    color: #aec4be;
 }
 
 /***----------------------------------      • Wallpapers •      -----------------------------------***/
 
 .wallpapers-widget {
     padding: 0 6px 0 6px;
-    background-color: var(--mantle);
+    background-color: #060A08;
     border-radius: 8px;
 }
 .wallpapers-gallery-window {
-    background-color: var(--mantle);
+    background-color: #060A08;
     border: 0;
     margin: 0;
     border-radius: 10px;
 }
 .wallpapers-gallery-buttons {
     background-color:rgba(255, 255, 255, 0);
-    color: var(--icon);
+    color: #aec4be;
     border: none;
     font-size: 14px;
     padding: 8px 0;
@@ -1046,10 +1023,9 @@ div.power-menu-popup .button,
 .wallpapers-gallery-image {
     border: 4px solid transparent;
     border-radius: 10px;
-    transition: border 0.2s;
 }
 .wallpapers-gallery-image:hover {
-    border: 4px solid var(--icon);
+    border: 4px solid #aec4be;
 }
 .wallpapers-gallery-image.focused {
     border: 4px solid #89b4fa;
@@ -1074,19 +1050,19 @@ div.power-menu-popup .button,
 .memory-widget .label {
     min-width: 34px;
     max-width: 34px;
-    color: var(--text);
+    color: #aec4be;
 }
 .cpu-widget .label {
     min-width: 34px;
     max-width: 34px;
-    color: var(--text);
+    color: #aec4be;
 }
 .cpu-widget .icon {
-    color: var(--icon);
+    color: #aec4be;
     margin-right: 3px;
 }
 .memory-widget .icon {
-    color: var(--icon);
+    color: #aec4be;
     margin-right: 3px;
 }
 
@@ -1100,20 +1076,20 @@ div.power-menu-popup .button,
 }
 .update-check-widget .widget-container.winget,
 .update-check-widget .widget-container.windows {
-    background: var(--mauve);
+    background: #578875;
     margin: 0px 0px 0px 0px;
     border-radius: 10px;
-    border: 0px solid var(--sapphire);
+    border: 0px solid #4C6B61;
 }
 .update-check-widget .widget-container.winget .icon,
 .update-check-widget .widget-container.windows .icon {
-    color: var(--base);
+    color: #23334E;
     margin: 0 2px 0 6px;
 }
 .update-check-widget .widget-container.winget .label,
 .update-check-widget .widget-container.windows .label {
     margin: 0 6px 0 1px;
-    color: var(--base);
+    color: #23334E;
     font-weight: 900;
     font-size: 14px;
 }
@@ -1121,12 +1097,12 @@ div.power-menu-popup .button,
 /***----------------------------------      • Traffic •      -----------------------------------***/
 
 .traffic-widget .icon {
-    color: var(--icon);
+    color: #aec4be;
     padding-right: 6px;
     padding-left: 6px;
 }
 .traffic-widget .label {
-color: var(--fadedgreen);
+color: #30504E;
 }
 
 
@@ -1137,17 +1113,17 @@ color: var(--fadedgreen);
 }
 .notes-widget .label {
    font-size: 14px;
-   color: var(--text);
+   color: #aec4be;
 }
 .notes-widget .icon {
     font-size: 14px;
-    color: var(--icon);
+    color: #aec4be;
 }
 /* Notes Widget Menu */
 .notes-menu {
     min-width: 500px;
     max-width: 500px;
-    background-color: var(--mantle);
+    background-color: #060A08;
 }
 .notes-menu .note-item {
     background-color:transparent;
@@ -1160,7 +1136,7 @@ color: var(--fadedgreen);
 .notes-menu .note-item .icon {
     font-size: 16px;
     padding: 0 4px;
-    color: var(--icon);
+    color: #aec4be;
 }
 .notes-menu .delete-button {
     color: #ff6b6b;
@@ -1184,7 +1160,7 @@ color: var(--fadedgreen);
 }
 .notes-menu .empty-list {
     font-family: 'JetBrainsMono NFP';
-    color: var(--icon);
+    color: #aec4be;
     font-size: 20px;
     font-weight: 600;
     padding: 10px 0 20px 0;     
@@ -1203,7 +1179,7 @@ color: var(--fadedgreen);
 }
 .notes-menu .add-button:hover,
 .notes-menu .cancel-button:hover {
-    background-color: var(--mantle);
+    background-color: #060A08;
 }
 .notes-menu .scroll-area {
     background: transparent; 
@@ -1212,7 +1188,7 @@ color: var(--fadedgreen);
 }
 .notes-menu .note-input {
     background-color:rgba(17, 17, 27, 0.2);
-    border: px solid var(--icon);
+    border: px solid #aec4be;
     font-family: 'JetBrainsMono NFP';
     font-size: 12px;
     max-height: 200px;
@@ -1221,7 +1197,7 @@ color: var(--fadedgreen);
     border-radius: 6px;
 }
 .note-input:focus {
-    border: 1px solid var(--icon);
+    border: 1px solid #aec4be;
 }
 
 /***----------------------------------      • Media •      -----------------------------------***/
@@ -1229,7 +1205,7 @@ color: var(--fadedgreen);
 .media-menu {
     min-width: 520px;
     max-width: 700px;
-    background-color: var(--mantle);
+    background-color: #060A08;
 	border-radius: 8px;
     padding: 16px 20px;
 }
@@ -1237,7 +1213,7 @@ color: var(--fadedgreen);
 .media-menu .artist,
 .media-menu .source {
     font-size: 16px;
-    color: var(--icon);
+    color: #aec4be;
     font-weight: 700;
     margin-left: 16px;
     margin-right: 16px;
@@ -1250,7 +1226,7 @@ color: var(--fadedgreen);
 .media-menu .artist {
     font-size: 13px;
     font-weight: 650;
-    color: var(--icon);
+    color: #aec4be;
     margin-top: 4px;
     margin-bottom: 12px;
 }
@@ -1268,7 +1244,7 @@ color: var(--fadedgreen);
 .media-menu .source::after {
     content: " | ";
     font-size: 14px;
-    color: var(--icon);
+    color: #aec4be;
     font-weight: 400;
     background: none;
     padding-left: 12px;
@@ -1298,22 +1274,21 @@ Example: "Windows Media" becomes "windows-media" */
     font-family: "Segoe Fluent Icons";
     font-size: 18px;
     font-weight: 400;
-    color: var(--icon);
+    color: #aec4be;
     background-color: transparent;
     border: none;
     padding: 12px 16px;
     cursor: pointer;
     border-radius: 20px;
-	color: var(--fadedgreen);
+	color: #30504E;
     margin: 0 8px;
-    transition: all 0.2s ease;
 }
 .media-menu .btn.prev {
     margin-left: 16px;
 }
 .media-menu .btn:hover {
-    color: var(--icon);
-    background-color: rgba(var(--colors4-rgb, 160, 52, 137), 0.15);
+    color: #aec4be;
+    background-color: rgba(76, 107, 97, 0.15);
     transform: scale(1.05);
 }
 .media-menu .btn.play {
@@ -1330,7 +1305,7 @@ Example: "Windows Media" becomes "windows-media" */
 .media-menu .playback-time {
     font-size: 12px;
     font-family: 'JetBrainsMono NFP';
-    color: var(--icon); 
+    color: #aec4be; 
     margin-top: 20px;
     min-width: 100px;
 }
@@ -1343,17 +1318,17 @@ Example: "Windows Media" becomes "windows-media" */
     background: transparent;
     height: 2px;
     border-radius: 3px;
-    background: var(--mantle);
+    background: #060A08;
 
 }
 .media-menu .progress-slider::groove:hover {
     background: transparent;
     height: 6px;
     border-radius: 3px;
-    background: var(--mantle);
+    background: #060A08;
 }
 .media-menu .progress-slider::sub-page {
-    background: var(--fadedgreen);
+    background: #30504E;
     border-radius: 3px;
     height: 4px;
 }
@@ -1365,44 +1340,44 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 .gpu-widget .widget-container {
-    background-color: var(--mantle);
+    background-color: #060A08;
     border-radius: 6px;
     padding: 0 12px 0 8px;
 }
 
 .gpu-widget .widget-container .label {
-    color: var(--icon);
+    color: #aec4be;
     font-weight: 700;
     font-size: 12px;
 }
 
 .gpu-widget .widget-container .label.alt {
-    color: var(--icon);
+    color: #aec4be;
     font-weight: 700;
     font-size: 12px;
 }
 
 .gpu-widget .label.status-low {
-    color: var(--colors10);
+    color: #30504E;
 }
 
 .gpu-widget .label.status-medium {
-    color: var(--colors3);
+    color: #2A5363;
 }
 
 .gpu-widget .label.status-high {
-    color: var(--colors1);
+    color: #23334E;
 }
 
 .gpu-widget .label.status-critical {
-    color: var(--red);
+    color: #23334E;
 }
 
 /***----------------------------------      • GPU Progess Bar •      -----------------------------------***/
 
 .gpu-widget .progress-circle {
-    background-color: var(--mantle);
-    border: 2px solid var(--icon);
+    background-color: #060A08;
+    border: 2px solid #aec4be;
     border-radius: 50%;
     margin-left: 6px;
 }
@@ -1415,8 +1390,6 @@ Example: "Windows Media" becomes "windows-media" */
 
 .vscode-menu {
     background-color: rgba(6, 10, 8, 0.95);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     max-height: 500px;
     min-width: 420px;
     border-radius: 8px;
@@ -1492,14 +1465,14 @@ Example: "Windows Media" becomes "windows-media" */
 
 .grouper .grouper-button {
     font-size: 12px;
-    color: var(--icon);
+    color: #aec4be;
     padding: 0 6px;
     background-color: transparent;
     border: none;
 }
 
 .grouper .grouper-button:hover {
-    color: var(--home-accent);
+    color: #578875;
 }
 
 /* Specific grouper overrides */
@@ -1522,7 +1495,7 @@ Example: "Windows Media" becomes "windows-media" */
 /***----------------------------------      • Power Menu Widget •      -----------------------------------***/
 
 .power-menu-widget .label {
-    color: var(--icon);
+    color: #aec4be;
     font-size: 14px;
 }
 
@@ -1536,34 +1509,34 @@ Example: "Windows Media" becomes "windows-media" */
     width: 140px !important;
     height: 140px !important;
     border-radius: 10px !important;
-    background-color: var(--mantle) !important;
-    border: 2px solid var(--surface1) !important;
+    background-color: #060A08 !important;
+    border: 2px solid #30504E !important;
     margin: 10px !important;
     padding: 15px !important;
 }
 
 .power-menu-popup .button.hover {
-    background-color: var(--surface1) !important;
-    border: 2px solid var(--home-accent) !important;
+    background-color: #30504E !important;
+    border: 2px solid #578875 !important;
 }
 
 .power-menu-popup .button .label {
     font-size: 14px !important;
     font-weight: 600 !important;
-    color: var(--text) !important;
+    color: #aec4be !important;
     padding: 12px 0 0 0 !important;
 }
 
 .power-menu-popup .button .icon {
     font-size: 48px !important;
     font-family: "JetBrainsMono NFP" !important;
-    color: var(--icon) !important;
+    color: #aec4be !important;
     padding: 15px 0 !important;
 }
 
 .power-menu-popup .button.hover .label,
 .power-menu-popup .button.hover .icon {
-    color: var(--home-accent);
+    color: #578875;
 }
 
 .power-menu-popup .button.cancel {
@@ -1593,32 +1566,32 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 .power-menu-popup .button.cancel.hover .label {
-    color: var(--mantle);
+    color: #060A08;
 }
 
 .uptime {
     font-size: 13px;
     margin-bottom: 16px;
-    color: var(--home-muted);
+    color: #798985;
     font-weight: 500;
 }
 
 /***----------------------------------      • Traffic Widget •      -----------------------------------***/
 
 .traffic-widget .widget-container .label {
-    color: var(--icon);
+    color: #aec4be;
 }
 
 .traffic-menu {
-    background-color: var(--mantle);
+    background-color: #060A08;
     min-width: 280px;
     border-radius: 8px;
 }
 
 .traffic-menu .header {
     padding: 10px 14px;
-    border-bottom: 1px solid var(--surface1);
-    color: var(--text);
+    border-bottom: 1px solid #30504E;
+    color: #aec4be;
     font-weight: 600;
 }
 
@@ -1628,25 +1601,25 @@ Example: "Windows Media" becomes "windows-media" */
 
 .traffic-menu .contents .item {
     padding: 6px 0;
-    color: var(--text);
+    color: #aec4be;
 }
 
 /***----------------------------------      • WiFi Widget •      -----------------------------------***/
 
 .wifi-widget .widget-container .label {
-    color: var(--icon);
+    color: #aec4be;
 }
 
 .wifi-menu {
-    background-color: var(--mantle);
+    background-color: #060A08;
     min-width: 300px;
     border-radius: 8px;
 }
 
 .wifi-menu .header {
     padding: 10px 14px;
-    border-bottom: 1px solid var(--surface1);
-    color: var(--text);
+    border-bottom: 1px solid #30504E;
+    color: #aec4be;
     font-weight: 600;
 }
 
@@ -1656,7 +1629,7 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 .wifi-menu .contents .item:hover {
-    background-color: var(--surface1);
+    background-color: #30504E;
 }
 
 /***----------------------------------      • AI Chat Widget •      -----------------------------------***/
@@ -1672,8 +1645,6 @@ Example: "Windows Media" becomes "windows-media" */
 
 .ai-chat-popup {
     background-color: rgba(6, 10, 8, 0.95);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     min-width: 500px;
     max-width: 500px;
     min-height: 600px;
