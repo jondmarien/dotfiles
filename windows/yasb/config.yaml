@@ -57,6 +57,9 @@ bars:
       right:
         [
           "taskbar",
+          "cpu",
+          "memory",
+          "gpu",
           "media_grouper",
           "system_monitor",
           "power_menu"
@@ -123,7 +126,7 @@ widgets:
     options:
       class_name: "system-monitor"
       hide_empty: false
-      widgets: ["cpu", "memory", "gpu", "disk", "volume", "traffic", "wifi", "bluetooth"]
+      widgets: ["disk", "volume", "traffic", "wifi", "bluetooth"]
       collapse_options:
         enabled: true  # Enable collapse for system monitor
         exclude_widgets: []  # All widgets can be collapsed
@@ -412,13 +415,14 @@ widgets:
         on_left: "toggle_chat"
       providers:
         - provider: "Perplexity"
-          api_endpoint: "https://api.perplexity.ai"
+          api_endpoint: "https://api.perplexity.ai/chat/completions"
           credential: "env"
           models:
             - name: "sonar"
               label: "Sonar"
             - name: "sonar-pro"
               label: "Sonar Pro"
+              max_tokens: 4096
       label_shadow:
         enabled: true
         color: "black"
