@@ -60,6 +60,7 @@ bars:
           "cpu",
           "memory",
           "gpu",
+          "traffic",
           "media_grouper",
           "system_monitor",
           "power_menu"
@@ -126,7 +127,7 @@ widgets:
     options:
       class_name: "system-monitor"
       hide_empty: false
-      widgets: ["disk", "volume", "traffic", "wifi", "bluetooth"]
+      widgets: ["disk", "volume", "wifi", "bluetooth"]
       collapse_options:
         enabled: true  # Enable collapse for system monitor
         exclude_widgets: []  # All widgets can be collapsed
@@ -352,7 +353,7 @@ widgets:
     options:
       label: "<span>\uef16</span>"  # Windsurf icon
       label_alt: "<span>\uef16</span> recents"
-      menu_title: "<span style='font-weight:bold'>Windsurf Next</span> recents"
+      menu_title: "Windsurf Next recents"
       max_field_size: 50
       folder_icon: "\uf114"
       file_icon: "\uf016"
@@ -361,7 +362,7 @@ widgets:
       hide_file_icon: false
       max_number_of_folders: 20
       max_number_of_files: 10
-      modified_date_format: "Date modified %m/%d/%y %H:%M"
+      modified_date_format: "%m/%d/%y %H:%M"
       cli_command: "windsurf-next"
       # Path to Windsurf Next state database
       state_storage_path: "C:\\Users\\nucle\\AppData\\Roaming\\Windsurf - Next\\User\\globalStorage\\state.vscdb"
@@ -369,7 +370,7 @@ widgets:
         blur: true
         round_corners: true
         round_corners_type: "normal"
-        border_color: "System"
+        border_color: "#798985"
         alignment: "center"
         direction: "down"
         offset_top: 6
