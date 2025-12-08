@@ -59,6 +59,7 @@ bars:
           "taskbar",
           "media",
           "system_monitor",
+          "volume",
           "bluetooth",
           "power_menu"
         ]
@@ -71,6 +72,12 @@ widgets:
       class_name: "wm-controls"
       hide_empty: false
       widgets: ["glazewm_workspaces", "komorebi_control", "komorebi_workspaces", "komorebi_stack"]
+      collapse_options:
+        enabled: false  # Set to true to enable collapse functionality
+        exclude_widgets: []  # Widgets that stay visible when collapsed
+        expanded_label: "\uf054"  # Icon when expanded
+        collapsed_label: "\uf053"  # Icon when collapsed
+        label_position: "right"  # "left" or "right"
       container_shadow:
         enabled: true
         color: "black"
@@ -83,6 +90,12 @@ widgets:
       class_name: "notifications-group"
       hide_empty: true
       widgets: ["obs", "github", "notes"]
+      collapse_options:
+        enabled: true  # Enable collapse for notifications
+        exclude_widgets: []  # All widgets can be collapsed
+        expanded_label: "\uf054"  # Icon when expanded
+        collapsed_label: "\uf053"  # Icon when collapsed
+        label_position: "right"  # "left" or "right"
       container_shadow:
         enabled: true
         color: "black"
@@ -95,6 +108,12 @@ widgets:
       class_name: "system-monitor"
       hide_empty: false
       widgets: ["cpu", "memory", "gpu", "disk"]
+      collapse_options:
+        enabled: true  # Enable collapse for system monitor
+        exclude_widgets: []  # All widgets can be collapsed
+        expanded_label: "\uf054"  # Icon when expanded
+        collapsed_label: "\uf053"  # Icon when collapsed
+        label_position: "right"  # "left" or "right"
       container_shadow:
         enabled: true
         color: "black"
@@ -297,6 +316,8 @@ widgets:
       only_unread: false
       max_field_size: 54
       update_interval: 60
+      show_comment_count: false  # NEW v1.8.4: Display comment counts for issues/PRs
+      reason_filters: []  # NEW v1.8.4: Filter by reason (e.g., ['mention', 'assign', 'review_requested'])
       notification_dot:
         enabled: true
         corner: "bottom_left"
@@ -336,7 +357,7 @@ widgets:
       locale: ""
       update_interval: 1000
       timezones: []
-      calendar: 
+      calendar:
         blur: True
         round_corners: True
         round_corners_type: "normal"
@@ -558,6 +579,7 @@ widgets:
         style: "left"
         separator: " | "
         label_padding: 1
+        always_scroll: false
         
   # CPU, Memory, and Disk Widgets
   cpu:
@@ -617,6 +639,42 @@ widgets:
         color: "black"
         radius: 3
         offset: [ 1, 1 ]
+  volume:
+    type: "yasb.volume.VolumeWidget"
+    options:
+      label: "<span>{icon}</span> {level}"
+      label_alt: "{volume}"
+      volume_icons:
+        - "\ueee8"  # Icon muted
+        - "\uf026"  # Icon 0-25%
+        - "\uf027"  # Icon 26-75%
+        - "\uf028"  # Icon 76-100%
+      callbacks:
+        on_left: "toggle_volume_menu"  # NEW v1.8.4: Opens volume menu with app controls
+        on_middle: "do_nothing"
+        on_right: "toggle_mute"
+      audio_menu:  # NEW v1.8.4: App volume control menu
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_apps: true  # NEW: Show individual app volume controls
+        show_app_labels: false
+        show_app_icons: true
+        show_apps_expanded: false  # NEW: Auto-expand app volumes (false = collapsed by default)
+        app_icons:
+          toggle_down: "\uf078"  # Icon when collapsed
+          toggle_up: "\uf077"    # Icon when expanded
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+
   bluetooth:
     type: "yasb.bluetooth.BluetoothWidget"
     options:
