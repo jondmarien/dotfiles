@@ -89,7 +89,7 @@ widgets:
     options:
       class_name: "notifications-group"
       hide_empty: false  # Changed to false to debug - github widget was hidden
-      widgets: ["obs", "github", "notes"]
+      widgets: ["obs", "github", "windsurf", "notes"]
       collapse_options:
         enabled: true  # Enable collapse for notifications
         exclude_widgets: []  # All widgets can be collapsed
@@ -327,6 +327,47 @@ widgets:
         radius: 3
         offset: [1, 1]
       animation: true
+
+  windsurf:
+    type: "yasb.vscode.VSCodeWidget"
+    options:
+      label: "<span>\uef16</span>"  # Windsurf icon
+      label_alt: "<span>\uef16</span> recents"
+      menu_title: "<span style='font-weight:bold'>Windsurf Next</span> recents"
+      max_field_size: 50
+      folder_icon: "\uf114"
+      file_icon: "\uf016"
+      truncate_to_root_dir: true
+      hide_folder_icon: false
+      hide_file_icon: false
+      max_number_of_folders: 20
+      max_number_of_files: 10
+      modified_date_format: "Date modified %m/%d/%y %H:%M"
+      cli_command: "windsurf-next"
+      # Path to Windsurf Next state database
+      state_storage_path: "C:\\Users\\nucle\\AppData\\Roaming\\Windsurf - Next\\User\\globalStorage\\state.vscdb"
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "center"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+      animation:
+        enabled: true
+        type: "fadeInOut"
+        duration: 200
 
   obs:
     type: "yasb.obs.ObsWidget"
