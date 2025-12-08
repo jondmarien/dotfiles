@@ -1480,3 +1480,226 @@ Example: "Windows Media" becomes "windows-media" */
 .vscode-menu .contents .item:hover {
     background-color: rgba(69, 71, 90, 0.7) !important;
 }
+
+/***----------------------------------      • Grouper Widget Styling •      -----------------------------------***/
+
+/* Remove grey background from all groupers */
+.grouper .container {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+}
+
+.grouper .grouper-button {
+    font-size: 12px;
+    color: var(--icon);
+    padding: 0 6px;
+    background-color: transparent;
+    border: none;
+}
+
+.grouper .grouper-button:hover {
+    color: var(--home-accent);
+}
+
+/* Specific grouper overrides */
+.notifications-group .container {
+    background-color: transparent;
+}
+
+.system-monitor .container {
+    background-color: transparent;
+}
+
+.wm-controls .container {
+    background-color: transparent;
+}
+
+.media-grouper .container {
+    background-color: transparent;
+}
+
+/***----------------------------------      • Power Menu Widget •      -----------------------------------***/
+
+.power-menu-widget .label {
+    color: var(--icon);
+    font-size: 14px;
+}
+
+.power-menu-popup {
+    background-color: transparent;
+}
+
+.power-menu-popup .button {
+    padding: 20px;
+    width: 140px;
+    height: 160px;
+    border-radius: 8px;
+    background-color: var(--mantle);
+    border: 2px solid var(--surface1);
+    margin: 6px;
+}
+
+.power-menu-popup .button.hover {
+    background-color: var(--surface1);
+    border: 2px solid var(--home-accent);
+}
+
+.power-menu-popup .button .label {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.power-menu-popup .button .icon {
+    font-size: 42px;
+    padding: 16px 0;
+    color: var(--icon);
+}
+
+.power-menu-popup .button.hover .label,
+.power-menu-popup .button.hover .icon {
+    color: var(--home-accent);
+}
+
+.power-menu-popup .button.cancel .icon {
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    font-size: 0;
+}
+
+.power-menu-popup .button.cancel .label {
+    color: var(--red);
+    margin: 0;
+    font-size: 14px;
+}
+
+.power-menu-popup .button.cancel {
+    height: 40px;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.power-menu-popup .button.cancel.hover .label {
+    color: var(--home-accent);
+}
+
+.uptime {
+    font-size: 13px;
+    margin-bottom: 12px;
+    color: var(--home-muted);
+    font-weight: 600;
+}
+
+/***----------------------------------      • Traffic Widget •      -----------------------------------***/
+
+.traffic-widget .widget-container .label {
+    color: var(--icon);
+}
+
+.traffic-menu {
+    background-color: var(--mantle);
+    min-width: 280px;
+    border-radius: 8px;
+}
+
+.traffic-menu .header {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--surface1);
+    color: var(--text);
+    font-weight: 600;
+}
+
+.traffic-menu .contents {
+    padding: 8px 14px;
+}
+
+.traffic-menu .contents .item {
+    padding: 6px 0;
+    color: var(--text);
+}
+
+/***----------------------------------      • WiFi Widget •      -----------------------------------***/
+
+.wifi-widget .widget-container .label {
+    color: var(--icon);
+}
+
+.wifi-menu {
+    background-color: var(--mantle);
+    min-width: 300px;
+    border-radius: 8px;
+}
+
+.wifi-menu .header {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--surface1);
+    color: var(--text);
+    font-weight: 600;
+}
+
+.wifi-menu .contents .item {
+    padding: 8px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wifi-menu .contents .item:hover {
+    background-color: var(--surface1);
+}
+
+/***----------------------------------      • AI Chat Widget •      -----------------------------------***/
+
+.ai-chat-widget .widget-container .label {
+    color: var(--icon);
+}
+
+.ai-chat-popup {
+    background-color: var(--mantle);
+    min-width: 400px;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.ai-chat-popup .header {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--surface1);
+    color: var(--text);
+    font-weight: 600;
+}
+
+.ai-chat-popup .message {
+    padding: 10px 14px;
+    margin: 4px 0;
+}
+
+.ai-chat-popup .message.user {
+    background-color: var(--surface1);
+    border-radius: 8px;
+}
+
+.ai-chat-popup .message.assistant {
+    color: var(--text);
+}
+
+.ai-chat-popup .input-area {
+    padding: 10px;
+    border-top: 1px solid var(--surface1);
+}
+
+.ai-chat-popup .input-area input {
+    background-color: var(--base);
+    border: 1px solid var(--surface1);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: var(--text);
+}
+
+.ai-chat-popup .btn {
+    background-color: var(--home-accent);
+    color: var(--mantle);
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+}

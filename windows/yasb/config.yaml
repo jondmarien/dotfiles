@@ -57,15 +57,31 @@ bars:
       right:
         [
           "taskbar",
-          "media",
+          "media_grouper",
           "system_monitor",
-          "volume",
-          "bluetooth",
           "power_menu"
         ]
 
 widgets:
   # Grouper Widgets
+  media_grouper:
+    type: "yasb.grouper.GrouperWidget"
+    options:
+      class_name: "media-grouper"
+      hide_empty: true  # Hide when no media playing
+      widgets: ["media"]
+      collapse_options:
+        enabled: true
+        exclude_widgets: []
+        expanded_label: "\uf054"
+        collapsed_label: "\uf053"
+        label_position: "right"
+      container_shadow:
+        enabled: false
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+
   wm_controls:
     type: "yasb.grouper.GrouperWidget"
     options:
@@ -89,7 +105,7 @@ widgets:
     options:
       class_name: "notifications-group"
       hide_empty: false  # Changed to false to debug - github widget was hidden
-      widgets: ["obs", "github", "windsurf", "notes"]
+      widgets: ["obs", "github", "windsurf", "ai_chat", "notes"]
       collapse_options:
         enabled: true  # Enable collapse for notifications
         exclude_widgets: []  # All widgets can be collapsed
@@ -107,7 +123,7 @@ widgets:
     options:
       class_name: "system-monitor"
       hide_empty: false
-      widgets: ["cpu", "memory", "gpu", "disk"]
+      widgets: ["cpu", "memory", "gpu", "disk", "volume", "traffic", "wifi", "bluetooth"]
       collapse_options:
         enabled: true  # Enable collapse for system monitor
         exclude_widgets: []  # All widgets can be collapsed
@@ -368,6 +384,46 @@ widgets:
         enabled: true
         type: "fadeInOut"
         duration: 200
+
+  ai_chat:
+    type: "yasb.ai_chat.AiChatWidget"
+    options:
+      label: "<span>\uf086</span>"
+      chat:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "center"
+        direction: "down"
+        offset_left: 0
+        offset_top: 6
+      icons:
+        send: "\uf1d8"
+        stop: "\uf04d"
+        clear: "\uf1f8"
+        assistant: "\udb81\ude74"
+      notification_dot:
+        enabled: false
+        corner: "top_right"
+        color: "red"
+        margin: [0, 2]
+      callbacks:
+        on_left: "toggle_chat"
+      providers:
+        - provider: "Perplexity"
+          api_endpoint: "https://api.perplexity.ai"
+          credential: "env"
+          models:
+            - name: "sonar"
+              label: "Sonar"
+            - name: "sonar-pro"
+              label: "Sonar Pro"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
 
   obs:
     type: "yasb.obs.ObsWidget"
@@ -810,6 +866,69 @@ widgets:
         color: "black"
         radius: 3
         offset: [1, 1]
+
+  traffic:
+    type: "yasb.traffic.TrafficWidget"
+    options:
+      label: "\ueab4 {download_speed} \ueab7 {upload_speed}"
+      label_alt: "D: {download_speed} | U: {upload_speed}"
+      update_interval: 1000
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_interface_name: true
+        show_internet_info: true
+      callbacks:
+        on_left: "toggle_menu"
+        on_right: "toggle_label"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+
+  wifi:
+    type: "yasb.wifi.WifiWidget"
+    options:
+      label: "<span>{wifi_icon}</span>"
+      label_alt: "{wifi_name} {wifi_strength}%"
+      update_interval: 5000
+      hide_if_ethernet: true  # Hide when using ethernet
+      ethernet_label: "<span>{wifi_icon}</span>"
+      ethernet_label_alt: "<span>{wifi_icon}</span> {ip_addr}"
+      ethernet_icon: "\ueba9"
+      get_exact_wifi_strength: false
+      wifi_icons: [
+        "\udb82\udd2e",
+        "\udb82\udd1f",
+        "\udb82\udd22",
+        "\udb82\udd25",
+        "\udb82\udd28"
+      ]
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "exec cmd.exe /c start ms-settings:network"
+        on_right: "toggle_label"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+      menu_config:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
 
   bluetooth:
     type: "yasb.bluetooth.BluetoothWidget"
