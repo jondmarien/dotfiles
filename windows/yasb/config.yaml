@@ -973,25 +973,25 @@ widgets:
   power_menu:
     type: "yasb.power_menu.PowerMenuWidget"
     options:
-      label: "\uf011"
-      uptime: True
-      blur: False
-      blur_background: True
-      animation_duration: 300 # Milliseconds
-      button_row: 3 # Number of buttons in a row, min 1 max 5
+      label: "\udb80\udc35"
+      uptime: true
+      blur: false
+      blur_background: true
+      animation_duration: 300
+      button_row: 3
       buttons:
-        lock: ["\uf023", "Lock"]
-        sleep: ["\uf186","Sleep"]
-        signout: ["\uf2f5", "Sign out"]
-        shutdown: ["\uf011", "Shut Down"]
-        restart: ["\uf2f1", "Restart"]
-        hibernate: ["\uf28e", "Hibernate"]
-        cancel: ["\uf00d", "Cancel"]
+        lock: ["\udb80\udc3d", "Lock"]
+        sleep: ["\udb81\udf4e", "Sleep"]
+        signout: ["\udb80\udf44", "Sign Out"]
+        shutdown: ["\udb80\udc35", "Shutdown"]
+        restart: ["\udb82\udc79", "Restart"]
+        hibernate: ["\udb81\udf2c", "Hibernate"]
+        cancel: ["\udb80\udd59", "Cancel"]
       label_shadow:
         enabled: true
         color: "black"
         radius: 3
-        offset: [ 1, 1 ]
+        offset: [1, 1]
 
   gpu:
     type: "yasb.gpu.GpuWidget"

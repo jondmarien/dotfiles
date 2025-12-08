@@ -1527,17 +1527,19 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 .power-menu-popup {
-    background-color: transparent;
+    background-color: rgba(6, 10, 8, 0.95);
+    padding: 20px;
+    border-radius: 12px;
 }
 
 .power-menu-popup .button {
-    padding: 20px;
-    width: 140px;
-    height: 160px;
-    border-radius: 8px;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
     background-color: var(--mantle);
     border: 2px solid var(--surface1);
-    margin: 6px;
+    margin: 8px;
+    padding: 10px;
 }
 
 .power-menu-popup .button.hover {
@@ -1546,16 +1548,17 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 .power-menu-popup .button .label {
-    margin-top: 12px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
     color: var(--text);
+    padding: 8px 0 0 0;
 }
 
 .power-menu-popup .button .icon {
-    font-size: 42px;
-    padding: 16px 0;
+    font-size: 36px;
+    font-family: "JetBrainsMono NFP";
     color: var(--icon);
+    padding: 10px 0;
 }
 
 .power-menu-popup .button.hover .label,
@@ -1563,34 +1566,41 @@ Example: "Windows Media" becomes "windows-media" */
     color: var(--home-accent);
 }
 
+.power-menu-popup .button.cancel {
+    height: 44px;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
 .power-menu-popup .button.cancel .icon {
+    font-size: 0;
     padding: 0;
     margin: 0;
     max-height: 0;
-    font-size: 0;
 }
 
 .power-menu-popup .button.cancel .label {
-    color: var(--red);
-    margin: 0;
-    font-size: 14px;
+    color: #ff6b6b;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0;
 }
 
-.power-menu-popup .button.cancel {
-    height: 40px;
-    width: 100%;
-    border-radius: 6px;
+.power-menu-popup .button.cancel.hover {
+    background-color: #ff6b6b;
+    border-color: #ff6b6b;
 }
 
 .power-menu-popup .button.cancel.hover .label {
-    color: var(--home-accent);
+    color: var(--mantle);
 }
 
 .uptime {
     font-size: 13px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     color: var(--home-muted);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 /***----------------------------------      • Traffic Widget •      -----------------------------------***/
