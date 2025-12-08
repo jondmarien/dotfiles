@@ -299,9 +299,34 @@ widgets:
       offline_label: "GlazeWM Offline"
       hide_empty_workspaces: true
       hide_if_offline: false
-      # NEW v1.8.5: Optional distinction between active and focused workspaces
-      focused_populated_label: "WS: {name}"  # Label for focused populated workspace (defaults to active label)
-      focused_empty_label: "Empty: {name}"      # Label for focused empty workspace (defaults to active label)
+      # Label customization (uses {name} or {display_name} from GlazeWM config)
+      # populated_label: "{name}"        # Non-active workspace with windows
+      # empty_label: "{name}"            # Non-active workspace without windows
+      # active_populated_label: "{name}" # Active workspace with windows
+      # active_empty_label: "{name}"     # Active workspace without windows
+      # NEW v1.8.5: Focused workspace distinction (multi-monitor)
+      focused_populated_label: "WS: {name}"  # Focused workspace with windows
+      focused_empty_label: "Empty: {name}"   # Focused workspace without windows
+      # Scroll to switch workspaces
+      enable_scroll_switching: true
+      reverse_scroll_direction: false
+      # App icons in workspace buttons
+      app_icons:
+        enabled_populated: false  # Show icons in populated workspaces
+        enabled_active: true      # Show icons in active workspace
+        enabled_focused: true     # Show icons in focused workspace (v1.8.5)
+        size: 14
+        max_icons: 4              # 0 = unlimited
+        hide_label: false         # Hide workspace name when icons shown
+        hide_duplicates: true     # Hide duplicate app icons
+        hide_floating: false      # Hide floating window icons
+      # Styling
+      btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+      animation: true
 
   obs:
     type: "yasb.obs.ObsWidget"
