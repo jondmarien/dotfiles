@@ -43,12 +43,12 @@
 /* 1. Layout and Containers                                                                           */
 /* -------------------------------------------------------------------------------------------------- */
 
-* {
-	/*font-size: 12px;*/
-	color: var(--home-accent);
-	font-weight: 900;
+/* Global styles - only apply to the bar, not popups */
+.yasb-bar * {
+	font-size: 12px;
+	color: var(--text);
+	font-weight: 600;
 	font-family: "JetBrainsMono NFP";
-	/* Removed margin: 0 and padding: 0 - was breaking popup menus */
 }
 .yasb-bar {
 	padding: 0 4px;
