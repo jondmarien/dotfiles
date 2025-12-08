@@ -26,7 +26,7 @@ bars:
       acrylic: true
       dark_mode: true
       round_corners: true
-      border_color: none
+      border_color: "none"
     window_flags:
       always_on_top: false
       windows_app_bar: true
@@ -142,7 +142,7 @@ widgets:
       blur: true
       round_corners: true
       round_corners_type: "normal"
-      border_color: ""
+      border_color: "System"
       distance: 10
   bin:
     type: "yasb.recycle_bin.RecycleBinWidget"

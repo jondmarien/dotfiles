@@ -336,6 +336,29 @@
     background-color: transparent;
 }
 
+/* Fix scroll pass-through issue */
+.github-menu .scroll-area {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.github-menu .scroll-area QScrollBar:vertical {
+    width: 8px;
+    background: transparent;
+}
+
+.github-menu .scroll-area QScrollBar::handle:vertical {
+    background: var(--colors8);
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+.github-menu .scroll-area QScrollBar::add-line:vertical,
+.github-menu .scroll-area QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
 .github-menu .contents .item {
     min-height: 44px;
     padding: 10px 16px;
@@ -1412,75 +1435,57 @@ Example: "Windows Media" becomes "windows-media" */
 
 /***----------------------------------      • Windsurf / VSCode Widget •      -----------------------------------***/
 
-.vscode-widget .widget-container .label {
-    color: var(--icon);
-}
 .vscode-widget .widget-container .icon {
-    color: #57948a;  /* Windsurf teal color */
+    color: #57948a;
 }
 
-/* Popup menu */
 .vscode-menu {
     max-height: 500px;
-    min-width: 350px;
-    background-color: var(--mantle);
+    min-width: 300px;
 }
 
 .vscode-menu .header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 14px;
-    font-weight: 600;
-    padding: 10px 12px;
-    color: var(--text);
+    font-size: 15px;
+    font-weight: 400;
+    padding: 8px;
+    color: #cdd6f4;
     background-color: rgba(17, 17, 27, 0.4);
-    font-family: 'JetBrainsMono NFP';
 }
 
 .vscode-menu .contents {
-    background-color: transparent;
+    background-color: rgba(17, 17, 27, 0.4);
 }
 
 .vscode-menu .contents .item {
-    min-height: 32px;
+    min-height: 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.075);
-    padding: 4px 8px;
 }
 
 .vscode-menu .contents .item .title {
     font-size: 12px;
     margin-right: 5px;
-    font-family: 'JetBrainsMono NFP';
-    color: var(--text);
 }
 
 .vscode-menu .contents .item .modified-date {
     font-size: 11px;
     margin-right: 5px;
-    color: var(--home-muted);
-    font-family: 'JetBrainsMono NFP';
+    color: #797e91;
 }
 
 .vscode-menu .contents .item .folder-icon {
     font-size: 16px;
     margin-left: 8px;
-    color: var(--home-accent);  /* Folder icon color */
+    color: #f2cdcd;
 }
 
 .vscode-menu .contents .item .file-icon {
     font-size: 16px;
     margin-left: 8px;
-    color: var(--home-secondary);  /* File icon color */
+    color: #cba6f7;
 }
 
 .vscode-menu .contents .item:hover {
-    background-color: var(--surface1);
+    background-color: #45475a;
     border-bottom: 1px solid rgba(255, 255, 255, 0);
-}
-
-.vscode-menu .no-recent {
-    font-family: 'JetBrainsMono NFP';
-    color: var(--home-muted);
-    font-size: 14px;
-    padding: 20px;
-    text-align: center;
 }
