@@ -88,7 +88,7 @@ widgets:
     type: "yasb.grouper.GrouperWidget"
     options:
       class_name: "notifications-group"
-      hide_empty: true
+      hide_empty: false  # Changed to false to debug - github widget was hidden
       widgets: ["obs", "github", "notes"]
       collapse_options:
         enabled: true  # Enable collapse for notifications
@@ -215,6 +215,8 @@ widgets:
         reload: "\uead2"
       run_ahk: false
       run_whkd: true
+      # NEW v1.8.6: Option to run Masir
+      run_masir: false
       show_version: true
       komorebi_menu:
         blur: true
@@ -276,6 +278,11 @@ widgets:
         return_format: "string"
         hide_empty: true
         use_shell: false
+      # NEW v1.8.5: Tooltip support for custom widgets
+      tooltip:
+        enabled: false
+        tooltip_label: "GlazeWM Restore - Click to fix workspace state"  # Can use {data} placeholders like: "{data[key]}"
+        tooltip_delay: 400  # Delay in ms before tooltip appears
       callbacks:
         on_left: "exec"
         on_middle: "toggle_label"
@@ -292,6 +299,9 @@ widgets:
       offline_label: "GlazeWM Offline"
       hide_empty_workspaces: true
       hide_if_offline: false
+      # NEW v1.8.5: Optional distinction between active and focused workspaces
+      focused_populated_label: "WS: {name}"  # Label for focused populated workspace (defaults to active label)
+      focused_empty_label: "Empty: {name}"      # Label for focused empty workspace (defaults to active label)
 
   obs:
     type: "yasb.obs.ObsWidget"
@@ -310,19 +320,40 @@ widgets:
     type: "yasb.github.GithubWidget"
     options:
       label: "<span>\ueba1</span>"
-      label_alt: "Notifications {data}"
-      token: ""
-      max_notification: 20
+      label_alt: "Notifications {data}"  # {data} returns number of unread notifications
+      tooltip: true  # Show tooltip on hover
+      # Token options:
+      # 1. Set directly: token: "ghp_xxxxxxxxxxxx"
+      # 2. Use environment variable: token: "env" (reads YASB_GITHUB_TOKEN)
+      # Get your token at: https://github.com/settings/tokens (Personal access tokens - classic)
+      # Required scope: "notifications" (read)
+      token: "env"  # Set YASB_GITHUB_TOKEN environment variable, or replace with your token
+      max_notification: 30  # Max 50
       only_unread: false
       max_field_size: 54
-      update_interval: 60
-      show_comment_count: false  # NEW v1.8.4: Display comment counts for issues/PRs
-      reason_filters: []  # NEW v1.8.4: Filter by reason (e.g., ['mention', 'assign', 'review_requested'])
+      update_interval: 300  # Check interval in seconds (min: 60, max: 3600)
+      show_comment_count: true  # Fetch comment counts for issues/PRs (extra API call)
+      reason_filters: []  # e.g., ['mention', 'assign', 'review_requested'] - empty = all
       notification_dot:
         enabled: true
-        corner: "bottom_left"
+        corner: "bottom_left"  # top_left, top_right, bottom_left, bottom_right
         color: "red"
         margin: [1, 1]
+      # Icons for different notification types
+      icons:
+        issue: "\uf41b"
+        issue_closed: "\uf41d"
+        pull_request: "\uea64"
+        pull_request_closed: "\uebda"
+        pull_request_merged: "\uf17f"
+        pull_request_draft: "\uebdb"
+        release: "\uea84"
+        discussion: "\uf442"
+        discussion_answered: "\uf4c0"
+        checksuite: "\uf418"
+        default: "\uea84"
+        github_logo: "\ueba1"
+        comment: "\uf41f"
       menu:
         blur: true
         round_corners: true
@@ -330,6 +361,10 @@ widgets:
         border_color: "System"
         alignment: "right"
         direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_categories: true  # Group notifications by type (PullRequest, Issue, etc.)
+        categories_order: ["PullRequest", "Issue", "CheckSuite", "Release", "Discussion"]
       label_shadow:
         enabled: true
         color: "black"
@@ -380,8 +415,9 @@ widgets:
   weather:
     type: "yasb.weather.WeatherWidget"
     options:
+      # NEW v1.8.5: Added {chance_of_rain} and {chance_of_snow} placeholders
       label: "<span>{icon}</span> {conditions} {temp}"
-      label_alt: "{location}: {conditions}, Min {min_temp}, Max {max_temp}, Humidity {humidity}"
+      label_alt: "{location}: {conditions}, Min {min_temp}, Max {max_temp}, Humidity {humidity}, Rain {chance_of_rain}%, Snow {chance_of_snow}%"
       api_key: '53c6b436eaa649beadb50948252306'
       update_interval: 600 #Update interval in seconds, Min 600
       hide_decimal: true
@@ -409,11 +445,36 @@ widgets:
         direction: "down"
         distance: 6
         icon_size: 48
+        # NEW v1.8.5: Hourly forecast options
+        show_hourly_forecast: true
+        time_format: "12h"  # "12h" or "24h"
+        hourly_point_spacing: 76
+        hourly_icon_size: 32
+        icon_smoothing: true
+        temp_line_width: 2
+        current_line_color: "#8EAEE8"
+        current_line_width: 1
+        current_line_style: "dot"  # "solid", "dash", "dot"
+        # NEW v1.8.6: Weather animation effects for hourly widget
+        hourly_gradient:
+          enabled: true
+          top_color: "#8EAEE8"
+          bottom_color: "#2A3E68"
+        weather_animation:
+          enabled: true
+          snow_overrides_rain: true
+          temp_line_animation_style: "both"  # "rain", "snow", "both", or "none"
+          rain_effect_intensity: 1.0  # 0.01 - 10.0
+          snow_effect_intensity: 1.0  # 0.01 - 10.0
+          scale_with_chance: true
+          enable_debug: false
   notes:
     type: "yasb.notes.NotesWidget"
     options:
       label: "<span>\udb82\udd0c</span> {count}"
       label_alt: "{count} notes"
+      # NEW v1.8.5: Custom data path for notes storage (defaults to ~/.config/yasb/notes.json)
+      data_path: "C:\\Users\\nucle\\.config\\yasb\\notes.json"
       menu:
         blur: true
         round_corners: true
@@ -446,12 +507,18 @@ widgets:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
       label: "<span>\udb83\ude09</span>"
+      # NEW v1.8.6: Support for multiple image folders (can be a single path or a list)
       image_path: "C:\\Users\\nucle\\Downloads\\wALLpapers"
+      # image_path:  # Example of multiple folders
+      #   - "C:\\Users\\nucle\\Downloads\\wALLpapers"
+      #   - "C:\\Users\\nucle\\Pictures\\Wallpapers"
       change_automatically: false
       update_interval: 60
       gallery:
         enabled: true
         blur: true
+        # NEW v1.8.6: gallery_columns option for grid layout
+        gallery_columns: 4  # Number of columns in the gallery grid
         image_width: 220
         image_per_page: 8
         show_buttons: false
@@ -462,6 +529,9 @@ widgets:
         lazy_load_fadein: 400
         image_corner_radius: 20
         enable_cache: true
+        # NEW v1.8.6: Custom gallery position (optional)
+        # offset_top: 0
+        # offset_left: 0
       run_after:
         - "wal -i '{image}'"
         - "pwsh -File C:\\Users\\nucle\\.config\\yasb\\inject-wal-colors.ps1"
