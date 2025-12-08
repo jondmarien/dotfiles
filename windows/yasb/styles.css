@@ -1414,71 +1414,71 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 .vscode-menu {
-    max-height: 500px !important;
-    min-width: 380px !important;
-    background-color: rgba(17, 17, 27, 0.95) !important;
-    border-radius: 8px !important;
+    background-color: rgba(6, 10, 8, 0.95);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    max-height: 500px;
+    min-width: 420px;
+    border-radius: 8px;
+    border: 1px solid #798985;
 }
 
 .vscode-menu .header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    padding: 12px 14px !important;
-    color: #cdd6f4 !important;
-    background-color: rgba(30, 30, 46, 0.9) !important;
+    border-bottom: 1px solid #798985;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "JetBrainsMono NFP";
+    padding: 12px 16px;
+    color: #aec4be;
+    background-color: rgba(6, 10, 8, 0.8);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .vscode-menu .contents {
-    background-color: transparent !important;
+    background-color: transparent;
+}
+
+.vscode-menu .scroll-area {
+    background: transparent;
+    border: none;
 }
 
 .vscode-menu .contents .item {
-    min-height: 52px !important;
-    padding: 10px 16px 10px 16px !important;
-    margin: 0 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-    background-color: transparent !important;
-    line-height: 1.4 !important;
-}
-
-.vscode-menu .contents .item * {
-    padding: 2px 0 !important;
-    margin: 0 !important;
-}
-
-.vscode-menu .contents .item .title {
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    color: #cdd6f4 !important;
-    padding: 0 0 4px 0 !important;
-    display: block !important;
-}
-
-.vscode-menu .contents .item .date-modified {
-    font-size: 11px !important;
-    font-weight: 400 !important;
-    color: #6c7086 !important;
-    padding: 0 !important;
-    display: block !important;
-}
-
-.vscode-menu .contents .item .folder-icon {
-    font-size: 20px !important;
-    padding: 0 12px 0 0 !important;
-    margin: 0 !important;
-    color: #f2cdcd !important;
-}
-
-.vscode-menu .contents .item .file-icon {
-    font-size: 20px !important;
-    padding: 0 12px 0 0 !important;
-    margin: 0 !important;
-    color: #cba6f7 !important;
+    min-height: 50px;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(121, 137, 133, 0.2);
 }
 
 .vscode-menu .contents .item:hover {
-    background-color: rgba(69, 71, 90, 0.7) !important;
+    background-color: rgba(76, 107, 97, 0.2);
+    border-bottom-color: transparent;
+}
+
+.vscode-menu .contents .item .title {
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "JetBrainsMono NFP";
+    color: #aec4be;
+    margin-bottom: 4px;
+}
+
+.vscode-menu .contents .item .date-modified {
+    font-size: 11px;
+    font-family: "JetBrainsMono NFP";
+    color: #798985;
+}
+
+.vscode-menu .contents .item .folder-icon {
+    font-size: 18px;
+    padding-right: 12px;
+    color: #578875;
+}
+
+.vscode-menu .contents .item .file-icon {
+    font-size: 18px;
+    padding-right: 12px;
+    color: #526784;
 }
 
 /***----------------------------------      • Grouper Widget Styling •      -----------------------------------***/
@@ -1666,71 +1666,85 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 .ai-chat-widget .icon {
-    color: var(--home-accent);
+    color: #578875;
     font-size: 16px;
 }
 
 .ai-chat-popup {
-    background-color: rgba(6, 10, 8, 0.9);
+    background-color: rgba(6, 10, 8, 0.95);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     min-width: 500px;
     max-width: 500px;
     min-height: 600px;
     max-height: 600px;
     border-radius: 10px;
+    border: 1px solid #798985;
 }
 
 .ai-chat-popup .chat-header {
-    background-color: rgba(6, 10, 8, 0.6);
+    background-color: rgba(6, 10, 8, 0.8);
     padding: 16px;
+    border-bottom: 1px solid #798985;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .ai-chat-popup .chat-footer {
-    background-color: transparent;
+    background-color: rgba(6, 10, 8, 0.6);
     padding: 16px;
+    border-top: 1px solid #798985;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .ai-chat-popup .chat-header .provider-label,
 .ai-chat-popup .chat-header .model-label {
-    font-family: 'JetBrainsMono NFP';
+    font-family: "JetBrainsMono NFP";
     font-size: 13px;
-    color: var(--text);
+    color: #aec4be;
     margin-right: 8px;
     font-weight: 600;
 }
 
 .ai-chat-popup .chat-header .provider-button,
 .ai-chat-popup .chat-header .model-button {
-    font-family: 'JetBrainsMono NFP';
-    background-color: var(--mantle);
-    border: 1px solid var(--surface1);
+    font-family: "JetBrainsMono NFP";
+    background-color: #23334E;
+    border: 1px solid #798985;
     font-size: 12px;
-    color: var(--text);
+    color: #aec4be;
     margin-right: 8px;
-    min-width: 130px;
-    max-width: 130px;
+    min-width: 160px;
+    max-width: 180px;
     border-radius: 6px;
-    padding: 4px 10px;
+    padding: 6px 12px;
+}
+
+.ai-chat-popup .chat-header .provider-button:hover,
+.ai-chat-popup .chat-header .model-button:hover {
+    background-color: #30504E;
 }
 
 .ai-chat-popup .chat-header .provider-button:disabled,
 .ai-chat-popup .chat-header .model-button:disabled {
-    color: var(--home-muted);
+    color: #798985;
 }
 
 /* Context menu styles */
 .ai-chat-popup .context-menu {
-    background-color: var(--mantle);
-    border: 1px solid var(--surface1);
+    background-color: #060A08;
+    border: 1px solid #798985;
     padding: 4px 0;
-    font-family: 'JetBrainsMono NFP';
+    font-family: "JetBrainsMono NFP";
     font-size: 12px;
-    color: var(--text);
+    color: #aec4be;
     border-radius: 6px;
 }
 
 .ai-chat-popup .context-menu::separator {
     height: 1px;
-    background-color: var(--surface1);
+    background-color: #30504E;
     margin: 4px 8px;
 }
 
@@ -1739,27 +1753,29 @@ Example: "Windows Media" becomes "windows-media" */
     padding: 6px 12px;
     margin: 2px 6px;
     border-radius: 4px;
-    min-width: 100px;
+    min-width: 140px;
+    color: #aec4be;
+    font-family: "JetBrainsMono NFP";
 }
 
 .ai-chat-popup .chat-header .context-menu::item {
-    min-width: 130px;
-    max-width: 130px;
-    padding: 4px;
+    min-width: 160px;
+    max-width: 180px;
+    padding: 6px 10px;
 }
 
 .ai-chat-popup .context-menu::item:disabled {
-    color: var(--home-muted);
+    color: #798985;
 }
 
 .ai-chat-popup .context-menu::item:selected {
-    background-color: var(--surface1);
-    color: var(--text);
+    background-color: #30504E;
+    color: #aec4be;
 }
 
 .ai-chat-popup .context-menu::item:checked {
-    background-color: var(--home-accent);
-    color: var(--mantle);
+    background-color: #578875;
+    color: #060A08;
 }
 
 .ai-chat-popup .chat-content {
@@ -1769,93 +1785,92 @@ Example: "Windows Media" becomes "windows-media" */
 
 .ai-chat-popup .chat-content .empty-chat .greeting,
 .ai-chat-popup .chat-content .empty-chat .message {
-    color: var(--text);
-    font-family: 'JetBrainsMono NFP';
-    font-size: 36px;
+    color: #aec4be;
+    font-family: "JetBrainsMono NFP";
+    font-size: 28px;
     font-weight: 600;
 }
 
 .ai-chat-popup .chat-content .empty-chat .message {
-    color: var(--home-muted);
-    font-size: 18px;
+    color: #798985;
+    font-size: 16px;
     padding-top: 8px;
 }
 
 .ai-chat-popup .chat-content .user-message,
 .ai-chat-popup .chat-content .assistant-message {
-    color: var(--text);
-    padding: 10px 12px;
-    border-radius: 6px;
-    margin: 6px 0;
-    font-family: 'JetBrainsMono NFP';
+    color: #aec4be;
+    padding: 12px 14px;
+    border-radius: 8px;
+    margin: 8px 16px;
+    font-family: "JetBrainsMono NFP";
     font-size: 13px;
 }
 
 .ai-chat-popup .chat-content .user-message {
-    margin-left: 26px;
+    margin-left: 40px;
     background-color: transparent;
+    text-align: right;
 }
 
 .ai-chat-popup .chat-content .assistant-message {
-    background-color: rgba(48, 80, 78, 0.3);
-    border: 1px solid var(--surface1);
+    background-color: rgba(48, 80, 78, 0.4);
+    border: 1px solid rgba(121, 137, 133, 0.3);
 }
 
 .ai-chat-popup .chat-content .assistant-icon {
-    font-size: 20px;
-    color: var(--home-accent);
-    margin-right: 8px;
+    font-size: 18px;
+    color: #578875;
+    margin-right: 10px;
     font-family: "JetBrainsMono NFP";
 }
 
 .ai-chat-popup .chat-footer .chat-input {
-    background-color: var(--mantle);
-    border: 2px solid var(--surface1);
-    border-radius: 6px;
-    padding: 0 10px;
-    font-family: 'JetBrainsMono NFP';
+    background-color: #23334E;
+    border: 2px solid #798985;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-family: "JetBrainsMono NFP";
     font-size: 13px;
-    color: var(--text);
-    margin-top: 8px;
-    max-height: 32px;
-    min-height: 32px;
+    color: #aec4be;
+    min-height: 36px;
 }
 
 .ai-chat-popup .chat-footer .chat-input:focus {
-    border-color: var(--home-accent);
+    border-color: #578875;
 }
 
 .ai-chat-popup .chat-footer .clear-button,
 .ai-chat-popup .chat-footer .send-button,
 .ai-chat-popup .chat-footer .stop-button {
-    background-color: var(--surface1);
-    color: var(--text);
+    background-color: #30504E;
+    color: #aec4be;
     font-size: 14px;
-    max-width: 32px;
-    min-width: 32px;
-    max-height: 32px;
-    min-height: 32px;
+    max-width: 36px;
+    min-width: 36px;
+    max-height: 36px;
+    min-height: 36px;
     border-radius: 6px;
-    margin-top: 8px;
+    margin-left: 8px;
     border: none;
     font-family: "JetBrainsMono NFP";
 }
 
 .ai-chat-popup .chat-footer .stop-button {
-    background-color: var(--home-accent);
-    color: var(--mantle);
+    background-color: #578875;
+    color: #060A08;
 }
 
 .ai-chat-popup .chat-footer .clear-button:hover,
 .ai-chat-popup .chat-footer .send-button:hover,
 .ai-chat-popup .chat-footer .stop-button:hover {
-    background-color: var(--home-accent);
-    color: var(--mantle);
+    background-color: #578875;
+    color: #060A08;
 }
 
 .ai-chat-popup .chat-footer .clear-button:disabled,
 .ai-chat-popup .chat-footer .send-button:disabled,
 .ai-chat-popup .chat-footer .stop-button:disabled {
-    background-color: var(--mantle);
-    color: var(--home-muted);
+    background-color: #23334E;
+    color: #798985;
 }
