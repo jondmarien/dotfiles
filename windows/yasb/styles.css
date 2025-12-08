@@ -50,11 +50,32 @@
 	font-weight: 600;
 	font-family: "JetBrainsMono NFP";
 }
+
+/* Bar styling with dark mode support */
 .yasb-bar {
 	padding: 0 4px;
 	margin: 0;
 	background-color: #060A08;
 	border-radius: 8px;
+}
+
+.yasb-bar.dark {
+	background-color: #060A08;
+}
+
+/* Global icon styling */
+.icon {
+	color: #aec4be;
+	font-size: 14px;
+}
+
+/* Global label styling */
+.label {
+	color: #aec4be;
+}
+
+.yasb-bar.dark .label {
+	color: #aec4be;
 }
 
 .widget {
@@ -70,6 +91,114 @@
 
 .widget .label.alt {
 	padding: 1px 8px 1px 8px;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* 1.5 Global Tooltip Styling                                                                        */
+/* -------------------------------------------------------------------------------------------------- */
+
+.tooltip {
+    background-color: #060A08;
+    border: 1px solid #798985;
+    border-radius: 6px;
+    color: #aec4be;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-family: "JetBrainsMono NFP";
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* 1.6 Global Context Menu Styling                                                                   */
+/* -------------------------------------------------------------------------------------------------- */
+
+/* Global context menu style */
+.context-menu,
+.context-menu .menu-checkbox {
+    background-color: #060A08;
+    border: 1px solid #798985;
+    border-radius: 8px;
+    padding: 4px 0px;
+    font-family: "JetBrainsMono NFP";
+    font-size: 12px;
+    color: #aec4be;
+}
+
+.context-menu::right-arrow {
+    width: 8px;
+    height: 8px;
+    padding-right: 24px;
+}
+
+.context-menu::item,
+.context-menu .menu-checkbox {
+    background-color: transparent;
+    padding: 8px 14px;
+    margin: 2px 6px;
+    border-radius: 6px;
+    min-width: 120px;
+}
+
+.context-menu::item:selected,
+.context-menu .menu-checkbox:hover {
+    background-color: #30504E;
+    color: #aec4be;
+}
+
+.context-menu::separator {
+    height: 1px;
+    background-color: #798985;
+    margin: 4px 8px;
+}
+
+.context-menu::item:disabled {
+    color: #798985;
+    background-color: transparent;
+}
+
+.context-menu .menu-checkbox .checkbox {
+    border: none;
+    padding: 8px 16px;
+    font-size: 12px;
+    margin: 0;
+    color: #aec4be;
+    font-family: "JetBrainsMono NFP";
+}
+
+.context-menu .submenu::item:disabled {
+    margin: 0;
+    padding-left: 16px;
+}
+
+.context-menu .menu-checkbox .checkbox:unchecked {
+    color: #798985;
+}
+
+.context-menu .menu-checkbox .checkbox::indicator {
+    width: 12px;
+    height: 12px;
+    margin-left: 0px;
+    margin-right: 8px;
+}
+
+.context-menu .menu-checkbox .checkbox::indicator:unchecked {
+    background: #23334E;
+    border-radius: 2px;
+}
+
+.context-menu .menu-checkbox .checkbox::indicator:checked {
+    background: #578875;
+    border-radius: 2px;
+}
+
+.context-menu .menu-checkbox .checkbox:focus {
+    outline: none;
+}
+
+.context-menu::item:checked {
+    background-color: #578875;
+    color: #060A08;
 }
 
 /* -------------------------------------------------------------------------------------------------- */
