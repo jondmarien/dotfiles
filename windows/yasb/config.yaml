@@ -973,20 +973,20 @@ widgets:
   power_menu:
     type: "yasb.power_menu.PowerMenuWidget"
     options:
-      label: "\udb80\udc35"
+      label: "\u23fb"
       uptime: true
       blur: false
       blur_background: true
       animation_duration: 300
       button_row: 3
       buttons:
-        lock: ["\udb80\udc3d", "Lock"]
-        sleep: ["\udb81\udf4e", "Sleep"]
-        signout: ["\udb80\udf44", "Sign Out"]
-        shutdown: ["\udb80\udc35", "Shutdown"]
-        restart: ["\udb82\udc79", "Restart"]
-        hibernate: ["\udb81\udf2c", "Hibernate"]
-        cancel: ["\udb80\udd59", "Cancel"]
+        lock: ["\uea75", "Lock"]
+        sleep: ["\u23fe", "Sleep"]
+        signout: ["\uea76", "Sign Out"]
+        shutdown: ["\u23fb", "Shutdown"]
+        restart: ["\uead2", "Restart"]
+        hibernate: ["\ueaf7", "Hibernate"]
+        cancel: ["\uea76", "Cancel"]
       label_shadow:
         enabled: true
         color: "black"

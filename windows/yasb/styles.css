@@ -1527,38 +1527,38 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 .power-menu-popup {
-    background-color: rgba(6, 10, 8, 0.95);
-    padding: 20px;
-    border-radius: 12px;
+    background-color: rgba(6, 10, 8, 0.95) !important;
+    padding: 30px !important;
+    border-radius: 12px !important;
 }
 
 .power-menu-popup .button {
-    width: 120px;
-    height: 120px;
-    border-radius: 10px;
-    background-color: var(--mantle);
-    border: 2px solid var(--surface1);
-    margin: 8px;
-    padding: 10px;
+    width: 140px !important;
+    height: 140px !important;
+    border-radius: 10px !important;
+    background-color: var(--mantle) !important;
+    border: 2px solid var(--surface1) !important;
+    margin: 10px !important;
+    padding: 15px !important;
 }
 
 .power-menu-popup .button.hover {
-    background-color: var(--surface1);
-    border: 2px solid var(--home-accent);
+    background-color: var(--surface1) !important;
+    border: 2px solid var(--home-accent) !important;
 }
 
 .power-menu-popup .button .label {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--text);
-    padding: 8px 0 0 0;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--text) !important;
+    padding: 12px 0 0 0 !important;
 }
 
 .power-menu-popup .button .icon {
-    font-size: 36px;
-    font-family: "JetBrainsMono NFP";
-    color: var(--icon);
-    padding: 10px 0;
+    font-size: 48px !important;
+    font-family: "JetBrainsMono NFP" !important;
+    color: var(--icon) !important;
+    padding: 15px 0 !important;
 }
 
 .power-menu-popup .button.hover .label,
@@ -1661,55 +1661,201 @@ Example: "Windows Media" becomes "windows-media" */
 
 /***----------------------------------      • AI Chat Widget •      -----------------------------------***/
 
-.ai-chat-widget .widget-container .label {
-    color: var(--icon);
+.ai-chat-widget {
+    padding: 0 6px;
+}
+
+.ai-chat-widget .icon {
+    color: var(--home-accent);
+    font-size: 16px;
 }
 
 .ai-chat-popup {
-    background-color: var(--mantle);
-    min-width: 400px;
+    background-color: rgba(6, 10, 8, 0.9);
+    min-width: 500px;
     max-width: 500px;
-    border-radius: 8px;
+    min-height: 600px;
+    max-height: 600px;
+    border-radius: 10px;
 }
 
-.ai-chat-popup .header {
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--surface1);
+.ai-chat-popup .chat-header {
+    background-color: rgba(6, 10, 8, 0.6);
+    padding: 16px;
+}
+
+.ai-chat-popup .chat-footer {
+    background-color: transparent;
+    padding: 16px;
+}
+
+.ai-chat-popup .chat-header .provider-label,
+.ai-chat-popup .chat-header .model-label {
+    font-family: 'JetBrainsMono NFP';
+    font-size: 13px;
     color: var(--text);
+    margin-right: 8px;
     font-weight: 600;
 }
 
-.ai-chat-popup .message {
-    padding: 10px 14px;
-    margin: 4px 0;
-}
-
-.ai-chat-popup .message.user {
-    background-color: var(--surface1);
-    border-radius: 8px;
-}
-
-.ai-chat-popup .message.assistant {
-    color: var(--text);
-}
-
-.ai-chat-popup .input-area {
-    padding: 10px;
-    border-top: 1px solid var(--surface1);
-}
-
-.ai-chat-popup .input-area input {
-    background-color: var(--base);
+.ai-chat-popup .chat-header .provider-button,
+.ai-chat-popup .chat-header .model-button {
+    font-family: 'JetBrainsMono NFP';
+    background-color: var(--mantle);
     border: 1px solid var(--surface1);
+    font-size: 12px;
+    color: var(--text);
+    margin-right: 8px;
+    min-width: 130px;
+    max-width: 130px;
     border-radius: 6px;
-    padding: 8px 12px;
+    padding: 4px 10px;
+}
+
+.ai-chat-popup .chat-header .provider-button:disabled,
+.ai-chat-popup .chat-header .model-button:disabled {
+    color: var(--home-muted);
+}
+
+/* Context menu styles */
+.ai-chat-popup .context-menu {
+    background-color: var(--mantle);
+    border: 1px solid var(--surface1);
+    padding: 4px 0;
+    font-family: 'JetBrainsMono NFP';
+    font-size: 12px;
+    color: var(--text);
+    border-radius: 6px;
+}
+
+.ai-chat-popup .context-menu::separator {
+    height: 1px;
+    background-color: var(--surface1);
+    margin: 4px 8px;
+}
+
+.ai-chat-popup .context-menu::item {
+    background-color: transparent;
+    padding: 6px 12px;
+    margin: 2px 6px;
+    border-radius: 4px;
+    min-width: 100px;
+}
+
+.ai-chat-popup .chat-header .context-menu::item {
+    min-width: 130px;
+    max-width: 130px;
+    padding: 4px;
+}
+
+.ai-chat-popup .context-menu::item:disabled {
+    color: var(--home-muted);
+}
+
+.ai-chat-popup .context-menu::item:selected {
+    background-color: var(--surface1);
     color: var(--text);
 }
 
-.ai-chat-popup .btn {
+.ai-chat-popup .context-menu::item:checked {
     background-color: var(--home-accent);
     color: var(--mantle);
+}
+
+.ai-chat-popup .chat-content {
+    background-color: transparent;
     border: none;
+}
+
+.ai-chat-popup .chat-content .empty-chat .greeting,
+.ai-chat-popup .chat-content .empty-chat .message {
+    color: var(--text);
+    font-family: 'JetBrainsMono NFP';
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.ai-chat-popup .chat-content .empty-chat .message {
+    color: var(--home-muted);
+    font-size: 18px;
+    padding-top: 8px;
+}
+
+.ai-chat-popup .chat-content .user-message,
+.ai-chat-popup .chat-content .assistant-message {
+    color: var(--text);
+    padding: 10px 12px;
     border-radius: 6px;
-    padding: 8px 12px;
+    margin: 6px 0;
+    font-family: 'JetBrainsMono NFP';
+    font-size: 13px;
+}
+
+.ai-chat-popup .chat-content .user-message {
+    margin-left: 26px;
+    background-color: transparent;
+}
+
+.ai-chat-popup .chat-content .assistant-message {
+    background-color: rgba(48, 80, 78, 0.3);
+    border: 1px solid var(--surface1);
+}
+
+.ai-chat-popup .chat-content .assistant-icon {
+    font-size: 20px;
+    color: var(--home-accent);
+    margin-right: 8px;
+    font-family: "JetBrainsMono NFP";
+}
+
+.ai-chat-popup .chat-footer .chat-input {
+    background-color: var(--mantle);
+    border: 2px solid var(--surface1);
+    border-radius: 6px;
+    padding: 0 10px;
+    font-family: 'JetBrainsMono NFP';
+    font-size: 13px;
+    color: var(--text);
+    margin-top: 8px;
+    max-height: 32px;
+    min-height: 32px;
+}
+
+.ai-chat-popup .chat-footer .chat-input:focus {
+    border-color: var(--home-accent);
+}
+
+.ai-chat-popup .chat-footer .clear-button,
+.ai-chat-popup .chat-footer .send-button,
+.ai-chat-popup .chat-footer .stop-button {
+    background-color: var(--surface1);
+    color: var(--text);
+    font-size: 14px;
+    max-width: 32px;
+    min-width: 32px;
+    max-height: 32px;
+    min-height: 32px;
+    border-radius: 6px;
+    margin-top: 8px;
+    border: none;
+    font-family: "JetBrainsMono NFP";
+}
+
+.ai-chat-popup .chat-footer .stop-button {
+    background-color: var(--home-accent);
+    color: var(--mantle);
+}
+
+.ai-chat-popup .chat-footer .clear-button:hover,
+.ai-chat-popup .chat-footer .send-button:hover,
+.ai-chat-popup .chat-footer .stop-button:hover {
+    background-color: var(--home-accent);
+    color: var(--mantle);
+}
+
+.ai-chat-popup .chat-footer .clear-button:disabled,
+.ai-chat-popup .chat-footer .send-button:disabled,
+.ai-chat-popup .chat-footer .stop-button:disabled {
+    background-color: var(--mantle);
+    color: var(--home-muted);
 }
