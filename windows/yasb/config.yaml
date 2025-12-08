@@ -79,7 +79,7 @@ widgets:
         collapsed_label: "\uf053"  # Icon when collapsed
         label_position: "right"  # "left" or "right"
       container_shadow:
-        enabled: true
+        enabled: false
         color: "black"
         radius: 3
         offset: [1, 1]
@@ -97,7 +97,7 @@ widgets:
         collapsed_label: "\uf053"  # Icon when collapsed
         label_position: "right"  # "left" or "right"
       container_shadow:
-        enabled: true
+        enabled: false
         color: "black"
         radius: 3
         offset: [1, 1]
@@ -115,7 +115,7 @@ widgets:
         collapsed_label: "\uf053"  # Icon when collapsed
         label_position: "right"  # "left" or "right"
       container_shadow:
-        enabled: true
+        enabled: false
         color: "black"
         radius: 3
         offset: [1, 1]
