@@ -2,41 +2,41 @@
 
 /*VARIABLES AND SOME DEFAULT SETTINGS*/
 :root {
-    /* Special */
-    --backgroundcol: #060A08;
-    --foregroundcol: #aec4be;
-    --cursorcol: #aec4be;
-    /* 16 pywal colors */
-    --colors0: #060A08;
-    --colors1: #23334E;
-    --colors2: #30504E;
-    --colors3: #2A5363;
-    --colors4: #4C6B61;
-    --colors5: #578875;
-    --colors6: #526784;
-    --colors7: #aec4be;
-    --colors8: #798985;
-    --colors9: #23334E;
-    --colors10: #30504E;
-    --colors11: #2A5363;
-    --colors12: #4C6B61;
-    --colors13: #578875;
-    --colors14: #526784;
-    --colors15: #aec4be;
-    /* Theme compatibility variables */
-    --mantle: #060A08;
-    --base: #23334E;
-    --surface1: #30504E;
-    --text: #aec4be;
-    --icon: #aec4be;
-    --mauve: #578875;
-    --sapphire: #4C6B61;
-    --red: #23334E;
-    --fadedgreen: #30504E;
-    /* Home widget specific colors */
-    --home-accent: #578875;
-    --home-secondary: #526784;
-    --home-muted: #798985;
+  /* Special */
+  --backgroundcol: #060a08;
+  --foregroundcol: #aec4be;
+  --cursorcol: #aec4be;
+  /* 16 pywal colors */
+  --colors0: #060a08;
+  --colors1: #23334e;
+  --colors2: #30504e;
+  --colors3: #2a5363;
+  --colors4: #4c6b61;
+  --colors5: #578875;
+  --colors6: #526784;
+  --colors7: #aec4be;
+  --colors8: #798985;
+  --colors9: #23334e;
+  --colors10: #30504e;
+  --colors11: #2a5363;
+  --colors12: #4c6b61;
+  --colors13: #578875;
+  --colors14: #526784;
+  --colors15: #aec4be;
+  /* Theme compatibility variables */
+  --mantle: #060a08;
+  --base: #23334e;
+  --surface1: #30504e;
+  --text: #aec4be;
+  --icon: #aec4be;
+  --mauve: #578875;
+  --sapphire: #4c6b61;
+  --red: #23334e;
+  --fadedgreen: #30504e;
+  /* Home widget specific colors */
+  --home-accent: #578875;
+  --home-secondary: #526784;
+  --home-muted: #798985;
 }
 
 /* -------------------------------------------------------------------------------------------------- */
@@ -45,53 +45,51 @@
 
 /* Global styles */
 * {
-	color: #aec4be;
-	font-weight: 600;
-	font-family: "JetBrainsMono NFM";
+  color: #aec4be;
+  font-weight: 600;
+  font-family: "JetBrainsMono NFM";
 }
 
 /* Bar styling with dark mode support */
 .yasb-bar {
-	padding: 0 4px;
-	margin: 0;
-	background-color: #060A08;
-	border-radius: 8px;
+  padding: 0 4px;
+  margin: 0;
+  background-color: #060a08;
+  border-radius: 8px;
 }
 
 .yasb-bar.dark {
-	background-color: #060A08;
+  background-color: #060a08;
 }
 
 /* Global icon styling */
 .icon {
-	color: #aec4be;
-	font-size: 18px;
+  color: #aec4be;
+  font-size: 18px;
 }
 
 /* Global label styling */
 .label {
-    font-size: 12px;
-	color: #aec4be;
+  font-size: 12px;
+  color: #aec4be;
 }
 
 .yasb-bar.dark .label {
-    font-size: 12px;
-	color: #aec4be;
+  font-size: 12px;
+  color: #aec4be;
 }
 
 .widget {
-	padding: 0 10px;
-	margin: 0;
+  padding: 0 10px;
+  margin: 0;
 }
 
 .widget .label {
-	padding: 2px 2px 1px 2px;
-    
-
+  padding: 2px 2px 1px 2px;
 }
 
 .widget .label.alt {
-	padding: 1px 8px 1px 8px;
+  padding: 1px 8px 1px 8px;
 }
 
 /* -------------------------------------------------------------------------------------------------- */
@@ -99,12 +97,12 @@
 /* -------------------------------------------------------------------------------------------------- */
 
 .tooltip {
-    background-color: #060A08;
-    border: 1px solid #798985;
-    border-radius: 6px;
-    color: #aec4be;
-    padding: 6px 12px;
-    margin-top: 4px;
+  background-color: #060a08;
+  border: 1px solid #798985;
+  border-radius: 6px;
+  color: #aec4be;
+  padding: 6px 12px;
+  margin-top: 4px;
 }
 
 /* -------------------------------------------------------------------------------------------------- */
@@ -114,85 +112,85 @@
 /* Global context menu style */
 .context-menu,
 .context-menu .menu-checkbox {
-    background-color: #060A08;
-    border: 1px solid #798985;
-    border-radius: 8px;
-    padding: 4px 0px;
-    color: #aec4be;
+  background-color: #060a08;
+  border: 1px solid #798985;
+  border-radius: 8px;
+  padding: 4px 0px;
+  color: #aec4be;
 }
 
 .context-menu::right-arrow {
-    width: 8px;
-    height: 8px;
-    padding-right: 24px;
+  width: 8px;
+  height: 8px;
+  padding-right: 24px;
 }
 
 .context-menu::item,
 .context-menu .menu-checkbox {
-    background-color: transparent;
-    padding: 8px 14px;
-    margin: 2px 6px;
-    border-radius: 6px;
-    min-width: 120px;
+  background-color: transparent;
+  padding: 8px 14px;
+  margin: 2px 6px;
+  border-radius: 6px;
+  min-width: 120px;
 }
 
 .context-menu::item:selected,
 .context-menu .menu-checkbox:hover {
-    background-color: #30504E;
-    color: #aec4be;
+  background-color: #30504e;
+  color: #aec4be;
 }
 
 .context-menu::separator {
-    height: 1px;
-    background-color: #798985;
-    margin: 4px 8px;
+  height: 1px;
+  background-color: #798985;
+  margin: 4px 8px;
 }
 
 .context-menu::item:disabled {
-    color: #798985;
-    background-color: transparent;
+  color: #798985;
+  background-color: transparent;
 }
 
 .context-menu .menu-checkbox .checkbox {
-    border: none;
-    padding: 8px 16px;
-    margin: 0;
-    color: #aec4be;
+  border: none;
+  padding: 8px 16px;
+  margin: 0;
+  color: #aec4be;
 }
 
 .context-menu .submenu::item:disabled {
-    margin: 0;
-    padding-left: 16px;
+  margin: 0;
+  padding-left: 16px;
 }
 
 .context-menu .menu-checkbox .checkbox:unchecked {
-    color: #798985;
+  color: #798985;
 }
 
 .context-menu .menu-checkbox .checkbox::indicator {
-    width: 12px;
-    height: 12px;
-    margin-left: 0px;
-    margin-right: 8px;
+  width: 12px;
+  height: 12px;
+  margin-left: 0px;
+  margin-right: 8px;
 }
 
 .context-menu .menu-checkbox .checkbox::indicator:unchecked {
-    background: #23334E;
-    border-radius: 2px;
+  background: #23334e;
+  border-radius: 2px;
 }
 
 .context-menu .menu-checkbox .checkbox::indicator:checked {
-    background: #578875;
-    border-radius: 2px;
+  background: #578875;
+  border-radius: 2px;
 }
 
 .context-menu .menu-checkbox .checkbox:focus {
-    outline: none;
+  outline: none;
 }
 
 .context-menu::item:checked {
-    background-color: #578875;
-    color: #060A08;
+  background-color: #578875;
+  color: #060a08;
 }
 
 /* -------------------------------------------------------------------------------------------------- */
@@ -201,46 +199,45 @@
 
 /* Home widget */
 .home-widget .widget-container {
-    padding: 0;
+  padding: 0;
 }
 
 /* Bin widget */
 .bin-widget .widget-container,
 .recycle-bin-widget .widget-container {
-    padding: 0;
+  padding: 0;
 }
 
 /* Komorebi workspaces widget */
 .komorebi-workspaces .widget-container {
-    padding: 0 8px;
+  padding: 0 8px;
 }
 
 /* Apps widget */
 .apps-widget .widget-container,
 .applications-widget .widget-container {
-    padding: 0;
+  padding: 0;
 }
 
 /* Notes widget */
 .notes-widget .widget-container {
-    padding: 0;
+  padding: 0;
 }
 
 /* Wallpapers widget */
 .wallpapers-widget .widget-container {
-    padding: 0;
+  padding: 0;
 }
 
 /* Systray widget */
 .systray .widget-container {
-    padding: 0;
+  padding: 0;
 }
 
 /* GPU widget */
 .gpu-widget .widget-container {
-    padding: 0 8px;
+  padding: 0 8px;
 }
-
 
 /* -------------------------------------------------------------------------------------------------- */
 /* 3. Widgets                                                                                         */
@@ -249,334 +246,354 @@
 /***-------------------------------      • Windows Desktops •      --------------------------------***/
 
 .komorebi-control-widget .label {
-    font-size: 14px;
-    color: #cdd6f4;
-    font-weight: 600;
+  font-size: 14px;
+  color: #cdd6f4;
+  font-weight: 600;
 }
 .komorebi-control-menu {
-    background-color: rgba(17, 17, 27, 0.2);
+  background-color: rgba(17, 17, 27, 0.2);
 }
 .komorebi-control-menu .button {
-    color: rgba(162, 177, 199, 0.4);
-    padding: 8px 16px;
-    font-size: 32px;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.04);
+  color: rgba(162, 177, 199, 0.4);
+  padding: 8px 16px;
+  font-size: 32px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.04);
 }
 .komorebi-control-menu .button.active {
-    color: rgb(228, 228, 228);
-    background-color: rgba(255, 255, 255, 0.04);
+  color: rgb(228, 228, 228);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 .komorebi-control-menu .button:disabled,
 .komorebi-control-menu .button.active:disabled {
-    background-color: rgba(255, 255, 255, 0.01);
-    color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.01);
+  color: rgba(255, 255, 255, 0.2);
 }
 .komorebi-control-menu .footer .text {
-    font-size: 12px;
-    color: #6c7086;
+  font-size: 12px;
+  color: #6c7086;
 }
 
 /***-------------------------------      • Calendar Widget •      --------------------------------***/
 
 .calendar {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .calendar .calendar-table,
 .calendar .calendar-table::item {
-    background-color: transparent;
-    color: #aec4be;
-    font-family: "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 4px;
-    border: none;
-    outline: none;
-    border-radius: 4px;
+  background-color: transparent;
+  color: #aec4be;
+  font-family:
+    "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana,
+    sans-serif;
+  margin: 0;
+  padding: 4px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
 }
 
 .calendar .calendar-table::item:selected {
-    background-color: rgba(76, 107, 97, 0.7);
-    color: #aec4be;
-    font-weight: bold;
-    border-radius: 4px;
+  background-color: rgba(76, 107, 97, 0.7);
+  color: #aec4be;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
 .calendar .day-label,
 .calendar .month-label,
 .calendar .date-label {
-    font-family: "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana, sans-serif;
-    color: #aec4be;
-    font-weight: 700;
-    min-width: 180px;
-    max-width: 180px;
-    text-align: center;
+  font-family:
+    "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana,
+    sans-serif;
+  color: #aec4be;
+  font-weight: 700;
+  min-width: 320px;
+  max-width: 400px;
+  text-align: center;
 }
 
 .calendar .month-label {
-    font-weight: normal;
-    color: #aec4be;
-    margin-bottom: 8px;
+  font-weight: normal;
+  color: #aec4be;
+  margin-bottom: 8px;
 }
 
 .calendar .date-label {
-    font-size: 24px;
-    font-weight: 900;
-    color: #4C6B61;
-    margin: 8px 0;
+  font-size: 24px;
+  font-weight: 900;
+  color: #4c6b61;
+  margin: 8px 0;
 }
 
 .calendar .day-label {
-    margin-top: 12px;
-    margin-bottom: 8px;
-    color: #798985;
-    font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  color: #798985;
+  font-size: 14px;
 }
 
 /*** Systray Styles */
 .systray {
-    background: transparent !important;
-    border: none;
-    margin: 0;
-    padding: 0 4px;
+  background: transparent !important;
+  border: none;
+  margin: 0;
+  padding: 0 4px;
 }
 
 .systray .unpinned-container {
-    background: rgba(76, 107, 97, 0.1);
-    border-radius: 6px;
-    padding: 2px 4px;
-    margin: 0 2px;
+  background: rgba(76, 107, 97, 0.1);
+  border-radius: 6px;
+  padding: 2px 4px;
+  margin: 0 2px;
 }
 
 .systray .pinned-container {
-    background: transparent;
+  background: transparent;
 }
 
-.systray .pinned-container[forceshow=true] {
-    background: rgba(76, 107, 97, 0.2);
+.systray .pinned-container[forceshow="true"] {
+  background: rgba(76, 107, 97, 0.2);
 }
 
 .systray .button {
-    border-radius: 4px;
-    padding: 2px;
-    margin: 0 1px;
+  border-radius: 4px;
+  padding: 2px;
+  margin: 0 1px;
 }
 
 .systray .button:hover {
-    background: rgba(76, 107, 97, 0.3);
+  background: rgba(76, 107, 97, 0.3);
 }
 
-.systray .button[dragging=true] {
-    background: #4C6B61;
-    border-color: #4C6B61;
+.systray .button[dragging="true"] {
+  background: #4c6b61;
+  border-color: #4c6b61;
 }
 
 .systray .unpinned-visibility-btn {
-    border-radius: 4px;
-    height: 20px;
-    width: 16px;
-    color: #aec4be;
-    background: transparent;
+  border-radius: 4px;
+  height: 20px;
+  width: 16px;
+  color: #aec4be;
+  background: transparent;
 }
 
 .systray .unpinned-visibility-btn:checked {
-    background: rgba(76, 107, 97, 0.2);
+  background: rgba(76, 107, 97, 0.2);
 }
 
 .systray .unpinned-visibility-btn:hover {
-    border: 1px solid #798985;
-    background: rgba(76, 107, 97, 0.15);
+  border: 1px solid #798985;
+  background: rgba(76, 107, 97, 0.15);
 }
 
 /*** System Stats Group */
 .system-stats {
-    background: #060A08;
-    border-radius: 6px;
-    padding: 0 8px;
-    margin: 0 2px;
-    border: 1px solid rgba(121, 137, 133, 0.2);
+  background: #060a08;
+  border-radius: 6px;
+  padding: 0 8px;
+  margin: 0 2px;
+  border: 1px solid rgba(121, 137, 133, 0.2);
 }
 
 .system-stats .widget {
-    margin: 0 4px;
-    padding: 0 2px;
+  margin: 0 4px;
+  padding: 0 2px;
 }
 
 .system-stats .widget:first-child {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .system-stats .widget:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 /*** GitHub Widget Styles */
 .github-menu {
-    background-color: rgba(6, 10, 8, 0.85);
-    max-height: 500px;
-    min-height: 500px;
-    min-width: 420px;
-    border-radius: 8px;
-    border: 1px solid #798985;
+  background-color: rgba(6, 10, 8, 0.85);
+  max-height: 500px;
+  min-height: 500px;
+  min-width: 420px;
+  border-radius: 8px;
+  border: 1px solid #798985;
 }
 
 .github-menu .header {
-    border-bottom: 1px solid #798985;
-    font-size: 15px;
-    font-weight: 600;
-    font-family: "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana, sans-serif;
-    padding: 12px 16px;
-    color: #aec4be;
-    background-color: rgba(6, 10, 8, 0.8);
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+  border-bottom: 1px solid #798985;
+  font-size: 15px;
+  font-weight: 600;
+  font-family:
+    "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana,
+    sans-serif;
+  padding: 12px 16px;
+  color: #aec4be;
+  background-color: rgba(6, 10, 8, 0.8);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .github-menu .footer {
-    border-top: 1px solid #798985;
-    font-size: 12px;
-    padding: 8px 16px;
-    font-family: "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana, sans-serif;
-    color: #798985;
-    background-color: rgba(6, 10, 8, 0.8);
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+  border-top: 1px solid #798985;
+  font-size: 12px;
+  padding: 8px 16px;
+  font-family:
+    "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana,
+    sans-serif;
+  color: #798985;
+  background-color: rgba(6, 10, 8, 0.8);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .github-menu .contents {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 /* Fix scroll pass-through issue */
 .github-menu .scroll-area {
-    background: transparent;
-    border: none;
-    border-radius: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
 }
 
 .github-menu .scroll-area QScrollBar:vertical {
-    width: 8px;
-    background: transparent;
+  width: 8px;
+  background: transparent;
 }
 
 .github-menu .scroll-area QScrollBar::handle:vertical {
-    background: #798985;
-    border-radius: 4px;
-    min-height: 20px;
+  background: #798985;
+  border-radius: 4px;
+  min-height: 20px;
 }
 
 .github-menu .scroll-area QScrollBar::add-line:vertical,
 .github-menu .scroll-area QScrollBar::sub-line:vertical {
-    height: 0;
+  height: 0;
 }
 
 .github-menu .contents .item {
-    min-height: 44px;
-    padding: 10px 16px;
-    border-bottom: 1px solid rgba(121, 137, 133, 0.15);
+  min-height: 44px;
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(121, 137, 133, 0.15);
 }
 
 .github-menu .contents .item:hover {
-    background-color: rgba(76, 107, 97, 0.1);
-    border-bottom-color: transparent;
+  background-color: rgba(76, 107, 97, 0.1);
+  border-bottom-color: transparent;
 }
 
 .github-menu .contents .item .title,
 .github-menu .contents .item .description {
-    color: #aec4be;
-    font-family: "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana, sans-serif;
+  color: #aec4be;
+  font-family:
+    "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana,
+    sans-serif;
 }
 
 .github-menu .contents .item .title {
-    font-size: 13px;
-    font-weight: 500;
-    margin-bottom: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 2px;
 }
 
 .github-menu .contents .item .description {
-    font-size: 11px;
-    opacity: 0.8;
+  font-size: 11px;
+  opacity: 0.8;
 }
 
 .github-menu .contents .item.new .title,
 .github-menu .contents .item.new .description {
-    color: #aec4be;
-    font-weight: 600;
+  color: #aec4be;
+  font-weight: 600;
 }
 
 .github-menu .contents .item .icon {
-    font-size: 16px;
-    padding-right: 12px;
-    color: #798985;
+  font-size: 16px;
+  padding-right: 12px;
+  color: #798985;
 }
 
 .github-menu .contents .item.new .icon {
-    color: #2A5363;
+  color: #2a5363;
 }
 
 /*** GlazeWM Workspaces Widget - Custom Style (Transparent, No Shadow) */
 .glazewm-workspaces {
-    background: transparent !important;
-    margin: 0;
-    padding: 0 4px;
-    box-shadow: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    font-family: inherit;
+  background: transparent !important;
+  margin: 0;
+  padding: 0 4px;
+  box-shadow: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-family: inherit;
 }
 
 /*** Use pywal color variables for workspace buttons */
 .glazewm-workspaces .ws-btn {
-    font-size: 13px;
-    background: transparent !important;
-    border: none;
-    padding: 2px 8px;
-    margin: 0 2px;
-    color: #aec4be;
-    border-radius: 5px;
-    box-shadow: none;
+  font-size: 13px;
+  background: transparent !important;
+  border: none;
+  padding: 2px 8px;
+  margin: 0 2px;
+  color: #aec4be;
+  border-radius: 5px;
+  box-shadow: none;
 }
 
 /*** Active and populated workspace: accent color foreground, subtle background */
 .glazewm-workspaces .ws-btn.active_populated {
-    color: #4C6B61;
-    background: rgba(76, 107, 97, 0.25); /* fallback to #A03489 if --colors4-rgb not set */
+  color: #4c6b61;
+  background: rgba(
+    76,
+    107,
+    97,
+    0.25
+  ); /* fallback to #A03489 if --colors4-rgb not set */
 }
 
 /*** Active but empty workspace: faded accent, subtle background */
 .glazewm-workspaces .ws-btn.active_empty {
-    color: #798985;
-    background: rgba(121, 137, 133, 0.18); /* fallback to #6b667d if --colors8-rgb not set */
+  color: #798985;
+  background: rgba(
+    121,
+    137,
+    133,
+    0.18
+  ); /* fallback to #6b667d if --colors8-rgb not set */
 }
 
 /*** Populated workspace: accent color */
 .glazewm-workspaces .ws-btn.populated {
-    color: #4C6B61;
-    background: transparent;
+  color: #4c6b61;
+  background: transparent;
 }
 
 /*** Empty workspace: faded accent color */
 .glazewm-workspaces .ws-btn.empty {
-    color: #798985;
-    background: transparent;
+  color: #798985;
+  background: transparent;
 }
 
 /*** Hover state: subtle accent background, accent foreground */
 .glazewm-workspaces .ws-btn:hover,
 .glazewm-workspaces .ws-btn.populated:hover,
 .glazewm-workspaces .ws-btn.empty:hover {
-    background: rgba(76, 107, 97, 0.18);
-    color: #4C6B61;
-    cursor: pointer;
+  background: rgba(76, 107, 97, 0.18);
+  color: #4c6b61;
+  cursor: pointer;
 }
 
 /*** Offline status: use pywal red or warning color */
 .glazewm-workspaces .offline-status {
-    color: #23334E;
-    font-style: italic;
-    padding: 0 6px;
-    background: transparent;
+  color: #23334e;
+  font-style: italic;
+  padding: 0 6px;
+  background: transparent;
 }
 
 /***-------------------------------      • System Widgets •      --------------------------------***/
@@ -584,524 +601,543 @@
 .cpu-widget,
 .memory-widget,
 .system-widget {
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    margin: 0;
-    padding: 0 4px;
-    z-index: 1;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0;
+  padding: 0 4px;
+  z-index: 1;
 }
 
 /***-------------------------------      • Pill Group •      --------------------------------***/
 
 .cpu-widget:first-of-type {
-    border-top-left-radius: 999px;
-    border-bottom-left-radius: 999px;
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
 }
 .system-widget:last-of-type {
-    border-top-right-radius: 999px;
-    border-bottom-right-radius: 999px;
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
 }
 
 /*** Apply the pill background to the group using :has() if supported */
 .bar-right:has(.cpu-widget + .memory-widget + .system-widget) .cpu-widget,
 .bar-right:has(.cpu-widget + .memory-widget + .system-widget) .memory-widget,
 .bar-right:has(.cpu-widget + .memory-widget + .system-widget) .system-widget {
-    background: rgba(20, 20, 30, 0.75);
-    border: 1px solid rgba(120,120,140,0.16);
-    color: #aec4be;
+  background: rgba(20, 20, 30, 0.75);
+  border: 1px solid rgba(120, 120, 140, 0.16);
+  color: #aec4be;
 }
 
 /*** Fallback for browsers without :has() support: use direct adjacent selectors */
 .cpu-widget + .memory-widget,
 .memory-widget + .system-widget {
-    margin-left: -4px; /* overlap borders */
+  margin-left: -4px; /* overlap borders */
 }
 
 .cpu-widget,
 .memory-widget,
 .system-widget {
-    /* Add padding for pill shape */
-    padding-top: 2px;
-    padding-bottom: 2px;
+  /* Add padding for pill shape */
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 /* Optional: add hover effect */
 .cpu-widget:hover,
 .memory-widget:hover,
 .system-widget:hover {
-    background: rgba(40, 40, 60, 0.85);
-    border-color: #4C6B61;
+  background: rgba(40, 40, 60, 0.85);
+  border-color: #4c6b61;
 }
 
 /***-------------------------------      • Komorebi Workspaces •      --------------------------------***/
 
 .komorebi-workspaces {
-    background: transparent !important;
-    margin: 0;
-    padding: 0 4px;
-    box-shadow: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    font-family: inherit;
+  background: transparent !important;
+  margin: 0;
+  padding: 0 4px;
+  box-shadow: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-family: inherit;
 }
 
 .komorebi-workspaces .ws-btn {
-    font-size: 13px;
-    background: transparent !important;
-    box-shadow: 1px 1px 3px black;
-    border: none;
-    padding: 2px 8px;
-    margin: 0 2px;
-    color: #aec4be;
-    border-radius: 5px;
-    box-shadow: none;
+  font-size: 13px;
+  background: transparent !important;
+  box-shadow: 1px 1px 3px black;
+  border: none;
+  padding: 2px 8px;
+  margin: 0 2px;
+  color: #aec4be;
+  border-radius: 5px;
+  box-shadow: none;
 }
 
 .komorebi-workspaces .ws-btn.active,
 .komorebi-workspaces .ws-btn.populated {
-    color: #4C6B61;
-    background: rgba(76, 107, 97, 0.25);
+  color: #4c6b61;
+  background: rgba(76, 107, 97, 0.25);
 }
 
 .komorebi-workspaces .ws-btn.active:not(.populated) {
-    color: #798985;
-    background: rgba(121, 137, 133, 0.18);
+  color: #798985;
+  background: rgba(121, 137, 133, 0.18);
 }
 
 .komorebi-workspaces .ws-btn.populated:not(.active) {
-    color: #4C6B61;
-    background: transparent;
+  color: #4c6b61;
+  background: transparent;
 }
 
 .komorebi-workspaces .ws-btn.empty {
-    color: #798985;
-    background: transparent;
+  color: #798985;
+  background: transparent;
 }
 
 .komorebi-workspaces .ws-btn:hover {
-    background: rgba(76, 107, 97, 0.18);
-    color: #4C6B61;
-    cursor: pointer;
+  background: rgba(76, 107, 97, 0.18);
+  color: #4c6b61;
+  cursor: pointer;
 }
 
 .komorebi-workspaces .offline-status {
-    color: #23334E;
-    font-style: italic;
-    padding: 0 6px;
-    background: transparent;
+  color: #23334e;
+  font-style: italic;
+  padding: 0 6px;
+  background: transparent;
 }
 
 .komorebi-workspaces .ws-btn .label {
-    font-weight: bold;
-    font-size: 13px;
+  font-weight: bold;
+  font-size: 13px;
 }
 
 .komorebi-workspaces .ws-btn .icon {
-    font-size: 14px;
-    margin-right: 4px;
+  font-size: 14px;
+  margin-right: 4px;
 }
 
 .komorebi-workspaces .ws-btn.active .icon {
-    color: #4C6B61;
+  color: #4c6b61;
 }
-
 
 /***-------------------------------      • Taskbar Widget •      --------------------------------***/
 
 .taskbar-widget {
-    background: transparent;
-    padding: 0;
+  background: transparent;
+  padding: 0;
 }
 
 .taskbar-widget .widget-container {
-    background: transparent;
-    padding: 0 4px;
-    display: flex;
-    align-items: center;
-    gap: 2px;
+  background: transparent;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
 .taskbar-widget .app-container {
-    margin: 2px 1px;
-    border-radius: 6px;
-    padding: 4px 6px;
-    background: rgba(6, 10, 8, 0.6);
-    border: 1px solid rgba(121, 137, 133, 0.3);
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    min-height: 28px;
-    box-sizing: border-box;
+  margin: 2px 1px;
+  border-radius: 6px;
+  padding: 4px 6px;
+  background: rgba(6, 10, 8, 0.6);
+  border: 1px solid rgba(121, 137, 133, 0.3);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  min-height: 28px;
+  box-sizing: border-box;
 }
 
 .taskbar-widget .app-container:hover {
-    background: rgba(76, 107, 97, 0.2);
-    border-color: rgba(76, 107, 97, 0.5);
-    transform: translateY(-1px);
+  background: rgba(76, 107, 97, 0.2);
+  border-color: rgba(76, 107, 97, 0.5);
+  transform: translateY(-1px);
 }
 
 .taskbar-widget .app-container.foreground {
-    background: rgba(76, 107, 97, 0.3);
-    border-color: #4C6B61;
-    box-shadow: 0 0 8px rgba(76, 107, 97, 0.4);
+  background: rgba(76, 107, 97, 0.3);
+  border-color: #4c6b61;
+  box-shadow: 0 0 8px rgba(76, 107, 97, 0.4);
 }
 
 .taskbar-widget .app-container.flashing {
-    background: rgba(35, 51, 78, 0.4);
-    border-color: #23334E;
-    animation: taskbar-flash 1s infinite alternate;
+  background: rgba(35, 51, 78, 0.4);
+  border-color: #23334e;
+  animation: taskbar-flash 1s infinite alternate;
 }
 
 @keyframes taskbar-flash {
-    0% { 
-        background: rgba(35, 51, 78, 0.4);
-        box-shadow: 0 0 4px rgba(35, 51, 78, 0.3);
-    }
-    100% { 
-        background: rgba(35, 51, 78, 0.6);
-        box-shadow: 0 0 12px rgba(35, 51, 78, 0.6);
-    }
+  0% {
+    background: rgba(35, 51, 78, 0.4);
+    box-shadow: 0 0 4px rgba(35, 51, 78, 0.3);
+  }
+  100% {
+    background: rgba(35, 51, 78, 0.6);
+    box-shadow: 0 0 12px rgba(35, 51, 78, 0.6);
+  }
 }
 
 .taskbar-widget .app-container .app-icon {
-    font-size: 16px;
-    color: #aec4be;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 16px;
+  font-size: 16px;
+  color: #aec4be;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
 }
 
 .taskbar-widget .app-container.foreground .app-icon {
-    color: #4C6B61;
+  color: #4c6b61;
 }
 
 .taskbar-widget .app-container .app-title {
-    padding-left: 6px;
-    font-size: 12px;
-    font-weight: 500;
-    color: #aec4be;
-    font-family: "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana, sans-serif;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  padding-left: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #aec4be;
+  font-family:
+    "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana,
+    sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .taskbar-widget .app-container.foreground .app-title {
-    color: #4C6B61;
-    font-weight: 600;
+  color: #4c6b61;
+  font-weight: 600;
 }
 
 /***-------------------------------      • Power Menu Widget •      --------------------------------***/
 
 .power-menu-popup {
-	background: #060A08;
-	border-radius: 8px;
+  background: #060a08;
+  border-radius: 8px;
 }
 
 .power-menu-widget .label {
-	color: #aec4be;
-	font-size: 16px;
-        padding: 0
+  color: #aec4be;
+  font-size: 16px;
+  padding: 0;
 }
 div.power-menu-popup .button,
 .power-menu-popup div.button,
 .widget.power-menu .power-menu-popup .button {
-	padding: 20px !important;
-	margin: 8px !important;
-	width: 120px !important;
-	height: 120px !important;
-	min-width: 120px !important;
-	min-height: 120px !important;
-	max-width: 120px !important;
-	max-height: 120px !important;
-	border-radius: 8px !important;
-	background-color: #23334E !important;
-	color: white !important;
-	display: flex !important;
-	flex-direction: column !important;
-	align-items: center !important;
-	justify-content: center !important;
-	box-sizing: border-box !important;
-	font-size: inherit !important;
-	border: none !important;
-	cursor: pointer !important;
+  padding: 20px !important;
+  margin: 8px !important;
+  width: 120px !important;
+  height: 120px !important;
+  min-width: 120px !important;
+  min-height: 120px !important;
+  max-width: 120px !important;
+  max-height: 120px !important;
+  border-radius: 8px !important;
+  background-color: #23334e !important;
+  color: white !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  font-size: inherit !important;
+  border: none !important;
+  cursor: pointer !important;
 }
 .power-menu-popup .button.hover {
-	background-color: #30504E;
+  background-color: #30504e;
 }
 .power-menu-popup .button .label {
-	margin-bottom: 0px;
-	font-size: 16px;
-	font-weight: 600;
-	color: #aec4be;
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #aec4be;
 }
 .power-menu-popup .button .icon {
-	font-size: 36px !important;
-	margin-bottom: 8px !important;
-	color: #aec4be !important;
-	line-height: 1 !important;
+  font-size: 36px !important;
+  margin-bottom: 8px !important;
+  color: #aec4be !important;
+  line-height: 1 !important;
 }
 /* Power Menu Button-Specific Styles */
 .power-menu-popup .button.shutdown,
 .power-menu-popup .button.force_shutdown {
-	background-color: #23334E !important;
+  background-color: #23334e !important;
 }
 .power-menu-popup .button.shutdown .icon,
 .power-menu-popup .button.force_shutdown .icon,
 .power-menu-popup .button.shutdown .label,
 .power-menu-popup .button.force_shutdown .label {
-	color: white !important;
+  color: white !important;
 }
 
 .power-menu-popup .button.restart,
 .power-menu-popup .button.force_restart {
-	background-color: #E5C890 !important;
+  background-color: #e5c890 !important;
 }
 .power-menu-popup .button.restart .icon,
 .power-menu-popup .button.force_restart .icon,
 .power-menu-popup .button.restart .label,
 .power-menu-popup .button.force_restart .label {
-	color: white !important;
+  color: white !important;
 }
 
 .power-menu-popup .button.sleep,
 .power-menu-popup .button.hibernate {
-	background-color: #8CAAEE !important;
+  background-color: #8caaee !important;
 }
 .power-menu-popup .button.sleep .icon,
 .power-menu-popup .button.hibernate .icon,
 .power-menu-popup .button.sleep .label,
 .power-menu-popup .button.hibernate .label {
-	color: white !important;
+  color: white !important;
 }
 
 .power-menu-popup .button.signout {
-	background-color: #A6D189 !important;
+  background-color: #a6d189 !important;
 }
 .power-menu-popup .button.signout .icon,
 .power-menu-popup .button.signout .label {
-	color: white !important;
+  color: white !important;
 }
 
 .power-menu-popup .button.cancel {
-	background-color: #30504E !important;
+  background-color: #30504e !important;
 }
 .power-menu-popup .button.cancel .icon,
 .power-menu-popup .button.cancel .label {
-	color: #23334E !important;
+  color: #23334e !important;
 }
 
 /***-------------------------------      • Clock Widget •      --------------------------------***/
 
 .clock-widget {
-    padding: 0 8px;
+  padding: 0 8px;
 }
 
 .clock-widget .widget-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .clock-widget .widget-container .label {
-    color: #aec4be;
-    font-weight: bold;
-    padding: 4px 8px;
-    border-radius: 4px;
-    background-color: rgba(76, 107, 97, 0.1);
+  color: #aec4be;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgba(76, 107, 97, 0.1);
 }
 
 .clock-widget .widget-container .label.alt {
-    color: #aec4be;
-    background-color: rgba(76, 107, 97, 0.15);
+  color: #aec4be;
+  background-color: rgba(76, 107, 97, 0.15);
 }
 
 .clock-widget .widget-container .icon {
-    color: #4C6B61;
-    margin-right: 6px;
-    font-size: 14px;
+  color: #4c6b61;
+  margin-right: 6px;
+  font-size: 14px;
 }
-
 
 /***-------------------------------      • Icons & Typography •      --------------------------------***/
 
 .icon {
-	font-size: 16px;
+  font-size: 16px;
 }
 .volume-widget .icon {
-	color: #aec4be;
-	margin: 1px 2px 0 0;
+  color: #aec4be;
+  margin: 1px 2px 0 0;
 }
 .start-menu .icon {
-	font-size: 18px;
-	color: #aec4be
+  font-size: 18px;
+  color: #aec4be;
 }
 .clock-widget .icon {
-	color: #aec4be;
-	font-size: 14px;
-	margin-right: 6px;
+  color: #aec4be;
+  font-size: 14px;
+  margin-right: 6px;
 }
 .clock-widget .label {
-    padding-right: -1px;
-
+  padding-right: -1px;
 }
 .apps-widget .label {
-    color: #aec4be;
-    font-size: 17px;
-    padding-left: 4px;
-    padding-right: 4px;
+  color: #aec4be;
+  font-size: 17px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 /***-------------------------------      • Recycle Bin Widget •      --------------------------------***/
 
 .recycle-bin-widget .icon {
-    color: #aec4be;
-} 
+  color: #aec4be;
+}
 .recycle-bin-widget .label {
-    font-size: 11px;
-    color : #aec4be;
-    font-weight: 800;
+  font-size: 11px;
+  color: #aec4be;
+  font-weight: 800;
 }
 
 /***---------------------------------      • Weather Icons •      ----------------------------------***/
 
 .weather-widget .icon {
-    color: #aec4be;
-    padding-right: 3;
+  color: #aec4be;
+  padding-right: 3;
 }
 
 /***----------------------------------      • Weather Card •      -----------------------------------***/
 
 .weather-card {
-	background-color: #060A08;
+  background-color: #060a08;
 }
 .weather-card-today {
-	border-radius: 8px;
-	background-color: #060A08;
-	color: #aec4be;
+  border-radius: 8px;
+  background-color: #060a08;
+  color: #aec4be;
 }
 .weather-card-today .label {
-	font-size: 12px;
+  font-size: 12px;
 }
 .weather-card-today .label.location {
-	font-size: 24px;
-	font-weight: 800;
+  font-size: 24px;
+  font-weight: 800;
 }
 .weather-card-today .label.alert {
-	font-size: 12px;
-	font-weight: 700;
-	background-color: rgba(247, 199, 42, 0.05);
-	border: 1px solid rgba(247, 209, 42, 0.1);
-	color: rgba(196, 181, 162, 0.85);
-	border-radius: 6px;
-	padding: 5px 0;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: rgba(247, 199, 42, 0.05);
+  border: 1px solid rgba(247, 209, 42, 0.1);
+  color: rgba(196, 181, 162, 0.85);
+  border-radius: 6px;
+  padding: 5px 0;
 }
 .weather-card-day {
-	border-radius: 8px;
-	background-color: #060A08;
+  border-radius: 8px;
+  background-color: #060a08;
 }
 .weather-card-day .label {
-	font-size: 12px;
+  font-size: 12px;
 }
 
 /***----------------------------------      • Home Menu •      -----------------------------------***/
 
 .home-menu {
-	background-color: #060A08;
-	border-radius: 8px;
-	padding: 16px 0;
-	margin-left: 0px;
-	min-width: 320px;
-	max-width: 380px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-	overflow: visible;
+  background-color: #060a08;
+  border-radius: 8px;
+  padding: 16px 0;
+  margin-left: 0px;
+  min-width: 320px;
+  max-width: 380px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: visible;
 }
 .home-menu .menu-item {
-	padding: 18px 48px 18px 48px;
-	font-size: 15px;
-	font-weight: 600;
-    color: #aec4be;
-    margin: 4px 16px;
-    border-radius: 6px;
-    border-left: 3px solid transparent;
-    line-height: 1.6;
-    min-height: 28px;
-    overflow: visible;
-    white-space: nowrap;
+  padding: 18px 48px 18px 48px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #aec4be;
+  margin: 4px 16px;
+  border-radius: 6px;
+  border-left: 3px solid transparent;
+  line-height: 1.6;
+  min-height: 28px;
+  overflow: visible;
+  white-space: nowrap;
 }
 .home-menu .menu-item:hover {
-	background-color: rgba(76, 107, 97, 0.15);
-	color: #578875;
-	border-left: 3px solid #578875;
-	transform: translateX(2px);
+  background-color: rgba(76, 107, 97, 0.15);
+  color: #578875;
+  border-left: 3px solid #578875;
+  transform: translateX(2px);
 }
-.home-menu .menu-item:nth-child(1) { color: #4C6B61; } /* Home */
-.home-menu .menu-item:nth-child(2) { color: #526784; } /* Downloads */
-.home-menu .menu-item:nth-child(3) { color: #578875; } /* Documents */
-.home-menu .menu-item:nth-child(4) { color: #578875; } /* Pictures */
-.home-menu .menu-item:nth-child(5) { color: #4C6B61; } /* Videos */
-.home-menu .menu-item:nth-child(6) { color: #2A5363; } /* Games */
-.home-menu .menu-item:nth-child(7) { color: #30504E; } /* Streamio */
-.home-menu .menu-item:nth-child(8) { color: #23334E; } /* Steam */
-.home-menu .menu-item:nth-child(9) { color: #798985; } /* Zen */
-.home-menu .menu-item:nth-child(10) { color: #526784; } /* iCUE */
+.home-menu .menu-item:nth-child(1) {
+  color: #4c6b61;
+} /* Home */
+.home-menu .menu-item:nth-child(2) {
+  color: #526784;
+} /* Downloads */
+.home-menu .menu-item:nth-child(3) {
+  color: #578875;
+} /* Documents */
+.home-menu .menu-item:nth-child(4) {
+  color: #578875;
+} /* Pictures */
+.home-menu .menu-item:nth-child(5) {
+  color: #4c6b61;
+} /* Videos */
+.home-menu .menu-item:nth-child(6) {
+  color: #2a5363;
+} /* Games */
+.home-menu .menu-item:nth-child(7) {
+  color: #30504e;
+} /* Streamio */
+.home-menu .menu-item:nth-child(8) {
+  color: #23334e;
+} /* Steam */
+.home-menu .menu-item:nth-child(9) {
+  color: #798985;
+} /* Zen */
+.home-menu .menu-item:nth-child(10) {
+  color: #526784;
+} /* iCUE */
 .home-menu .separator {
-	height: 1px;
-	background: #060A08;
-	margin: 8px 16px;
-	border: none;
+  height: 1px;
+  background: #060a08;
+  margin: 8px 16px;
+  border: none;
 }
 
-.home-widget .label{
-    color: #aec4be;
-    font-size: 12px;
-    background-color: #060A08;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-weight: 600;
+.home-widget .label {
+  color: #aec4be;
+  font-size: 12px;
+  background-color: #060a08;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
 /***----------------------------------      • Disk •      -----------------------------------***/
 
 .disk-widget {
-    padding: 0 6px 0 6px;
+  padding: 0 6px 0 6px;
 }
 .disk-group {
-    background-color: #060A08;
+  background-color: #060a08;
 }
 .disk-group-row {
-    min-width: 220px;
-    max-width: 220px;
-    max-height: 40px;
-    margin: 0;
-    padding: 0;
-    border-radius: 6px;
-    border: 1px solid rgba(128, 128, 128, 0);
+  min-width: 220px;
+  max-width: 220px;
+  max-height: 40px;
+  margin: 0;
+  padding: 0;
+  border-radius: 6px;
+  border: 1px solid rgba(128, 128, 128, 0);
 }
 .disk-group-row:hover {
-    background-color:rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.disk-group-label-bar{
-    max-height:8px;
-    border:0px solid rgba(128, 128, 128, 0);
-    background-color: rgba(137, 180, 250, 0.1);
-    border-radius: 4px;
+.disk-group-label-bar {
+  max-height: 8px;
+  border: 0px solid rgba(128, 128, 128, 0);
+  background-color: rgba(137, 180, 250, 0.1);
+  border-radius: 4px;
 }
-.disk-group-label-bar::chunk{
-    background-color: #aec4be;
-    border-radius: 4px;
+.disk-group-label-bar::chunk {
+  background-color: #aec4be;
+  border-radius: 4px;
 }
 .disk-group-label {
-    font-size: 10px;
-    color: #aec4be;
+  font-size: 10px;
+  color: #aec4be;
 }
 .disk-group-label-size {
-    font-size: 10px;
-    color: #aec4be;
+  font-size: 10px;
+  color: #aec4be;
 }
 .disk-widget .icon {
   color: #aec4be;
@@ -1110,750 +1146,747 @@ div.power-menu-popup .button,
 /***----------------------------------      • Cava •      -----------------------------------***/
 
 .cava-widget {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 .cava-widget .icon {
-    color: #aec4be;
+  color: #aec4be;
 }
 
 /***----------------------------------      • Wallpapers •      -----------------------------------***/
 
 .wallpapers-widget {
-    padding: 0 6px 0 6px;
-    background-color: #060A08;
-    border-radius: 8px;
+  padding: 0 6px 0 6px;
+  background-color: #060a08;
+  border-radius: 8px;
 }
 .wallpapers-gallery-window {
-    background-color: #060A08;
-    border: 0;
-    margin: 0;
-    border-radius: 10px;
+  background-color: #060a08;
+  border: 0;
+  margin: 0;
+  border-radius: 10px;
 }
 .wallpapers-gallery-buttons {
-    background-color:rgba(255, 255, 255, 0);
-    color: #aec4be;
-    border: none;
-    font-size: 14px;
-    padding: 8px 0;
-    border-radius: 8px;
-    margin:0 8px 8px 8px;
-    width: 600px;
+  background-color: rgba(255, 255, 255, 0);
+  color: #aec4be;
+  border: none;
+  font-size: 14px;
+  padding: 8px 0;
+  border-radius: 8px;
+  margin: 0 8px 8px 8px;
+  width: 600px;
 }
 .wallpapers-gallery-buttons:hover {
-    background-color:rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.08);
 }
 .wallpapers-gallery-image {
-    border: 4px solid transparent;
-    border-radius: 10px;
+  border: 4px solid transparent;
+  border-radius: 10px;
 }
 .wallpapers-gallery-image:hover {
-    border: 4px solid #aec4be;
+  border: 4px solid #aec4be;
 }
 .wallpapers-gallery-image.focused {
-    border: 4px solid #89b4fa;
+  border: 4px solid #89b4fa;
 }
 
 /***----------------------------------      • CPU & Memory •      -----------------------------------***/
 
 .cpu-widget {
-    padding-right: 0;
+  padding-right: 0;
 }
 .memory-widget {
-    padding-left: 0;
+  padding-left: 0;
 }
 .cpu-widget .widget-container {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 .memory-widget .widget-container {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 .memory-widget .label {
-    min-width: 34px;
-    max-width: 34px;
-    color: #aec4be;
+  min-width: 34px;
+  max-width: 34px;
+  color: #aec4be;
 }
 .cpu-widget .label {
-    min-width: 34px;
-    max-width: 34px;
-    color: #aec4be;
+  min-width: 34px;
+  max-width: 34px;
+  color: #aec4be;
 }
 .cpu-widget .icon {
-    color: #aec4be;
-    margin-right: 3px;
+  color: #aec4be;
+  margin-right: 3px;
 }
 .memory-widget .icon {
-    color: #aec4be;
-    margin-right: 3px;
+  color: #aec4be;
+  margin-right: 3px;
 }
 
 /***----------------------------------      • Update Check •      -----------------------------------***/
 
 .update-check-widget {
-    padding: 0 0px 0 0px;
+  padding: 0 0px 0 0px;
 }
 .update-check-widget .icon {
-    font-size: 11px;
+  font-size: 11px;
 }
 .update-check-widget .widget-container.winget,
 .update-check-widget .widget-container.windows {
-    background: #578875;
-    margin: 0px 0px 0px 0px;
-    border-radius: 10px;
-    border: 0px solid #4C6B61;
+  background: #578875;
+  margin: 0px 0px 0px 0px;
+  border-radius: 10px;
+  border: 0px solid #4c6b61;
 }
 .update-check-widget .widget-container.winget .icon,
 .update-check-widget .widget-container.windows .icon {
-    color: #23334E;
-    margin: 0 2px 0 6px;
+  color: #23334e;
+  margin: 0 2px 0 6px;
 }
 .update-check-widget .widget-container.winget .label,
 .update-check-widget .widget-container.windows .label {
-    margin: 0 6px 0 1px;
-    color: #23334E;
-    font-weight: 900;
-    font-size: 14px;
+  margin: 0 6px 0 1px;
+  color: #23334e;
+  font-weight: 900;
+  font-size: 14px;
 }
-
 
 /***----------------------------------      • Notes •      -----------------------------------***/
 
 .notes-widget {
-    padding: 2;
+  padding: 2;
 }
 .notes-widget .label {
-   font-size: 14px;
-   color: #aec4be;
+  font-size: 14px;
+  color: #aec4be;
 }
 .notes-widget .icon {
-    font-size: 14px;
-    color: #aec4be;
+  font-size: 14px;
+  color: #aec4be;
 }
 /* Notes Widget Menu */
 .notes-menu {
-    min-width: 500px;
-    max-width: 500px;
-    background-color: #060A08;
+  min-width: 500px;
+  max-width: 500px;
+  background-color: #060a08;
 }
 .notes-menu .note-item {
-    background-color:transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    max-width: 490px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 490px;
 }
 .notes-menu .note-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .notes-menu .note-item .icon {
-    font-size: 16px;
-    padding: 0 4px;
-    color: #aec4be;
+  font-size: 16px;
+  padding: 0 4px;
+  color: #aec4be;
 }
 .notes-menu .delete-button {
-    color: #ff6b6b;
-    background: transparent;
-    border: none;
-    font-size: 8px;
-    padding: 7px 8px;
-    border-radius: 3px;
+  color: #ff6b6b;
+  background: transparent;
+  border: none;
+  font-size: 8px;
+  padding: 7px 8px;
+  border-radius: 3px;
 }
 .notes-menu .delete-button:hover {
-    background-color: rgba(128, 128, 128, 0.5);
+  background-color: rgba(128, 128, 128, 0.5);
 }
 .notes-menu .note-item .title {
-    font-size: 13px;
-    font-family: 'JetBrainsMono NFM';
+  font-size: 13px;
+  font-family: "JetBrainsMono NFM";
 }
 .notes-menu .note-item .date {
-    font-size: 12px;
-    font-family: 'JetBrainsMono NFM';
-    color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  font-family: "JetBrainsMono NFM";
+  color: rgba(255, 255, 255, 0.4);
 }
 .notes-menu .empty-list {
-    font-family: 'JetBrainsMono NFM';
-    color: #aec4be;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 10px 0 20px 0;     
+  font-family: "JetBrainsMono NFM";
+  color: #aec4be;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 0 20px 0;
 }
-.notes-menu .add-button,  
+.notes-menu .add-button,
 .notes-menu .cancel-button {
-    padding: 8px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 4px;
-    color: #E69875;
-    font-family: 'JetBrainsMono NFM';
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  color: #e69875;
+  font-family: "JetBrainsMono NFM";
 }
 .notes-menu .cancel-button {
-    margin-left: 4px;
+  margin-left: 4px;
 }
 .notes-menu .add-button:hover,
 .notes-menu .cancel-button:hover {
-    background-color: #060A08;
+  background-color: #060a08;
 }
 .notes-menu .scroll-area {
-    background: transparent; 
-    border: none; 
-    border-radius:0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
 }
 .notes-menu .note-input {
-    background-color:rgba(17, 17, 27, 0.2);
-    border: px solid #aec4be;
-    font-family: 'JetBrainsMono NFM';
-    font-size: 12px;
-    max-height: 200px;
-    padding: 4px;
-    padding-bottom: 4px;
-    border-radius: 6px;
+  background-color: rgba(17, 17, 27, 0.2);
+  border: px solid #aec4be;
+  font-family: "JetBrainsMono NFM";
+  font-size: 12px;
+  max-height: 200px;
+  padding: 4px;
+  padding-bottom: 4px;
+  border-radius: 6px;
 }
 .note-input:focus {
-    border: 1px solid #aec4be;
+  border: 1px solid #aec4be;
 }
 
 /***----------------------------------      • Media •      -----------------------------------***/
 
 .media-menu {
-    min-width: 520px;
-    max-width: 700px;
-    background-color: #060A08;
-	border-radius: 8px;
-    padding: 16px 20px;
+  min-width: 520px;
+  max-width: 700px;
+  background-color: #060a08;
+  border-radius: 8px;
+  padding: 16px 20px;
 }
 .media-menu .title,
 .media-menu .artist,
 .media-menu .source {
-    font-size: 16px;
-    color: #aec4be;
-    font-weight: 700;
-    margin-left: 16px;
-    margin-right: 16px;
-    font-family: 'JetBrainsMono NFM';
-    line-height: 1.4;
-    word-wrap: break-word;
-    white-space: normal;
-    overflow: visible;
+  font-size: 16px;
+  color: #aec4be;
+  font-weight: 700;
+  margin-left: 16px;
+  margin-right: 16px;
+  font-family: "JetBrainsMono NFM";
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: visible;
 }
 .media-menu .artist {
-    font-size: 13px;
-    font-weight: 650;
-    color: #aec4be;
-    margin-top: 4px;
-    margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 650;
+  color: #aec4be;
+  margin-top: 4px;
+  margin-bottom: 12px;
 }
 .media-menu .source {
-    font-size: 11px;
-    color: #000;
-    font-weight: normal;
-    border-radius: 3px;
-    background-color: #bac2de;
-    padding: 4px 8px;
-    margin: 8px 16px 12px 16px;
-    display: inline-block;
+  font-size: 11px;
+  color: #000;
+  font-weight: normal;
+  border-radius: 3px;
+  background-color: #bac2de;
+  padding: 4px 8px;
+  margin: 8px 16px 12px 16px;
+  display: inline-block;
 }
 
 .media-menu .source::after {
-    content: " | ";
-    font-size: 14px;
-    color: #aec4be;
-    font-weight: 400;
-    background: none;
-    padding-left: 12px;
+  content: " | ";
+  font-size: 14px;
+  color: #aec4be;
+  font-weight: 400;
+  background: none;
+  padding-left: 12px;
 }
 /* The source class name is the same as what you see in the media widget; just replace spaces with dashes and convert it to lowercase.
 Example: "Windows Media" becomes "windows-media" */
 .media-menu .source.firefox {
-    background-color: #ff583b;
-    color: #ffffff;
+  background-color: #ff583b;
+  color: #ffffff;
 }
 .media-menu .source.spotify {
-    background-color: #199143;
-    color: #ffffff;
+  background-color: #199143;
+  color: #ffffff;
 }
 .media-menu .source.edge {
-    background-color: #0078d4;
-    color: #ffffff;
+  background-color: #0078d4;
+  color: #ffffff;
 }
 .media-menu .source.windows-media {
-    background-color: #0078d4;
-    color: #ffffff;
+  background-color: #0078d4;
+  color: #ffffff;
 }
 
 /***----------------------------------      • Media Button •      -----------------------------------***/
 
 .media-menu .btn {
-    font-family: "Segoe Fluent Icons";
-    font-size: 18px;
-    font-weight: 400;
-    color: #aec4be;
-    background-color: transparent;
-    border: none;
-    padding: 12px 16px;
-    cursor: pointer;
-    border-radius: 20px;
-	color: #30504E;
-    margin: 0 8px;
+  font-family: "Segoe Fluent Icons";
+  font-size: 18px;
+  font-weight: 400;
+  color: #aec4be;
+  background-color: transparent;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  color: #30504e;
+  margin: 0 8px;
 }
 .media-menu .btn.prev {
-    margin-left: 16px;
+  margin-left: 16px;
 }
 .media-menu .btn:hover {
-    color: #aec4be;
-    background-color: rgba(76, 107, 97, 0.15);
-    transform: scale(1.05);
+  color: #aec4be;
+  background-color: rgba(76, 107, 97, 0.15);
+  transform: scale(1.05);
 }
 .media-menu .btn.play {
-    font-size: 24px;
-    padding: 12px 18px;
+  font-size: 24px;
+  padding: 12px 18px;
 }
 .media-menu .btn.disabled:hover,
 .media-menu .btn.disabled {
-    color: #4e525c;
-    background-color: rgba(0, 0, 0, 0);
-    transform: none;
+  color: #4e525c;
+  background-color: rgba(0, 0, 0, 0);
+  transform: none;
 }
 
 .media-menu .playback-time {
-    font-size: 12px;
-    font-family: 'JetBrainsMono NFM';
-    color: #aec4be; 
-    margin-top: 20px;
-    min-width: 100px;
+  font-size: 12px;
+  font-family: "JetBrainsMono NFM";
+  color: #aec4be;
+  margin-top: 20px;
+  min-width: 100px;
 }
 .media-menu .progress-slider {
-    height: 10px;
-    margin: 5px 4px;
-    border-radius: 3px;
+  height: 10px;
+  margin: 5px 4px;
+  border-radius: 3px;
 }
 .media-menu .progress-slider::groove {
-    background: transparent;
-    height: 2px;
-    border-radius: 3px;
-    background: #060A08;
-
+  background: transparent;
+  height: 2px;
+  border-radius: 3px;
+  background: #060a08;
 }
 .media-menu .progress-slider::groove:hover {
-    background: transparent;
-    height: 6px;
-    border-radius: 3px;
-    background: #060A08;
+  background: transparent;
+  height: 6px;
+  border-radius: 3px;
+  background: #060a08;
 }
 .media-menu .progress-slider::sub-page {
-    background: #30504E;
-    border-radius: 3px;
-    height: 4px;
+  background: #30504e;
+  border-radius: 3px;
+  height: 4px;
 }
 
 /***----------------------------------      • GPU •      -----------------------------------***/
 
 .gpu-widget {
-    padding: 0 6px 0 6px;
+  padding: 0 6px 0 6px;
 }
 
 .gpu-widget .widget-container {
-    background-color: #060A08;
-    border-radius: 6px;
-    padding: 0 12px 0 8px;
+  background-color: #060a08;
+  border-radius: 6px;
+  padding: 0 12px 0 8px;
 }
 
 .gpu-widget .widget-container .label {
-    color: #aec4be;
-    font-weight: 700;
-    font-size: 12px;
+  color: #aec4be;
+  font-weight: 700;
+  font-size: 12px;
 }
 
 .gpu-widget .widget-container .label.alt {
-    color: #aec4be;
-    font-weight: 700;
-    font-size: 12px;
+  color: #aec4be;
+  font-weight: 700;
+  font-size: 12px;
 }
 
 .gpu-widget .label.status-low {
-    color: #30504E;
+  color: #30504e;
 }
 
 .gpu-widget .label.status-medium {
-    color: #2A5363;
+  color: #2a5363;
 }
 
 .gpu-widget .label.status-high {
-    color: #23334E;
+  color: #23334e;
 }
 
 .gpu-widget .label.status-critical {
-    color: #23334E;
+  color: #23334e;
 }
 
 /***----------------------------------      • GPU Progess Bar •      -----------------------------------***/
 
 .gpu-widget .progress-circle {
-    background-color: #060A08;
-    border: 2px solid #aec4be;
-    border-radius: 50%;
-    margin-left: 6px;
+  background-color: #060a08;
+  border: 2px solid #aec4be;
+  border-radius: 50%;
+  margin-left: 6px;
 }
 
 /***----------------------------------      • Windsurf / VSCode Widget •      -----------------------------------***/
 
 .vscode-widget .widget-container .icon {
-    color: #57948a;
+  color: #57948a;
 }
 
 .vscode-menu {
-    background-color: rgba(6, 10, 8, 0.95);
-    max-height: 500px;
-    min-width: 420px;
-    border-radius: 8px;
-    border: 1px solid #798985;
+  background-color: rgba(6, 10, 8, 0.95);
+  max-height: 500px;
+  min-width: 420px;
+  border-radius: 8px;
+  border: 1px solid #798985;
 }
 
 .vscode-menu .header {
-    border-bottom: 1px solid #798985;
-    font-size: 15px;
-    font-weight: 600;
-    font-family: "JetBrainsMono NFM";
-    padding: 12px 16px;
-    color: #aec4be;
-    background-color: rgba(6, 10, 8, 0.8);
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+  border-bottom: 1px solid #798985;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "JetBrainsMono NFM";
+  padding: 12px 16px;
+  color: #aec4be;
+  background-color: rgba(6, 10, 8, 0.8);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .vscode-menu .contents {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .vscode-menu .scroll-area {
-    background: transparent;
-    border: none;
+  background: transparent;
+  border: none;
 }
 
 .vscode-menu .contents .item {
-    min-height: 50px;
-    padding: 12px 16px;
-    border-bottom: 1px solid rgba(121, 137, 133, 0.2);
+  min-height: 50px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(121, 137, 133, 0.2);
 }
 
 .vscode-menu .contents .item:hover {
-    background-color: rgba(76, 107, 97, 0.2);
-    border-bottom-color: transparent;
+  background-color: rgba(76, 107, 97, 0.2);
+  border-bottom-color: transparent;
 }
 
 .vscode-menu .contents .item .title {
-    font-size: 13px;
-    font-weight: 500;
-    font-family: "JetBrainsMono NFM";
-    color: #aec4be;
-    margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "JetBrainsMono NFM";
+  color: #aec4be;
+  margin-bottom: 4px;
 }
 
 .vscode-menu .contents .item .date-modified {
-    font-size: 11px;
-    font-family: "JetBrainsMono NFM";
-    color: #798985;
+  font-size: 11px;
+  font-family: "JetBrainsMono NFM";
+  color: #798985;
 }
 
 .vscode-menu .contents .item .folder-icon {
-    font-size: 18px;
-    padding-right: 12px;
-    color: #578875;
+  font-size: 18px;
+  padding-right: 12px;
+  color: #578875;
 }
 
 .vscode-menu .contents .item .file-icon {
-    font-size: 18px;
-    padding-right: 12px;
-    color: #526784;
+  font-size: 18px;
+  padding-right: 12px;
+  color: #526784;
 }
 
 /***----------------------------------      • Grouper Widget Styling •      -----------------------------------***/
 
 /* Remove grey background from all groupers */
 .grouper .container {
-    background-color: transparent;
-    border: none;
-    margin: 0;
+  background-color: transparent;
+  border: none;
+  margin: 0;
 }
 
 .grouper .grouper-button {
-    font-size: 12px;
-    color: #aec4be;
-    padding: 0 6px;
-    background-color: transparent;
-    border: none;
+  font-size: 12px;
+  color: #aec4be;
+  padding: 0 6px;
+  background-color: transparent;
+  border: none;
 }
 
 .grouper .grouper-button:hover {
-    color: #578875;
+  color: #578875;
 }
 
 /* Specific grouper overrides */
 .notifications-group .container {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .system-monitor .container {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .wm-controls .container {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .media-grouper .container {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 /***----------------------------------      • Power Menu Widget •      -----------------------------------***/
 
 .power-menu-widget .label {
-    color: #aec4be;
-    font-size: 14px;
+  color: #aec4be;
+  font-size: 14px;
 }
 
 .power-menu-popup {
-    background-color: rgba(6, 10, 8, 0.95) !important;
-    padding: 30px !important;
-    border-radius: 12px !important;
+  background-color: rgba(6, 10, 8, 0.95) !important;
+  padding: 30px !important;
+  border-radius: 12px !important;
 }
 
 .power-menu-popup .button {
-    width: 140px !important;
-    height: 140px !important;
-    border-radius: 10px !important;
-    background-color: #060A08 !important;
-    border: 2px solid #30504E !important;
-    margin: 10px !important;
-    padding: 15px !important;
+  width: 140px !important;
+  height: 140px !important;
+  border-radius: 10px !important;
+  background-color: #060a08 !important;
+  border: 2px solid #30504e !important;
+  margin: 10px !important;
+  padding: 15px !important;
 }
 
 .power-menu-popup .button.hover {
-    background-color: #30504E !important;
-    border: 2px solid #578875 !important;
+  background-color: #30504e !important;
+  border: 2px solid #578875 !important;
 }
 
 .power-menu-popup .button .label {
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    color: #aec4be !important;
-    padding: 12px 0 0 0 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #aec4be !important;
+  padding: 12px 0 0 0 !important;
 }
 
 .power-menu-popup .button .icon {
-    font-size: 48px !important;
-    font-family: "JetBrainsMono NFM" !important;
-    color: #aec4be !important;
-    padding: 15px 0 !important;
+  font-size: 48px !important;
+  font-family: "JetBrainsMono NFM" !important;
+  color: #aec4be !important;
+  padding: 15px 0 !important;
 }
 
 .power-menu-popup .button.hover .label,
 .power-menu-popup .button.hover .icon {
-    color: #578875;
+  color: #578875;
 }
 
 .power-menu-popup .button.cancel {
-    height: 44px;
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 12px;
+  height: 44px;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 12px;
 }
 
 .power-menu-popup .button.cancel .icon {
-    font-size: 0;
-    padding: 0;
-    margin: 0;
-    max-height: 0;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
 }
 
 .power-menu-popup .button.cancel .label {
-    color: #ff6b6b;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 0;
+  color: #ff6b6b;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0;
 }
 
 .power-menu-popup .button.cancel.hover {
-    background-color: #ff6b6b;
-    border-color: #ff6b6b;
+  background-color: #ff6b6b;
+  border-color: #ff6b6b;
 }
 
 .power-menu-popup .button.cancel.hover .label {
-    color: #060A08;
+  color: #060a08;
 }
 
 .uptime {
-    font-size: 13px;
-    margin-bottom: 16px;
-    color: #798985;
-    font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 16px;
+  color: #798985;
+  font-weight: 500;
 }
 
 /***----------------------------------      • Traffic Widget •      -----------------------------------***/
 
 .traffic-menu,
 .traffic-menu * {
-    font-family: "JetBrainsMono NFM";
-    color: #aec4be;
+  font-family: "JetBrainsMono NFM";
+  color: #aec4be;
 }
 
 .traffic-widget .icon {
-    color: #aec4be;
-    padding-right: 6px;
-    padding-left: 6px;
+  color: #aec4be;
+  padding-right: 6px;
+  padding-left: 6px;
 }
 .traffic-widget .label {
-color: #30504E;
+  color: #30504e;
 }
 
 .traffic-menu {
-    background-color: rgba(24, 25, 27, 0.85) !important;
-    min-width: 280px !important;
+  background-color: rgba(24, 25, 27, 0.85) !important;
+  min-width: 280px !important;
 }
 
 .traffic-menu .header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-    background-color: rgba(24, 25, 27, 0.8) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background-color: rgba(24, 25, 27, 0.8) !important;
 }
 
 .traffic-menu .header .title {
-    padding: 8px !important;
-    font-size: 16px !important;
-    font-weight: 600 !important;
-    font-family: "JetBrainsMono NFM" !important;
-    color: #ffffff !important;
+  padding: 8px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  font-family: "JetBrainsMono NFM" !important;
+  color: #ffffff !important;
 }
 
 .traffic-menu .header .reset-button {
-    font-size: 11px !important;
-    padding: 4px 8px !important;
-    margin-right: 8px !important;
-    font-family: "JetBrainsMono NFM" !important;
-    border-radius: 4px !important;
-    font-weight: 600 !important;
-    background-color: transparent !important;
-    border: none !important;
+  font-size: 11px !important;
+  padding: 4px 8px !important;
+  margin-right: 8px !important;
+  font-family: "JetBrainsMono NFM" !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  background-color: transparent !important;
+  border: none !important;
 }
 
 .traffic-menu .reset-button:hover {
-    color: #ffffff !important;
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .traffic-menu .reset-button:pressed {
-    color: #ffffff !important;
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
 /* Some builds use the 'resset-button' class name (double 's') */
 .traffic-menu .header .resset-button {
-    font-size: 11px !important;
-    padding: 4px 8px !important;
-    margin-right: 8px !important;
-    font-family: "JetBrainsMono NFM" !important;
-    border-radius: 4px !important;
-    font-weight: 600 !important;
-    background-color: transparent !important;
-    border: none !important;
+  font-size: 11px !important;
+  padding: 4px 8px !important;
+  margin-right: 8px !important;
+  font-family: "JetBrainsMono NFM" !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  background-color: transparent !important;
+  border: none !important;
 }
 
 .traffic-menu .resset-button:hover {
-    color: #ffffff !important;
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .traffic-menu .resset-button:pressed {
-    color: #ffffff !important;
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
 /* Speed column styles */
 .traffic-menu .download-speed,
 .traffic-menu .upload-speed {
-    background-color: transparent !important;
-    padding: 4px 10px !important;
-    margin-right: 12px !important;
-    margin-left: 12px !important;
-    margin-top: 16px !important;
-    margin-bottom: 0 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background-color: transparent !important;
+  padding: 4px 10px !important;
+  margin-right: 12px !important;
+  margin-left: 12px !important;
+  margin-top: 16px !important;
+  margin-bottom: 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
 .traffic-menu .download-speed {
-    margin-left: 12px !important;
-    margin-right: 12px !important;
+  margin-left: 12px !important;
+  margin-right: 12px !important;
 }
 
 .traffic-menu .speed-separator {
-    max-width: 1px !important;
-    background-color: rgba(255, 255, 255, 0.2) !important;
-    margin: 32px 0 16px 0 !important;
+  max-width: 1px !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  margin: 32px 0 16px 0 !important;
 }
 
 .traffic-menu .upload-speed-value,
 .traffic-menu .download-speed-value {
-    font-size: 24px !important;
-    font-weight: 900 !important;
-    font-family: "JetBrainsMono NFM" !important;
-    color: #bcc2c5 !important;
+  font-size: 24px !important;
+  font-weight: 900 !important;
+  font-family: "JetBrainsMono NFM" !important;
+  color: #bcc2c5 !important;
 }
 
 .traffic-menu .upload-speed-unit,
 .traffic-menu .download-speed-unit {
-    font-size: 13px !important;
-    font-family: "JetBrainsMono NFM" !important;
-    font-weight: 600 !important;
-    padding-top: 4px !important;
+  font-size: 13px !important;
+  font-family: "JetBrainsMono NFM" !important;
+  font-weight: 600 !important;
+  padding-top: 4px !important;
 }
 
 .traffic-menu .upload-speed-placeholder,
 .traffic-menu .download-speed-placeholder {
-    color: #747474 !important;
-    font-size: 11px !important;
-    font-family: "JetBrainsMono NFM" !important;
-    padding: 0 0 4px 0 !important;
+  color: #747474 !important;
+  font-size: 11px !important;
+  font-family: "JetBrainsMono NFM" !important;
+  padding: 0 0 4px 0 !important;
 }
 
 /* Section and data styles */
 .traffic-menu .section-title {
-    font-size: 12px !important;
-    font-weight: 600 !important;
-    color: #7c8192 !important;
-    margin-bottom: 4px !important;
-    font-family: "JetBrainsMono NFM" !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #7c8192 !important;
+  margin-bottom: 4px !important;
+  font-family: "JetBrainsMono NFM" !important;
 }
 
 .traffic-menu .session-section,
 .traffic-menu .today-section,
 .traffic-menu .alltime-section {
-    margin: 8px 8px 0 8px !important;
-    padding: 0 10px 10px 10px !important;
-    background-color: transparent !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  margin: 8px 8px 0 8px !important;
+  padding: 0 10px 10px 10px !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 /* Generic section classes from the widget */
 .traffic-menu .section {
-    background-color: transparent !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-    margin: 8px 8px 0 8px !important;
-    padding: 0 10px 10px 10px !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  margin: 8px 8px 0 8px !important;
+  padding: 0 10px 10px 10px !important;
 }
 
 .traffic-menu .section.speeds-section {
-    border-bottom: none !important;
-    padding: 0 10px 0 10px !important;
+  border-bottom: none !important;
+  padding: 0 10px 0 10px !important;
 }
 
 .traffic-menu .data-text {
-    font-size: 13px !important;
-    color: #afb5cc !important;
-    padding: 2px 0 !important;
-    font-family: "JetBrainsMono NFM" !important;
-
+  font-size: 13px !important;
+  color: #afb5cc !important;
+  padding: 2px 0 !important;
+  font-family: "JetBrainsMono NFM" !important;
 }
 
 /* Explicit data-text subclasses */
@@ -1864,17 +1897,17 @@ color: #30504E;
 .traffic-menu .data-text.today-download-text,
 .traffic-menu .data-text.alltime-upload-text,
 .traffic-menu .data-text.alltime-download-text {
-    font-size: 13px !important;
-    color: #afb5cc !important;
-    padding: 2px 0 !important;
-    font-family: "JetBrainsMono NFM" !important;
+  font-size: 13px !important;
+  color: #afb5cc !important;
+  padding: 2px 0 !important;
+  font-family: "JetBrainsMono NFM" !important;
 }
 
 .traffic-menu .data-value {
-    font-weight: 600 !important;
-    font-size: 13px !important;
-    font-family: "JetBrainsMono NFM" !important;
-    padding: 2px 0 !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  font-family: "JetBrainsMono NFM" !important;
+  padding: 2px 0 !important;
 }
 
 /* Explicit data-value subclasses */
@@ -1885,605 +1918,774 @@ color: #30504E;
 .traffic-menu .data-value.today-download-value,
 .traffic-menu .data-value.alltime-upload-value,
 .traffic-menu .data-value.alltime-download-value {
-    font-weight: 600 !important;
-    font-size: 13px !important;
-    font-family: "JetBrainsMono NFM" !important;
-    padding: 2px 0 !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  font-family: "JetBrainsMono NFM" !important;
+  padding: 2px 0 !important;
 }
 
 /* Fallback targets to catch any unlabeled elements */
 .traffic-menu QLabel {
-    color: #aec4be !important;
-    font-family: "JetBrainsMono NFM" !important;
+  color: #aec4be !important;
+  font-family: "JetBrainsMono NFM" !important;
 }
 
 .traffic-menu QPushButton {
-    color: #aec4be !important;
-    font-family: "JetBrainsMono NFM" !important;
+  color: #aec4be !important;
+  font-family: "JetBrainsMono NFM" !important;
 }
 
 /* Interface and Internet info styles */
 .traffic-menu .interface-info,
 .traffic-menu .internet-info {
-    font-size: 12px !important;
-    color: #6f7486 !important;
-    padding: 8px 0 !important;
-    font-family: "JetBrainsMono NFM" !important;
+  font-size: 12px !important;
+  color: #6f7486 !important;
+  padding: 8px 0 !important;
+  font-family: "JetBrainsMono NFM" !important;
 }
 
 .traffic-menu .internet-info {
-    background-color: rgba(68, 68, 68, 0.1) !important;
+  background-color: rgba(68, 68, 68, 0.1) !important;
 }
 
 .traffic-menu .internet-info.connected {
-    background-color: rgba(166, 227, 161, 0.096) !important;
-    color: #a6e3a1 !important;
+  background-color: rgba(166, 227, 161, 0.096) !important;
+  color: #a6e3a1 !important;
 }
 
 .traffic-menu .internet-info.disconnected {
-    background-color: rgba(243, 139, 168, 0.1) !important;
-    color: #f38ba8 !important;
+  background-color: rgba(243, 139, 168, 0.1) !important;
+  color: #f38ba8 !important;
 }
 
 /***----------------------------------      • WiFi Widget •      -----------------------------------***/
 
 .wifi-widget .widget-container .label {
-    color: #aec4be;
+  color: #aec4be;
 }
 
 .wifi-menu {
-    background-color: #060A08;
-    min-width: 300px;
-    border-radius: 8px;
+  background-color: #060a08;
+  min-width: 300px;
+  border-radius: 8px;
 }
 
 .wifi-menu .header {
-    padding: 10px 14px;
-    border-bottom: 1px solid #30504E;
-    color: #aec4be;
-    font-weight: 600;
+  padding: 10px 14px;
+  border-bottom: 1px solid #30504e;
+  color: #aec4be;
+  font-weight: 600;
 }
 
 .wifi-menu .contents .item {
-    padding: 8px 14px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 8px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .wifi-menu .contents .item:hover {
-    background-color: #30504E;
+  background-color: #30504e;
 }
 
 /***----------------------------------      • AI Chat Widget •      -----------------------------------***/
 
 .ai-chat-widget {
-    padding: 0 6px;
+  padding: 0 6px;
 }
 
 .ai-chat-widget .icon {
-    color: #578875;
-    font-size: 16px;
+  color: #578875;
+  font-size: 16px;
 }
 
 .ai-chat-popup {
-    background-color: rgba(6, 10, 8, 0.95);
-    min-width: 500px;
-    max-width: 500px;
-    min-height: 600px;
-    max-height: 600px;
-    border-radius: 10px;
-    border: 1px solid #798985;
+  background-color: rgba(6, 10, 8, 0.95);
+  min-width: 500px;
+  max-width: 500px;
+  min-height: 600px;
+  max-height: 600px;
+  border-radius: 10px;
+  border: 1px solid #798985;
 }
 
 .ai-chat-popup .chat-header {
-    background-color: rgba(6, 10, 8, 0.8);
-    padding: 16px;
-    border-bottom: 1px solid #798985;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+  background-color: rgba(6, 10, 8, 0.8);
+  padding: 16px;
+  border-bottom: 1px solid #798985;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .ai-chat-popup .chat-footer {
-    background-color: rgba(6, 10, 8, 0.6);
-    padding: 16px;
-    border-top: 1px solid #798985;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+  background-color: rgba(6, 10, 8, 0.6);
+  padding: 16px;
+  border-top: 1px solid #798985;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .ai-chat-popup .chat-header .provider-label,
 .ai-chat-popup .chat-header .model-label {
-    font-family: "JetBrainsMono NFM";
-    font-size: 13px;
-    color: #aec4be;
-    margin-right: 8px;
-    font-weight: 600;
+  font-family: "JetBrainsMono NFM";
+  font-size: 13px;
+  color: #aec4be;
+  margin-right: 8px;
+  font-weight: 600;
 }
 
 .ai-chat-popup .chat-header .provider-button,
 .ai-chat-popup .chat-header .model-button {
-    font-family: "JetBrainsMono NFM";
-    background-color: #23334E;
-    border: 1px solid #798985;
-    font-size: 12px;
-    color: #aec4be;
-    margin-right: 8px;
-    min-width: 160px;
-    max-width: 180px;
-    border-radius: 6px;
-    padding: 6px 12px;
+  font-family: "JetBrainsMono NFM";
+  background-color: #23334e;
+  border: 1px solid #798985;
+  font-size: 12px;
+  color: #aec4be;
+  margin-right: 8px;
+  min-width: 160px;
+  max-width: 180px;
+  border-radius: 6px;
+  padding: 6px 12px;
 }
 
 .ai-chat-popup .chat-header .provider-button:hover,
 .ai-chat-popup .chat-header .model-button:hover {
-    background-color: #30504E;
+  background-color: #30504e;
 }
 
 .ai-chat-popup .chat-header .provider-button:disabled,
 .ai-chat-popup .chat-header .model-button:disabled {
-    color: #798985;
+  color: #798985;
 }
 
 /* Context menu styles */
 .ai-chat-popup .context-menu {
-    background-color: #060A08;
-    border: 1px solid #798985;
-    padding: 4px 0;
-    font-family: "JetBrainsMono NFM";
-    font-size: 12px;
-    color: #aec4be;
-    border-radius: 6px;
+  background-color: #060a08;
+  border: 1px solid #798985;
+  padding: 4px 0;
+  font-family: "JetBrainsMono NFM";
+  font-size: 12px;
+  color: #aec4be;
+  border-radius: 6px;
 }
 
 .ai-chat-popup .context-menu::separator {
-    height: 1px;
-    background-color: #30504E;
-    margin: 4px 8px;
+  height: 1px;
+  background-color: #30504e;
+  margin: 4px 8px;
 }
 
 .ai-chat-popup .context-menu::item {
-    background-color: transparent;
-    padding: 6px 12px;
-    margin: 2px 6px;
-    border-radius: 4px;
-    min-width: 140px;
-    color: #aec4be;
-    font-family: "JetBrainsMono NFM";
+  background-color: transparent;
+  padding: 6px 12px;
+  margin: 2px 6px;
+  border-radius: 4px;
+  min-width: 140px;
+  color: #aec4be;
+  font-family: "JetBrainsMono NFM";
 }
 
 .ai-chat-popup .chat-header .context-menu::item {
-    min-width: 160px;
-    max-width: 180px;
-    padding: 6px 10px;
+  min-width: 160px;
+  max-width: 180px;
+  padding: 6px 10px;
 }
 
 .ai-chat-popup .context-menu::item:disabled {
-    color: #798985;
+  color: #798985;
 }
 
 .ai-chat-popup .context-menu::item:selected {
-    background-color: #30504E;
-    color: #aec4be;
+  background-color: #30504e;
+  color: #aec4be;
 }
 
 .ai-chat-popup .context-menu::item:checked {
-    background-color: #578875;
-    color: #060A08;
+  background-color: #578875;
+  color: #060a08;
 }
 
 .ai-chat-popup .chat-content {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 
 .ai-chat-popup .chat-content .empty-chat .greeting,
 .ai-chat-popup .chat-content .empty-chat .message {
-    color: #aec4be;
-    font-family: "JetBrainsMono NFM";
-    font-size: 28px;
-    font-weight: 600;
+  color: #aec4be;
+  font-family: "JetBrainsMono NFM";
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .ai-chat-popup .chat-content .empty-chat .message {
-    color: #798985;
-    font-size: 16px;
-    padding-top: 8px;
+  color: #798985;
+  font-size: 16px;
+  padding-top: 8px;
 }
 
 .ai-chat-popup .chat-content .user-message,
 .ai-chat-popup .chat-content .assistant-message {
-    color: #aec4be;
-    padding: 12px 14px;
-    border-radius: 8px;
-    margin: 8px 16px;
-    font-family: "JetBrainsMono NFM";
-    font-size: 13px;
+  color: #aec4be;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin: 8px 16px;
+  font-family: "JetBrainsMono NFM";
+  font-size: 13px;
 }
 
 .ai-chat-popup .chat-content .user-message {
-    margin-left: 40px;
-    background-color: transparent;
-    text-align: right;
+  margin-left: 40px;
+  background-color: transparent;
+  text-align: right;
 }
 
 .ai-chat-popup .chat-content .assistant-message {
-    background-color: rgba(48, 80, 78, 0.4);
-    border: 1px solid rgba(121, 137, 133, 0.3);
+  background-color: rgba(48, 80, 78, 0.4);
+  border: 1px solid rgba(121, 137, 133, 0.3);
 }
 
 .ai-chat-popup .chat-content .assistant-icon {
-    font-size: 18px;
-    color: #578875;
-    margin-right: 10px;
-    font-family: "JetBrainsMono NFM";
+  font-size: 18px;
+  color: #578875;
+  margin-right: 10px;
+  font-family: "JetBrainsMono NFM";
 }
 
 .ai-chat-popup .chat-footer .chat-input {
-    background-color: #23334E;
-    border: 2px solid #798985;
-    border-radius: 8px;
-    padding: 8px 14px;
-    font-family: "JetBrainsMono NFM";
-    font-size: 13px;
-    color: #aec4be;
-    min-height: 36px;
+  background-color: #23334e;
+  border: 2px solid #798985;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-family: "JetBrainsMono NFM";
+  font-size: 13px;
+  color: #aec4be;
+  min-height: 36px;
 }
 
 .ai-chat-popup .chat-footer .chat-input:focus {
-    border-color: #578875;
+  border-color: #578875;
 }
 
 .ai-chat-popup .chat-footer .clear-button,
 .ai-chat-popup .chat-footer .send-button,
 .ai-chat-popup .chat-footer .stop-button {
-    background-color: #30504E;
-    color: #aec4be;
-    font-size: 14px;
-    max-width: 36px;
-    min-width: 36px;
-    max-height: 36px;
-    min-height: 36px;
-    border-radius: 6px;
-    margin-left: 8px;
-    border: none;
-    font-family: "JetBrainsMono NFM";
+  background-color: #30504e;
+  color: #aec4be;
+  font-size: 14px;
+  max-width: 36px;
+  min-width: 36px;
+  max-height: 36px;
+  min-height: 36px;
+  border-radius: 6px;
+  margin-left: 8px;
+  border: none;
+  font-family: "JetBrainsMono NFM";
 }
 
 .ai-chat-popup .chat-footer .stop-button {
-    background-color: #578875;
-    color: #060A08;
+  background-color: #578875;
+  color: #060a08;
 }
 
 .ai-chat-popup .chat-footer .clear-button:hover,
 .ai-chat-popup .chat-footer .send-button:hover,
 .ai-chat-popup .chat-footer .stop-button:hover {
-    background-color: #578875;
-    color: #060A08;
+  background-color: #578875;
+  color: #060a08;
 }
 
 .ai-chat-popup .chat-footer .clear-button:disabled,
 .ai-chat-popup .chat-footer .send-button:disabled,
 .ai-chat-popup .chat-footer .stop-button:disabled {
-    background-color: #23334E;
-    color: #798985;
+  background-color: #23334e;
+  color: #798985;
 }
 
 /***----------------------------------      • Launchpad Widget •      -----------------------------------***/
 
 /* Widget style */
 .launchpad-widget {
-    padding: 0 6px;
+  padding: 0 6px;
 }
 
 .launchpad-widget .label {
-    color: #aec4be;
+  color: #aec4be;
 }
 
 .launchpad-widget .icon {
-    font-size: 16px;
-    color: #578875;
+  font-size: 16px;
+  color: #578875;
 }
 
 /* Launchpad context menu style */
 .launchpad .context-menu,
 .launchpad .context-menu .menu-checkbox {
-    background-color: #060A08;
-    border: 1px solid #798985;
-    border-radius: 8px;
-    padding: 4px 0px;
-    font-family: "JetBrainsMono NFM";
-    font-size: 12px;
-    color: #aec4be;
-    font-weight: 600;
+  background-color: #060a08;
+  border: 1px solid #798985;
+  border-radius: 8px;
+  padding: 4px 0px;
+  font-family: "JetBrainsMono NFM";
+  font-size: 12px;
+  color: #aec4be;
+  font-weight: 600;
 }
 
 .launchpad .context-menu::right-arrow {
-    width: 8px;
-    height: 8px;
-    padding-right: 24px;
+  width: 8px;
+  height: 8px;
+  padding-right: 24px;
 }
 
 .launchpad .context-menu::item,
 .launchpad .context-menu .menu-checkbox {
-    background-color: transparent;
-    padding: 8px 14px;
-    margin: 2px 6px;
-    border-radius: 6px;
-    min-width: 120px;
+  background-color: transparent;
+  padding: 8px 14px;
+  margin: 2px 6px;
+  border-radius: 6px;
+  min-width: 120px;
 }
 
 .launchpad .context-menu::item:selected,
 .launchpad .context-menu .menu-checkbox:hover {
-    background-color: #30504E;
-    color: #aec4be;
+  background-color: #30504e;
+  color: #aec4be;
 }
 
 .launchpad .context-menu::item:pressed {
-    background-color: #23334E;
+  background-color: #23334e;
 }
 
 .launchpad .context-menu::separator {
-    height: 1px;
-    background-color: #798985;
-    margin: 4px 8px;
+  height: 1px;
+  background-color: #798985;
+  margin: 4px 8px;
 }
 
 .launchpad .context-menu::item:disabled {
-    color: #798985;
-    background-color: transparent;
+  color: #798985;
+  background-color: transparent;
 }
 
 .launchpad .context-menu .menu-checkbox .checkbox {
-    border: none;
-    padding: 8px 16px;
-    font-size: 12px;
-    margin: 0;
-    color: #aec4be;
-    font-family: "JetBrainsMono NFM";
+  border: none;
+  padding: 8px 16px;
+  font-size: 12px;
+  margin: 0;
+  color: #aec4be;
+  font-family: "JetBrainsMono NFM";
 }
 
 .launchpad .context-menu .submenu::item:disabled {
-    margin: 0;
-    padding-left: 16px;
+  margin: 0;
+  padding-left: 16px;
 }
 
 .launchpad .context-menu .menu-checkbox .checkbox:unchecked {
-    color: #798985;
+  color: #798985;
 }
 
 .launchpad .context-menu .menu-checkbox .checkbox::indicator {
-    width: 12px;
-    height: 12px;
-    margin-left: 0px;
-    margin-right: 8px;
+  width: 12px;
+  height: 12px;
+  margin-left: 0px;
+  margin-right: 8px;
 }
 
 .launchpad .context-menu .menu-checkbox .checkbox::indicator:unchecked {
-    background: #23334E;
-    border-radius: 2px;
+  background: #23334e;
+  border-radius: 2px;
 }
 
 .launchpad .context-menu .menu-checkbox .checkbox::indicator:checked {
-    background: #578875;
-    border-radius: 2px;
+  background: #578875;
+  border-radius: 2px;
 }
 
 .launchpad .context-menu .menu-checkbox .checkbox:focus {
-    outline: none;
+  outline: none;
 }
 
 .launchpad .context-menu::item:checked {
-    background-color: #578875;
-    color: #060A08;
+  background-color: #578875;
+  color: #060a08;
 }
 
 /* Launchpad App dialog style */
 .launchpad .app-dialog {
-    font-family: "JetBrainsMono NFM";
-    background-color: #060A08;
+  font-family: "JetBrainsMono NFM";
+  background-color: #060a08;
 }
 
 .launchpad .app-dialog .buttons-container {
-    background-color: #23334E;
-    margin-top: 16px;
-    border-top: 1px solid #798985;
-    max-height: 80px;
-    min-height: 80px;
-    padding: 0 20px;
+  background-color: #23334e;
+  margin-top: 16px;
+  border-top: 1px solid #798985;
+  max-height: 80px;
+  min-height: 80px;
+  padding: 0 20px;
 }
 
 .launchpad .app-dialog .message {
-    color: #aec4be;
-    font-family: "JetBrainsMono NFM";
-    font-size: 12px;
-    font-weight: 600;
-    padding: 10px 0;
+  color: #aec4be;
+  font-family: "JetBrainsMono NFM";
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 0;
 }
 
 .launchpad .app-dialog .title-field,
 .launchpad .app-dialog .path-field,
 .launchpad .app-dialog .icon-field {
-    background-color: #23334E;
-    border: 1px solid #798985;
-    border-radius: 4px;
-    padding: 0 6px;
-    font-family: "JetBrainsMono NFM";
-    font-size: 12px;
-    font-weight: 600;
-    color: #aec4be;
-    margin: 10px 0px 5px 0;
-    min-height: 30px;
+  background-color: #23334e;
+  border: 1px solid #798985;
+  border-radius: 4px;
+  padding: 0 6px;
+  font-family: "JetBrainsMono NFM";
+  font-size: 12px;
+  font-weight: 600;
+  color: #aec4be;
+  margin: 10px 0px 5px 0;
+  min-height: 30px;
 }
 
 .launchpad .app-dialog .title-field:focus,
 .launchpad .app-dialog .path-field:focus,
 .launchpad .app-dialog .icon-field:focus {
-    border-bottom-color: #578875;
+  border-bottom-color: #578875;
 }
 
 .launchpad .app-dialog .button {
-    background-color: #30504E;
-    border: none;
-    border-radius: 4px;
-    font-family: "JetBrainsMono NFM";
-    font-size: 12px;
-    font-weight: 600;
-    color: #aec4be;
-    min-width: 80px;
-    padding: 0 6px;
-    margin: 10px 0 5px 6px;
-    min-height: 28px;
-    outline: none;
+  background-color: #30504e;
+  border: none;
+  border-radius: 4px;
+  font-family: "JetBrainsMono NFM";
+  font-size: 12px;
+  font-weight: 600;
+  color: #aec4be;
+  min-width: 80px;
+  padding: 0 6px;
+  margin: 10px 0 5px 6px;
+  min-height: 28px;
+  outline: none;
 }
 
 .launchpad .app-dialog .buttons-container .button {
-    margin: 10px 0 5px 0px;
-    font-size: 13px;
+  margin: 10px 0 5px 0px;
+  font-size: 13px;
 }
 
 .launchpad .app-dialog .button:focus {
-    border: 2px solid #aec4be;
+  border: 2px solid #aec4be;
 }
 
 .launchpad .app-dialog .button:focus,
 .launchpad .app-dialog .button:hover {
-    background-color: #4C6B61;
+  background-color: #4c6b61;
 }
 
 .launchpad .app-dialog .button:pressed {
-    background-color: #30504E;
+  background-color: #30504e;
 }
 
 .launchpad .app-dialog .button.add,
 .launchpad .app-dialog .button.save {
-    background-color: #578875;
-    color: #060A08;
+  background-color: #578875;
+  color: #060a08;
 }
 
 .launchpad .app-dialog .button.add:focus,
 .launchpad .app-dialog .button.save:focus,
 .launchpad .app-dialog .button.add:hover,
 .launchpad .app-dialog .button.save:hover {
-    background-color: #4C6B61;
+  background-color: #4c6b61;
 }
 
 .launchpad .app-dialog .button.add:pressed,
 .launchpad .app-dialog .button.save:pressed {
-    background-color: #30504E;
+  background-color: #30504e;
 }
 
 .launchpad .app-dialog .button.delete {
-    background-color: #23334E;
-    color: #aec4be;
+  background-color: #23334e;
+  color: #aec4be;
 }
 
 .launchpad .app-dialog .button.delete:focus,
 .launchpad .app-dialog .button.delete:hover {
-    background-color: #4C6B61;
+  background-color: #4c6b61;
 }
 
 .launchpad .app-dialog .button.delete:pressed {
-    background-color: #30504E;
+  background-color: #30504e;
 }
 
 .launchpad .app-dialog .warning-message {
-    background-color: #23334E;
-    border: 1px solid #798985;
-    border-radius: 4px;
-    color: #aec4be;
-    font-family: "JetBrainsMono NFM";
-    font-size: 12px;
-    font-weight: 600;
-    padding: 8px 12px;
-    margin: 4px 0px;
+  background-color: #23334e;
+  border: 1px solid #798985;
+  border-radius: 4px;
+  color: #aec4be;
+  font-family: "JetBrainsMono NFM";
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 12px;
+  margin: 4px 0px;
 }
 
 /* Launchpad popup style */
 .launchpad .drop-overlay {
-    background-color: rgba(6, 10, 8, 0.8);
-    border: 4px dashed #578875;
+  background-color: rgba(6, 10, 8, 0.8);
+  border: 4px dashed #578875;
 }
 
 .launchpad .drop-overlay .text {
-    color: #aec4be;
-    font-family: "JetBrainsMono NFM";
-    font-size: 64px;
-    font-weight: 600;
-    text-transform: uppercase;
+  color: #aec4be;
+  font-family: "JetBrainsMono NFM";
+  font-size: 64px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .launchpad .launchpad-container {
-    background-color: rgba(6, 10, 8, 0.85);
+  background-color: rgba(6, 10, 8, 0.85);
 }
 
 .launchpad .search-container {
-    border-bottom: 1px solid rgba(121, 137, 133, 0.3);
-    background-color: rgba(0, 0, 0, 0.3);
-    min-height: 80px;
-    margin: 0;
-    padding: 0;
+  border-bottom: 1px solid rgba(121, 137, 133, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+  min-height: 80px;
+  margin: 0;
+  padding: 0;
 }
 
 .launchpad .search-input {
-    max-width: 400px;
-    padding: 8px 12px;
-    font-size: 14px;
-    min-height: 24px;
-    max-height: 24px;
-    font-family: "JetBrainsMono NFM";
-    border-radius: 20px;
-    border: 2px solid #798985;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #aec4be;
+  max-width: 400px;
+  padding: 8px 12px;
+  font-size: 14px;
+  min-height: 24px;
+  max-height: 24px;
+  font-family: "JetBrainsMono NFM";
+  border-radius: 20px;
+  border: 2px solid #798985;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #aec4be;
 }
 
 .launchpad .search-input:focus {
-    border: 2px solid #578875;
-    background-color: rgba(48, 80, 78, 0.2);
+  border: 2px solid #578875;
+  background-color: rgba(48, 80, 78, 0.2);
 }
 
 .launchpad .launchpad-scroll-area {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 
 .launchpad .app-icon {
-    background-color: transparent;
-    border-radius: 16px;
-    border: 3px solid transparent;
-    padding: 12px;
-    margin: 12px 20px 20px 20px;
-    max-width: 140px;
-    min-width: 140px;
-    min-height: 140px;
-    max-height: 140px;
+  background-color: transparent;
+  border-radius: 16px;
+  border: 3px solid transparent;
+  padding: 12px;
+  margin: 12px 20px 20px 20px;
+  max-width: 140px;
+  min-width: 140px;
+  min-height: 140px;
+  max-height: 140px;
 }
 
 .launchpad .app-icon:focus {
-    border: 3px solid #578875;
-    background-color: rgba(48, 80, 78, 0.25);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border: 3px solid #578875;
+  background-color: rgba(48, 80, 78, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .launchpad .app-icon:hover {
-    border: 3px solid #578875;
-    background-color: rgba(48, 80, 78, 0.35);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  border: 3px solid #578875;
+  background-color: rgba(48, 80, 78, 0.35);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
 
 .launchpad .app-icon .title {
-    color: #aec4be;
-    font-family: "JetBrainsMono NFM";
-    font-size: 12px;
-    margin-top: 8px;
-    font-weight: 600;
+  color: #aec4be;
+  font-family: "JetBrainsMono NFM";
+  font-size: 12px;
+  margin-top: 8px;
+  font-weight: 600;
 }
 
 /* URL app icons */
 .launchpad .app-icon.url .title {
-    color: #526784;
+  color: #526784;
 }
 
 .launchpad .app-icon .icon {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* NEW v1.8.7 Widget Styles                                                                           */
+/* -------------------------------------------------------------------------------------------------- */
+
+/***-------------------------------      • GitHub Copilot Widget •      --------------------------------***/
+
+.copilot-widget .widget-container {
+  padding: 0 8px;
+}
+
+.copilot-widget .label {
+  font-size: 12px;
+  color: #aec4be;
+}
+
+.copilot-widget .label span {
+  color: #578875;
+  font-size: 14px;
+}
+
+.copilot-widget .progress-bar {
+  background-color: #23334e;
+  border-radius: 50%;
+}
+
+.copilot-widget .progress-bar .fill {
+  background-color: #578875;
+}
+
+.copilot-widget .notification-dot {
+  background-color: #578875;
+}
+
+/***-------------------------------      • Brightness Widget •      --------------------------------***/
+
+.brightness-widget .widget-container {
+  padding: 0 8px;
+}
+
+.brightness-widget .label {
+  font-size: 12px;
+  color: #aec4be;
+}
+
+.brightness-widget .label span {
+  color: #578875;
+  font-size: 14px;
+}
+
+.brightness-slider {
+  background-color: rgba(6, 10, 8, 0.9);
+  border: 1px solid #798985;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.brightness-slider .slider {
+  background-color: #23334e;
+  border-radius: 4px;
+  min-height: 6px;
+  max-height: 6px;
+}
+
+.brightness-slider .slider::handle {
+  background-color: #578875;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  margin: -4px 0;
+}
+
+.brightness-slider .slider::groove:horizontal {
+  background-color: #23334e;
+  border-radius: 4px;
+  height: 6px;
+}
+
+.brightness-slider .slider::sub-page:horizontal {
+  background-color: #578875;
+  border-radius: 4px;
+}
+
+.brightness-slider .slider::add-page:horizontal {
+  background-color: #23334e;
+  border-radius: 4px;
+}
+
+.brightness-slider .value-label {
+  color: #aec4be;
+  font-size: 14px;
+  font-family: "JetBrainsMono NFM";
+  font-weight: 600;
+  min-width: 40px;
+  text-align: center;
+}
+
+/***-------------------------------      • Language Widget •      --------------------------------***/
+
+.language-widget .widget-container {
+  padding: 0 8px;
+}
+
+.language-widget .label {
+  font-size: 12px;
+  color: #aec4be;
+}
+
+.language-widget .label span {
+  color: #578875;
+  font-size: 14px;
+}
+
+.language-widget .caps-lock-on {
+  color: #578875;
+  font-weight: bold;
+}
+
+.language-widget .caps-lock-off {
+  color: #798985;
+}
+
+/***-------------------------------      • Media Progress Bar (v1.8.7) •      --------------------------------***/
+
+.media-widget .progress-bar {
+  background-color: #23334e;
+}
+
+.media-widget .progress-bar.circular {
+  border-radius: 50%;
+}
+
+.media-widget .progress-bar .fill {
+  background-color: #578875;
+}
+
+.media-widget .progress-bar.circular .fill {
+  border-radius: 50%;
+}
+
+.media-menu .progress-bar {
+  background-color: #23334e;
+  border-radius: 4px;
+  min-height: 4px;
+  max-height: 4px;
+  margin: 8px 0;
+}
+
+.media-menu .progress-bar .fill {
+  background-color: #578875;
+  border-radius: 4px;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* Notification Group Icons - Larger icons for better visibility                                      */
+/* -------------------------------------------------------------------------------------------------- */
+
+.notifications-group .widget .icon,
+.notifications-group .widget .label .icon {
+  font-size: 18px;
+}
+
+.notifications-group .obs-widget .icon,
+.notifications-group .github-widget .icon,
+.notifications-group .copilot-widget .icon,
+.notifications-group .ai-chat-widget .icon,
+.notifications-group .notes-widget .icon {
+  font-size: 18px;
 }

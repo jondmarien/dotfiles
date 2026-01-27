@@ -43,14 +43,15 @@ bars:
         [
           "home",
           "bin",
-          "update_check",
+          "update_check",  # DISABLED: YASB v1.8.7 bug - widget crashes on init
           "wm_controls",
           "launchpad"
         ]
       center:
         [
-          "notifications",
-          "apps",          
+          "extras",
+          "apps",
+          "notes",         
           "clock",
           "weather",
           "wallpapers"
@@ -62,6 +63,8 @@ bars:
           "memory",
           "gpu",
           "traffic",
+          "volume",
+          "brightness",
           "system_monitor",
           "power_menu"
         ]
@@ -86,12 +89,12 @@ widgets:
         radius: 3
         offset: [1, 1]
 
-  notifications:
+  extras:
     type: "yasb.grouper.GrouperWidget"
     options:
-      class_name: "notifications-group"
+      class_name: "extras-group"
       hide_empty: false  # Changed to false to debug - github widget was hidden
-      widgets: ["obs", "github", "windsurf", "ai_chat", "notes"]
+      widgets: ["github", "copilot", "ai_chat"]
       collapse_options:
         enabled: true  # Enable collapse for notifications
         exclude_widgets: []  # All widgets can be collapsed
@@ -109,7 +112,7 @@ widgets:
     options:
       class_name: "system-monitor"
       hide_empty: false
-      widgets: ["media", "disk", "volume", "wifi", "bluetooth"]
+      widgets: ["media", "disk", "wifi", "bluetooth", "language"]
       collapse_options:
         enabled: true  # Enable collapse for system monitor
         exclude_widgets: []  # All widgets can be collapsed
@@ -153,6 +156,8 @@ widgets:
       icons:
         bin_empty: "\udb82\ude7a"
         bin_filled: "\udb82\ude79"
+      # NEW v1.8.7: Show Windows confirmation dialog before emptying
+      show_confirmation: true
       callbacks:
         on_left: "open_bin"
         on_right: "toggle_label"
@@ -165,16 +170,21 @@ widgets:
   update_check:
     type: "yasb.update_check.UpdateCheckWidget"
     options:
-      winget_update:
-        enabled: false
-        label: "<span>\uf0ab</span>{count}"
-        interval: 180
-        exclude: []
       windows_update:
         enabled: true
-        label: "<span>\uf0ab</span>{count}"
+        label: "<span>\uf0ab</span> {count}"
         interval: 240
         exclude: []
+      winget_update:
+        enabled: true  # Must be enabled due to YASB bug - setting to false crashes widget
+        label: "<span>\uf0ab</span> {count}"
+        interval: 60
+        exclude: []
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
 
   komorebi_workspaces:
     type: "komorebi.workspaces.WorkspaceWidget"
@@ -389,6 +399,8 @@ widgets:
         stop: "\uf04d"
         clear: "\uf1f8"
         assistant: "\udb81\ude74"
+        # NEW v1.8.7: File attachment support
+        attach: "\uf0c6"
       notification_dot:
         enabled: false
         corner: "top_right"
@@ -487,6 +499,110 @@ widgets:
         duration: 500
         type: "fadeInOut"
 
+  # NEW v1.8.7: GitHub Copilot Usage Widget
+  copilot:
+    type: "yasb.copilot.CopilotWidget"
+    options:
+      label: "{icon} {used}/{allowance}"
+      label_alt: "Copilot: {used}/{allowance} ({percentage}%)"
+      # Token options:
+      # 1. Set directly: token: "github_pat_xxxxxxxxxxxx"
+      # 2. Use environment variable: token: "env" (reads YASB_COPILOT_TOKEN)
+      # Get your token at: https://github.com/settings/tokens (Fine-grained personal access token)
+      # Required permission: Account permissions -> Copilot (Read)
+      token: "env"
+      plan: "pro"  # "pro" or "pro_plus"
+      update_interval: 120  # Check interval in seconds
+      tooltip: true
+      icons:
+        copilot: "\udb81\ude74"
+        error: "\uf071"
+      thresholds:
+        warning: 75
+        critical: 90
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        chart: true
+      callbacks:
+        on_left: "toggle_label"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+      animation:
+        enabled: true
+        type: "fadeInOut"
+        duration: 200
+
+  # NEW v1.8.7: Brightness Widget (Monitor brightness control)
+  brightness:
+    type: "yasb.brightness.BrightnessWidget"
+    options:
+      label: "<span>{icon}</span>"
+      label_alt: "Brightness {percent}%"
+      tooltip: true
+      hide_unsupported: true
+      brightness_toggle_level: [0, 50, 100]
+      brightness_icons:
+        - "\udb80\udcde"  # Icon for 0-25% brightness
+        - "\udb80\udcdd"  # Icon for 26-50% brightness
+        - "\udb80\udcdf"  # Icon for 51-75% brightness
+        - "\udb80\udce0"  # Icon for 76-100% brightness
+      brightness_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "toggle_brightness_menu"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+
+  # NEW v1.8.7: Language Widget
+  language:
+    type: "yasb.language.LanguageWidget"
+    options:
+      label: "{lang[language_code]}-{lang[country_code]}"
+      label_alt: "{lang[full_name]}"
+      update_interval: 5
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+      language_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_layout_icon: true
+        layout_icon: "\uf11c"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+
   apps:
     type: "yasb.applications.ApplicationsWidget"
     options:
@@ -496,6 +612,7 @@ widgets:
         - { icon: "\uf1ff",launch: "C:\\Users\\nucle\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Discord Inc\\Discord.lnk" }
         - { icon: "\uef16",launch: "C:\\Users\\nucle\\AppData\\Local\\Programs\\Windsurf\\Windsurf.exe" }
         - { icon: "\udb82\udde8", launch: "C:\\Corsair iCUE5 Software\\iCUE.exe" }
+        - { icon: "\uf03d", launch: "C:\\Program Files\\obs-studio\\bin\\64bit\\obs64.exe" }
   clock:
     type: "yasb.clock.ClockWidget"
     options:
@@ -511,6 +628,8 @@ widgets:
         border_color: "System"
         alignment: "center"
         direction: "down"
+        # NEW v1.8.7: Display year in calendar popup
+        show_years: true
       callbacks:
         on_left: "toggle_calendar"
         on_middle: "toggle_label"
@@ -731,6 +850,10 @@ widgets:
         play: "▶"
         pause: "⏸"
         next_track: "⏭"
+      # NEW v1.8.7: Progress bar for media playback
+      progress_bar:
+        enabled: true
+        alignment: "bottom"  # "top", "bottom", or "center"
       media_menu:
         blur: true
         round_corners: true
@@ -986,8 +1109,9 @@ widgets:
   gpu:
     type: "yasb.gpu.GpuWidget"
     options:
+      # NEW v1.8.7: Added {info[power_draw]} placeholder for power consumption
       label: "<span>\uf4bc</span> {info[utilization]}%"
-      label_alt: "<span>\uf4bc</span> {info[temp]}°C | {info[mem_used]} / {info[mem_total]}"
+      label_alt: "<span>\uf4bc</span> {info[temp]}°C | {info[power_draw]}W | {info[mem_used]} / {info[mem_total]}"
       update_interval: 5000
       gpu_thresholds:
         low: 25
