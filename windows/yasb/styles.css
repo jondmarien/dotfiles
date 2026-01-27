@@ -45,10 +45,9 @@
 
 /* Global styles */
 * {
-	font-size: 12px;
 	color: #aec4be;
 	font-weight: 600;
-	font-family: "JetBrainsMono NFP";
+	font-family: "JetBrainsMono NFM";
 }
 
 /* Bar styling with dark mode support */
@@ -66,15 +65,17 @@
 /* Global icon styling */
 .icon {
 	color: #aec4be;
-	font-size: 14px;
+	font-size: 18px;
 }
 
 /* Global label styling */
 .label {
+    font-size: 12px;
 	color: #aec4be;
 }
 
 .yasb-bar.dark .label {
+    font-size: 12px;
 	color: #aec4be;
 }
 
@@ -103,9 +104,6 @@
     border-radius: 6px;
     color: #aec4be;
     padding: 6px 12px;
-    font-size: 12px;
-    font-family: "JetBrainsMono NFP";
-    font-weight: 600;
     margin-top: 4px;
 }
 
@@ -120,8 +118,6 @@
     border: 1px solid #798985;
     border-radius: 8px;
     padding: 4px 0px;
-    font-family: "JetBrainsMono NFP";
-    font-size: 12px;
     color: #aec4be;
 }
 
@@ -160,10 +156,8 @@
 .context-menu .menu-checkbox .checkbox {
     border: none;
     padding: 8px 16px;
-    font-size: 12px;
     margin: 0;
     color: #aec4be;
-    font-family: "JetBrainsMono NFP";
 }
 
 .context-menu .submenu::item:disabled {
@@ -293,7 +287,7 @@
 .calendar .calendar-table::item {
     background-color: transparent;
     color: #aec4be;
-    font-family: "JetBrainsMono NFP", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 4px;
     border: none;
@@ -311,7 +305,7 @@
 .calendar .day-label,
 .calendar .month-label,
 .calendar .date-label {
-    font-family: "JetBrainsMono NFP", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana, sans-serif;
     color: #aec4be;
     font-weight: 700;
     min-width: 180px;
@@ -430,7 +424,7 @@
     border-bottom: 1px solid #798985;
     font-size: 15px;
     font-weight: 600;
-    font-family: "JetBrainsMono NFP", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana, sans-serif;
     padding: 12px 16px;
     color: #aec4be;
     background-color: rgba(6, 10, 8, 0.8);
@@ -442,7 +436,7 @@
     border-top: 1px solid #798985;
     font-size: 12px;
     padding: 8px 16px;
-    font-family: "JetBrainsMono NFP", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana, sans-serif;
     color: #798985;
     background-color: rgba(6, 10, 8, 0.8);
     border-bottom-left-radius: 8px;
@@ -490,7 +484,7 @@
 .github-menu .contents .item .title,
 .github-menu .contents .item .description {
     color: #aec4be;
-    font-family: "JetBrainsMono NFP", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .github-menu .contents .item .title {
@@ -790,7 +784,7 @@
     font-size: 12px;
     font-weight: 500;
     color: #aec4be;
-    font-family: "JetBrainsMono NFP", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "JetBrainsMono NFM", "JetBrainsMono NFM", Tahoma, Geneva, Verdana, sans-serif;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1223,17 +1217,6 @@ div.power-menu-popup .button,
     font-size: 14px;
 }
 
-/***----------------------------------      • Traffic •      -----------------------------------***/
-
-.traffic-widget .icon {
-    color: #aec4be;
-    padding-right: 6px;
-    padding-left: 6px;
-}
-.traffic-widget .label {
-color: #30504E;
-}
-
 
 /***----------------------------------      • Notes •      -----------------------------------***/
 
@@ -1280,15 +1263,15 @@ color: #30504E;
 }
 .notes-menu .note-item .title {
     font-size: 13px;
-    font-family: 'JetBrainsMono NFP';
+    font-family: 'JetBrainsMono NFM';
 }
 .notes-menu .note-item .date {
     font-size: 12px;
-    font-family: 'JetBrainsMono NFP';
+    font-family: 'JetBrainsMono NFM';
     color: rgba(255, 255, 255, 0.4);
 }
 .notes-menu .empty-list {
-    font-family: 'JetBrainsMono NFP';
+    font-family: 'JetBrainsMono NFM';
     color: #aec4be;
     font-size: 20px;
     font-weight: 600;
@@ -1301,7 +1284,7 @@ color: #30504E;
     border: none;
     border-radius: 4px;
     color: #E69875;
-    font-family: 'JetBrainsMono NFP';
+    font-family: 'JetBrainsMono NFM';
 }
 .notes-menu .cancel-button {
     margin-left: 4px;
@@ -1318,7 +1301,7 @@ color: #30504E;
 .notes-menu .note-input {
     background-color:rgba(17, 17, 27, 0.2);
     border: px solid #aec4be;
-    font-family: 'JetBrainsMono NFP';
+    font-family: 'JetBrainsMono NFM';
     font-size: 12px;
     max-height: 200px;
     padding: 4px;
@@ -1346,7 +1329,7 @@ color: #30504E;
     font-weight: 700;
     margin-left: 16px;
     margin-right: 16px;
-    font-family: 'JetBrainsMono NFP';
+    font-family: 'JetBrainsMono NFM';
     line-height: 1.4;
     word-wrap: break-word;
     white-space: normal;
@@ -1433,7 +1416,7 @@ Example: "Windows Media" becomes "windows-media" */
 
 .media-menu .playback-time {
     font-size: 12px;
-    font-family: 'JetBrainsMono NFP';
+    font-family: 'JetBrainsMono NFM';
     color: #aec4be; 
     margin-top: 20px;
     min-width: 100px;
@@ -1529,7 +1512,7 @@ Example: "Windows Media" becomes "windows-media" */
     border-bottom: 1px solid #798985;
     font-size: 15px;
     font-weight: 600;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     padding: 12px 16px;
     color: #aec4be;
     background-color: rgba(6, 10, 8, 0.8);
@@ -1560,14 +1543,14 @@ Example: "Windows Media" becomes "windows-media" */
 .vscode-menu .contents .item .title {
     font-size: 13px;
     font-weight: 500;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     color: #aec4be;
     margin-bottom: 4px;
 }
 
 .vscode-menu .contents .item .date-modified {
     font-size: 11px;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     color: #798985;
 }
 
@@ -1658,7 +1641,7 @@ Example: "Windows Media" becomes "windows-media" */
 
 .power-menu-popup .button .icon {
     font-size: 48px !important;
-    font-family: "JetBrainsMono NFP" !important;
+    font-family: "JetBrainsMono NFM" !important;
     color: #aec4be !important;
     padding: 15px 0 !important;
 }
@@ -1707,30 +1690,239 @@ Example: "Windows Media" becomes "windows-media" */
 
 /***----------------------------------      • Traffic Widget •      -----------------------------------***/
 
-.traffic-widget .widget-container .label {
+.traffic-menu,
+.traffic-menu * {
+    font-family: "JetBrainsMono NFM";
     color: #aec4be;
+}
+
+.traffic-widget .icon {
+    color: #aec4be;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+.traffic-widget .label {
+color: #30504E;
 }
 
 .traffic-menu {
-    background-color: #060A08;
-    min-width: 280px;
-    border-radius: 8px;
+    background-color: rgba(24, 25, 27, 0.85) !important;
+    min-width: 280px !important;
 }
 
 .traffic-menu .header {
-    padding: 10px 14px;
-    border-bottom: 1px solid #30504E;
-    color: #aec4be;
-    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(24, 25, 27, 0.8) !important;
 }
 
-.traffic-menu .contents {
-    padding: 8px 14px;
+.traffic-menu .header .title {
+    padding: 8px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    font-family: "JetBrainsMono NFM" !important;
+    color: #ffffff !important;
 }
 
-.traffic-menu .contents .item {
-    padding: 6px 0;
-    color: #aec4be;
+.traffic-menu .header .reset-button {
+    font-size: 11px !important;
+    padding: 4px 8px !important;
+    margin-right: 8px !important;
+    font-family: "JetBrainsMono NFM" !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.traffic-menu .reset-button:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.traffic-menu .reset-button:pressed {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Some builds use the 'resset-button' class name (double 's') */
+.traffic-menu .header .resset-button {
+    font-size: 11px !important;
+    padding: 4px 8px !important;
+    margin-right: 8px !important;
+    font-family: "JetBrainsMono NFM" !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.traffic-menu .resset-button:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.traffic-menu .resset-button:pressed {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Speed column styles */
+.traffic-menu .download-speed,
+.traffic-menu .upload-speed {
+    background-color: transparent !important;
+    padding: 4px 10px !important;
+    margin-right: 12px !important;
+    margin-left: 12px !important;
+    margin-top: 16px !important;
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.traffic-menu .download-speed {
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+}
+
+.traffic-menu .speed-separator {
+    max-width: 1px !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    margin: 32px 0 16px 0 !important;
+}
+
+.traffic-menu .upload-speed-value,
+.traffic-menu .download-speed-value {
+    font-size: 24px !important;
+    font-weight: 900 !important;
+    font-family: "JetBrainsMono NFM" !important;
+    color: #bcc2c5 !important;
+}
+
+.traffic-menu .upload-speed-unit,
+.traffic-menu .download-speed-unit {
+    font-size: 13px !important;
+    font-family: "JetBrainsMono NFM" !important;
+    font-weight: 600 !important;
+    padding-top: 4px !important;
+}
+
+.traffic-menu .upload-speed-placeholder,
+.traffic-menu .download-speed-placeholder {
+    color: #747474 !important;
+    font-size: 11px !important;
+    font-family: "JetBrainsMono NFM" !important;
+    padding: 0 0 4px 0 !important;
+}
+
+/* Section and data styles */
+.traffic-menu .section-title {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #7c8192 !important;
+    margin-bottom: 4px !important;
+    font-family: "JetBrainsMono NFM" !important;
+}
+
+.traffic-menu .session-section,
+.traffic-menu .today-section,
+.traffic-menu .alltime-section {
+    margin: 8px 8px 0 8px !important;
+    padding: 0 10px 10px 10px !important;
+    background-color: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Generic section classes from the widget */
+.traffic-menu .section {
+    background-color: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin: 8px 8px 0 8px !important;
+    padding: 0 10px 10px 10px !important;
+}
+
+.traffic-menu .section.speeds-section {
+    border-bottom: none !important;
+    padding: 0 10px 0 10px !important;
+}
+
+.traffic-menu .data-text {
+    font-size: 13px !important;
+    color: #afb5cc !important;
+    padding: 2px 0 !important;
+    font-family: "JetBrainsMono NFM" !important;
+
+}
+
+/* Explicit data-text subclasses */
+.traffic-menu .data-text.session-upload-text,
+.traffic-menu .data-text.session-download-text,
+.traffic-menu .data-text.session-duration-text,
+.traffic-menu .data-text.today-upload-text,
+.traffic-menu .data-text.today-download-text,
+.traffic-menu .data-text.alltime-upload-text,
+.traffic-menu .data-text.alltime-download-text {
+    font-size: 13px !important;
+    color: #afb5cc !important;
+    padding: 2px 0 !important;
+    font-family: "JetBrainsMono NFM" !important;
+}
+
+.traffic-menu .data-value {
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    font-family: "JetBrainsMono NFM" !important;
+    padding: 2px 0 !important;
+}
+
+/* Explicit data-value subclasses */
+.traffic-menu .data-value.session-upload-value,
+.traffic-menu .data-value.session-download-value,
+.traffic-menu .data-value.session-duration-value,
+.traffic-menu .data-value.today-upload-value,
+.traffic-menu .data-value.today-download-value,
+.traffic-menu .data-value.alltime-upload-value,
+.traffic-menu .data-value.alltime-download-value {
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    font-family: "JetBrainsMono NFM" !important;
+    padding: 2px 0 !important;
+}
+
+/* Fallback targets to catch any unlabeled elements */
+.traffic-menu QLabel {
+    color: #aec4be !important;
+    font-family: "JetBrainsMono NFM" !important;
+}
+
+.traffic-menu QPushButton {
+    color: #aec4be !important;
+    font-family: "JetBrainsMono NFM" !important;
+}
+
+/* Interface and Internet info styles */
+.traffic-menu .interface-info,
+.traffic-menu .internet-info {
+    font-size: 12px !important;
+    color: #6f7486 !important;
+    padding: 8px 0 !important;
+    font-family: "JetBrainsMono NFM" !important;
+}
+
+.traffic-menu .internet-info {
+    background-color: rgba(68, 68, 68, 0.1) !important;
+}
+
+.traffic-menu .internet-info.connected {
+    background-color: rgba(166, 227, 161, 0.096) !important;
+    color: #a6e3a1 !important;
+}
+
+.traffic-menu .internet-info.disconnected {
+    background-color: rgba(243, 139, 168, 0.1) !important;
+    color: #f38ba8 !important;
 }
 
 /***----------------------------------      • WiFi Widget •      -----------------------------------***/
@@ -1800,7 +1992,7 @@ Example: "Windows Media" becomes "windows-media" */
 
 .ai-chat-popup .chat-header .provider-label,
 .ai-chat-popup .chat-header .model-label {
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     font-size: 13px;
     color: #aec4be;
     margin-right: 8px;
@@ -1809,7 +2001,7 @@ Example: "Windows Media" becomes "windows-media" */
 
 .ai-chat-popup .chat-header .provider-button,
 .ai-chat-popup .chat-header .model-button {
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     background-color: #23334E;
     border: 1px solid #798985;
     font-size: 12px;
@@ -1836,7 +2028,7 @@ Example: "Windows Media" becomes "windows-media" */
     background-color: #060A08;
     border: 1px solid #798985;
     padding: 4px 0;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     font-size: 12px;
     color: #aec4be;
     border-radius: 6px;
@@ -1855,7 +2047,7 @@ Example: "Windows Media" becomes "windows-media" */
     border-radius: 4px;
     min-width: 140px;
     color: #aec4be;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
 }
 
 .ai-chat-popup .chat-header .context-menu::item {
@@ -1886,7 +2078,7 @@ Example: "Windows Media" becomes "windows-media" */
 .ai-chat-popup .chat-content .empty-chat .greeting,
 .ai-chat-popup .chat-content .empty-chat .message {
     color: #aec4be;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     font-size: 28px;
     font-weight: 600;
 }
@@ -1903,7 +2095,7 @@ Example: "Windows Media" becomes "windows-media" */
     padding: 12px 14px;
     border-radius: 8px;
     margin: 8px 16px;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     font-size: 13px;
 }
 
@@ -1922,7 +2114,7 @@ Example: "Windows Media" becomes "windows-media" */
     font-size: 18px;
     color: #578875;
     margin-right: 10px;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
 }
 
 .ai-chat-popup .chat-footer .chat-input {
@@ -1930,7 +2122,7 @@ Example: "Windows Media" becomes "windows-media" */
     border: 2px solid #798985;
     border-radius: 8px;
     padding: 8px 14px;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     font-size: 13px;
     color: #aec4be;
     min-height: 36px;
@@ -1953,7 +2145,7 @@ Example: "Windows Media" becomes "windows-media" */
     border-radius: 6px;
     margin-left: 8px;
     border: none;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
 }
 
 .ai-chat-popup .chat-footer .stop-button {
@@ -1998,7 +2190,7 @@ Example: "Windows Media" becomes "windows-media" */
     border: 1px solid #798985;
     border-radius: 8px;
     padding: 4px 0px;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     font-size: 12px;
     color: #aec4be;
     font-weight: 600;
@@ -2046,7 +2238,7 @@ Example: "Windows Media" becomes "windows-media" */
     font-size: 12px;
     margin: 0;
     color: #aec4be;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
 }
 
 .launchpad .context-menu .submenu::item:disabled {
@@ -2086,7 +2278,7 @@ Example: "Windows Media" becomes "windows-media" */
 
 /* Launchpad App dialog style */
 .launchpad .app-dialog {
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     background-color: #060A08;
 }
 
@@ -2101,7 +2293,7 @@ Example: "Windows Media" becomes "windows-media" */
 
 .launchpad .app-dialog .message {
     color: #aec4be;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     font-size: 12px;
     font-weight: 600;
     padding: 10px 0;
@@ -2114,7 +2306,7 @@ Example: "Windows Media" becomes "windows-media" */
     border: 1px solid #798985;
     border-radius: 4px;
     padding: 0 6px;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     font-size: 12px;
     font-weight: 600;
     color: #aec4be;
@@ -2132,7 +2324,7 @@ Example: "Windows Media" becomes "windows-media" */
     background-color: #30504E;
     border: none;
     border-radius: 4px;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     font-size: 12px;
     font-weight: 600;
     color: #aec4be;
@@ -2198,7 +2390,7 @@ Example: "Windows Media" becomes "windows-media" */
     border: 1px solid #798985;
     border-radius: 4px;
     color: #aec4be;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     font-size: 12px;
     font-weight: 600;
     padding: 8px 12px;
@@ -2213,7 +2405,7 @@ Example: "Windows Media" becomes "windows-media" */
 
 .launchpad .drop-overlay .text {
     color: #aec4be;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     font-size: 64px;
     font-weight: 600;
     text-transform: uppercase;
@@ -2237,7 +2429,7 @@ Example: "Windows Media" becomes "windows-media" */
     font-size: 14px;
     min-height: 24px;
     max-height: 24px;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     border-radius: 20px;
     border: 2px solid #798985;
     background-color: rgba(0, 0, 0, 0.5);
@@ -2280,7 +2472,7 @@ Example: "Windows Media" becomes "windows-media" */
 
 .launchpad .app-icon .title {
     color: #aec4be;
-    font-family: "JetBrainsMono NFP";
+    font-family: "JetBrainsMono NFM";
     font-size: 12px;
     margin-top: 8px;
     font-weight: 600;
