@@ -2674,6 +2674,69 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 /* -------------------------------------------------------------------------------------------------- */
+/* Window Controls Widget                                                                            */
+/* -------------------------------------------------------------------------------------------------- */
+
+.window-controls-widget {
+  padding: 0;
+  margin: 0;
+}
+
+.window-controls-widget .widget-container {
+  padding: 0 2px;
+}
+
+.window-controls-widget .btn {
+  font-size: 14px;
+  min-width: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  max-height: 20px;
+  margin: 0 1px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+}
+
+.window-controls-widget .btn:hover {
+  background-color: #30504e;
+}
+
+.window-controls-widget .btn.minimize {
+  color: #FFBD2E;
+}
+
+.window-controls-widget .btn.minimize:hover {
+  color: #ffc853;
+}
+
+.window-controls-widget .btn.maximize,
+.window-controls-widget .btn.restore {
+  color: #28C840;
+}
+
+.window-controls-widget .btn.maximize:hover,
+.window-controls-widget .btn.restore:hover {
+  color: #60ff78;
+}
+
+.window-controls-widget .btn.close {
+  color: #FF5F57;
+}
+
+.window-controls-widget .btn.close:hover {
+  color: #ff8a84;
+  background-color: #23334e;
+}
+
+.window-controls-widget .app-name {
+  font-size: 12px;
+  padding-left: 4px;
+  color: #aec4be;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
 /* Notification Group Icons - Larger icons for better visibility                                      */
 /* -------------------------------------------------------------------------------------------------- */
 

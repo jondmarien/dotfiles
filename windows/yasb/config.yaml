@@ -46,8 +46,9 @@ bars:
           "home",
           "bin",
           "update_check",
+          "wm_controls",
+          "launchpad",
           "window_controls",
-          "launchpad"
         ]
       center:
         [
@@ -78,7 +79,7 @@ widgets:
     options:
       class_name: "wm-controls"
       hide_empty: false
-      widgets: ["glazewm_workspaces", "komorebi_control", "komorebi_workspaces", "komorebi_stack"]
+      widgets: ["glazewm_workspaces"]
       collapse_options:
         enabled: false  # Set to true to enable collapse functionality
         exclude_widgets: []  # Widgets that stay visible when collapsed
@@ -448,10 +449,10 @@ widgets:
       maximized_only: false
       buttons: ["minimize", "maximize", "close"]
       button_labels:
-        minimize: "\uea71"
-        maximize: "\uea71"
-        restore: "\uea71"
-        close: "\uea71"
+        minimize: "\uf2d1"
+        maximize: "\uf2d0"
+        restore: "\uf2d2"
+        close: "\uf00d"
       monitor_exclusive: true
       animation_duration: 120
 
