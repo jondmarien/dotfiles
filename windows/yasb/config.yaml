@@ -30,6 +30,8 @@ bars:
     window_flags:
       always_on_top: false
       windows_app_bar: true
+      # NEW v1.8.8: Auto-hide bar when a window is maximized (only works when windows_app_bar is false)
+      hide_on_maximized: false
     dimensions:
       width: "100%"
       height: 35
@@ -43,8 +45,8 @@ bars:
         [
           "home",
           "bin",
-          "update_check",  # DISABLED: YASB v1.8.7 bug - widget crashes on init
-          "wm_controls",
+          "update_check",
+          "window_controls",
           "launchpad"
         ]
       center:
@@ -399,17 +401,28 @@ widgets:
         stop: "\uf04d"
         clear: "\uf1f8"
         assistant: "\udb81\ude74"
-        # NEW v1.8.7: File attachment support
         attach: "\uf0c6"
+        # NEW v1.8.8: Floating window and copy icons
+        float_on: "\udb84\udcac"
+        float_off: "\udb84\udca9"
+        close: "\uf00d"
+        copy: "\uebcc"
+        copy_check: "\uf00c"
       notification_dot:
         enabled: false
         corner: "top_right"
         color: "red"
         margin: [0, 2]
+      # NEW v1.8.8: Start chat in floating window mode
+      start_floating: true
       callbacks:
         on_left: "toggle_chat"
+        on_middle: "do_nothing"
+        on_right: "do_nothing"
       providers:
         - provider: "OpenRouter"
+          # NEW v1.8.8: provider_type can be "openai" or "copilot"
+          provider_type: "openai"
           api_endpoint: "https://openrouter.ai/api/v1"
           credential: "env"
           models:
@@ -427,6 +440,21 @@ widgets:
         radius: 3
         offset: [1, 1]
 
+  # NEW v1.8.8: Window Controls Widget (minimize/maximize/close focused window)
+  window_controls:
+    type: "yasb.window_controls.WindowControlsWidget"
+    options:
+      show_app_name: true
+      maximized_only: false
+      buttons: ["minimize", "maximize", "close"]
+      button_labels:
+        minimize: "\uea71"
+        maximize: "\uea71"
+        restore: "\uea71"
+        close: "\uea71"
+      monitor_exclusive: true
+      animation_duration: 120
+
   obs:
     type: "yasb.obs.ObsWidget"
     options:
@@ -440,6 +468,11 @@ widgets:
         paused: "\ueba7"
       hide_when_not_recording: true
       blinking_icon: true
+      # NEW v1.8.8: Additional OBS display options
+      show_record_time: true
+      show_virtual_cam: true
+      show_studio_mode: true
+      tooltip: true
   github:
     type: "yasb.github.GithubWidget"
     options:
@@ -663,9 +696,14 @@ widgets:
         cloudyNight: "\ue226"
         rainyDay: "\ue371"
         rainyNight: "\ue371"
-        snowyIcyDay: "\udb81\udf17"
-        snowyIcyNight: "\udb81\udf17"
-        blizzard: "\udb81\udd99"
+        snowyDay: "\udb81\udf17"
+        snowyNight: "\udb81\udf17"
+        blizzardDay: "\udb81\udd99"
+        blizzardNight: "\udb81\udd99"
+        foggyDay: "\ue303"
+        foggyNight: "\ue346"
+        thunderstormDay: "\ue30f"
+        thunderstormNight: "\ue338"
         default: "\udb81\udd99"
       weather_card:
         blur: True
