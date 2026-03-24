@@ -2753,3 +2753,259 @@ Example: "Windows Media" becomes "windows-media" */
 .notifications-group .notes-widget .icon {
   font-size: 18px;
 }
+
+/* -------------------------------------------------------------------------------------------------- */
+/* Quick Launch / Open-Meteo / 1.9.1 popup styles                                                    */
+/* -------------------------------------------------------------------------------------------------- */
+
+/* Quick Launch widget button */
+.quick-launch-widget .icon {
+  color: #aec4be;
+  font-size: 14px;
+  padding: 0 4px;
+}
+
+.quick-launch-widget .icon:hover {
+  color: #d5e3df;
+}
+
+/* Quick Launch popup */
+.quick-launch-popup .container {
+  background-color: rgba(6, 10, 8, 0.92);
+  border: 1px solid #798985;
+  border-radius: 10px;
+}
+
+.quick-launch-popup .search {
+  padding: 12px 16px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(121, 137, 133, 0.35);
+}
+
+.quick-launch-popup .search .loader-line {
+  color: #57948a;
+}
+
+.quick-launch-popup .search .search-icon,
+.quick-launch-popup .search .search-submit-icon {
+  color: rgba(174, 196, 190, 0.8);
+  font-size: 18px;
+}
+
+.quick-launch-popup .search .search-input {
+  background: transparent;
+  border: none;
+  color: #aec4be;
+  font-size: 15px;
+  font-family: "JetBrainsMono NFM";
+  padding: 4px 0;
+}
+
+.quick-launch-popup .search .prefix {
+  background: #30504e;
+  border-radius: 6px;
+  color: #d5e3df;
+  padding: 0 8px;
+  margin-right: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.quick-launch-popup .results {
+  background: transparent;
+  padding: 8px;
+}
+
+.quick-launch-popup .results-list-view {
+  font-size: 14px;
+  color: #aec4be;
+  font-family: "JetBrainsMono NFM";
+}
+
+.quick-launch-popup .results-list-view .description {
+  color: rgba(174, 196, 190, 0.75);
+  font-size: 11px;
+}
+
+.quick-launch-popup .results-list-view .separator {
+  color: rgba(121, 137, 133, 0.85);
+  font-size: 12px;
+  padding: 4px 0 4px 12px;
+}
+
+.quick-launch-popup .results-list-view::item {
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.quick-launch-popup .results-list-view::item:hover,
+.quick-launch-popup .results-list-view::item:selected {
+  background-color: rgba(76, 107, 97, 0.25);
+}
+
+.quick-launch-popup .results-empty-text {
+  font-size: 18px;
+  color: rgba(174, 196, 190, 0.9);
+}
+
+.quick-launch-popup .preview {
+  background: rgba(6, 10, 8, 0.7);
+  border-left: 1px solid rgba(121, 137, 133, 0.35);
+}
+
+.quick-launch-popup .preview .preview-text {
+  font-size: 12px;
+  color: #aec4be;
+  padding: 8px 12px;
+  background-color: rgba(121, 137, 133, 0.1);
+}
+
+.quick-launch-popup .preview .preview-meta {
+  padding: 6px 12px;
+  border-top: 1px solid rgba(121, 137, 133, 0.2);
+}
+
+.quick-launch-popup .preview .preview-meta .preview-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #d5e3df;
+}
+
+.quick-launch-popup .preview .preview-meta .preview-subtitle {
+  font-size: 11px;
+  color: rgba(174, 196, 190, 0.8);
+}
+
+/* Open-Meteo widget/card (active weather widget) */
+.open-meteo-widget .icon {
+  color: #aec4be;
+  padding-right: 3px;
+}
+
+.open-meteo-widget .label {
+  color: #aec4be;
+}
+
+.open-meteo-card {
+  background-color: #060a08;
+  border: 1px solid #798985;
+  border-radius: 10px;
+}
+
+.open-meteo-card .label {
+  color: #aec4be;
+}
+
+.open-meteo-card-today .label.location {
+  color: #d5e3df;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.open-meteo-card-day {
+  border: 1px solid rgba(121, 137, 133, 0.2);
+  border-radius: 8px;
+  background-color: rgba(6, 10, 8, 0.75);
+}
+
+.open-meteo-card-day.active {
+  background-color: rgba(76, 107, 97, 0.25);
+  border-color: rgba(121, 137, 133, 0.45);
+}
+
+.open-meteo-card .hourly-data-button {
+  color: rgba(174, 196, 190, 0.6);
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.open-meteo-card .hourly-data-button.active {
+  color: #d5e3df;
+  background-color: rgba(121, 137, 133, 0.2);
+  border-color: rgba(121, 137, 133, 0.35);
+}
+
+/* Systray popup mode (show_in_popup) */
+.systray-popup {
+  background-color: rgba(6, 10, 8, 0.92);
+  border: 1px solid #798985;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+.systray-popup-container {
+  background: transparent;
+}
+
+.systray-popup .button {
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.systray-popup .button:hover {
+  background-color: rgba(76, 107, 97, 0.25);
+}
+
+/* CPU / Memory / GPU popups (1.9.1 menu support) */
+.cpu-popup,
+.memory-popup,
+.gpu-popup {
+  background-color: rgba(6, 10, 8, 0.94);
+  border: 1px solid #798985;
+  border-radius: 10px;
+  min-width: 400px;
+}
+
+.cpu-popup .header,
+.memory-popup .header,
+.gpu-popup .header {
+  background: transparent;
+  border-bottom: 1px solid rgba(121, 137, 133, 0.3);
+  padding: 10px 14px;
+}
+
+.cpu-popup .header .text,
+.memory-popup .header .text,
+.gpu-popup .header .text {
+  color: #d5e3df;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cpu-popup .header .pin-btn,
+.memory-popup .header .pin-btn,
+.gpu-popup .header .pin-btn {
+  color: rgba(174, 196, 190, 0.7);
+  border: none;
+  background: transparent;
+}
+
+.cpu-popup .graph-title,
+.memory-popup .graph-title,
+.gpu-popup .graph-title {
+  color: rgba(174, 196, 190, 0.7);
+  font-size: 11px;
+}
+
+.cpu-popup .stats .stat-item,
+.memory-popup .stats .stat-item,
+.gpu-popup .stats .stat-item {
+  background-color: rgba(121, 137, 133, 0.08);
+  border: 1px solid rgba(121, 137, 133, 0.18);
+  border-radius: 8px;
+}
+
+.cpu-popup .stats .stat-label,
+.memory-popup .stats .stat-label,
+.gpu-popup .stats .stat-label {
+  color: rgba(174, 196, 190, 0.75);
+  font-size: 12px;
+}
+
+.cpu-popup .stats .stat-value,
+.memory-popup .stats .stat-value,
+.gpu-popup .stats .stat-value {
+  color: #d5e3df;
+  font-size: 18px;
+  font-weight: 700;
+}

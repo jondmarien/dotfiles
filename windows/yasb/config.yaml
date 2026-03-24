@@ -48,15 +48,14 @@ bars:
           "update_check",
           "wm_controls",
           "launchpad",
-          "window_controls",
         ]
       center:
         [
-          "extras",
-          "apps",
+          "quick_launch",
+          "github",
           "notes",         
           "clock",
-          "weather",
+          "open_meteo",
           "wallpapers"
         ]
       right:
@@ -83,24 +82,6 @@ widgets:
       collapse_options:
         enabled: false  # Set to true to enable collapse functionality
         exclude_widgets: []  # Widgets that stay visible when collapsed
-        expanded_label: "\uf054"  # Icon when expanded
-        collapsed_label: "\uf053"  # Icon when collapsed
-        label_position: "right"  # "left" or "right"
-      container_shadow:
-        enabled: false
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-
-  extras:
-    type: "yasb.grouper.GrouperWidget"
-    options:
-      class_name: "extras-group"
-      hide_empty: false  # Changed to false to debug - github widget was hidden
-      widgets: ["github", "copilot", "ai_chat"]
-      collapse_options:
-        enabled: true  # Enable collapse for notifications
-        exclude_widgets: []  # All widgets can be collapsed
         expanded_label: "\uf054"  # Icon when expanded
         collapsed_label: "\uf053"  # Icon when collapsed
         label_position: "right"  # "left" or "right"
@@ -312,6 +293,8 @@ widgets:
     type: "glazewm.workspaces.GlazewmWorkspacesWidget"
     options:
       offline_label: "GlazeWM Offline"
+      monitor_exclusive: true  # v1.9.0+ preferred workspace filtering mode
+      # Kept for backward compatibility; newer versions prefer monitor_exclusive
       hide_empty_workspaces: true
       hide_if_offline: false
       # Label customization (uses {name} or {display_name} from GlazeWM config)
@@ -480,12 +463,9 @@ widgets:
       label: "<span>\ueba1</span>"
       label_alt: "Notifications {data}"  # {data} returns number of unread notifications
       tooltip: true  # Show tooltip on hover
-      # Token options:
-      # 1. Set directly: token: "ghp_xxxxxxxxxxxx"
-      # 2. Use environment variable: token: "env" (reads YASB_GITHUB_TOKEN)
-      # Get your token at: https://github.com/settings/tokens (Personal access tokens - classic)
-      # Required scope: "notifications" (read)
-      token: "env"  # Set YASB_GITHUB_TOKEN environment variable, or replace with your token
+      # OAuth-first (v1.9.1+): keep token empty to use device-flow sign-in.
+      # Optional fallback: set token: "env" and provide YASB_GITHUB_TOKEN.
+      token: ""
       max_notification: 30  # Max 50
       only_unread: false
       max_field_size: 54
@@ -637,16 +617,73 @@ widgets:
         radius: 3
         offset: [1, 1]
 
-  apps:
-    type: "yasb.applications.ApplicationsWidget"
+
+  quick_launch:
+    type: "yasb.quick_launch.QuickLaunchWidget"
     options:
-      label: "{data}"
-      app_list:
-        - { icon: "\uf489", launch: "warp" }    
-        - { icon: "\uf1ff",launch: "C:\\Users\\nucle\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Discord Inc\\Discord.lnk" }
-        - { icon: "\uef16",launch: "C:\\Users\\nucle\\AppData\\Local\\Programs\\Windsurf\\Windsurf.exe" }
-        - { icon: "\udb82\udde8", launch: "C:\\Corsair iCUE5 Software\\iCUE.exe" }
-        - { icon: "\uf03d", launch: "C:\\Program Files\\obs-studio\\bin\\64bit\\obs64.exe" }
+      label: "<span>\uf002</span>"
+      search_placeholder: "Search apps, gh, ssh, wt, wsl..."
+      max_results: 60
+      show_icons: true
+      icon_size: 32
+      compact_mode: false
+      providers:
+        apps:
+          enabled: true
+          prefix: "*"
+          priority: 0
+          show_recent: true
+          max_recent: 8
+          show_description: true
+        file_search:
+          enabled: true
+          prefix: "/"
+          priority: 1
+          backend: "auto"
+          show_path: true
+        web_search:
+          enabled: true
+          prefix: "?"
+          priority: 2
+          engine: "google"
+        system_commands:
+          enabled: true
+          prefix: ">"
+          priority: 3
+        github_notifications:
+          enabled: true
+          prefix: "gh"
+          priority: 4
+          # OAuth device flow is used when token is empty.
+          # Optional fallback: token: "env" with YASB_GITHUB_TOKEN.
+          token: ""
+        ssh:
+          enabled: true
+          prefix: "ssh"
+          priority: 5
+          ssh_config_path: "~/.ssh/config"
+        windows_terminal:
+          enabled: true
+          prefix: "wt"
+          priority: 6
+        wsl:
+          enabled: true
+          prefix: "wsl"
+          priority: 7
+          show_online: true
+      popup:
+        width: 720
+        height: 480
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        dark_mode: true
+      callbacks:
+        on_left: "toggle_quick_launch"
+      keybindings:
+        - keys: "alt+space"
+          action: "toggle_quick_launch"
   clock:
     type: "yasb.clock.ClockWidget"
     options:
@@ -677,7 +714,8 @@ widgets:
         color: "black"
         radius: 3
         offset: [1, 1]
-  weather:
+  # Legacy WeatherWidget backup (pre-1.9.0). Kept for easy rollback.
+  weather_legacy:
     type: "yasb.weather.WeatherWidget"
     options:
       # NEW v1.8.5: Added {chance_of_rain} and {chance_of_snow} placeholders
@@ -738,6 +776,69 @@ widgets:
           snow_effect_intensity: 1.0  # 0.01 - 10.0
           scale_with_chance: true
           enable_debug: false
+  open_meteo:
+    type: "yasb.open_meteo.OpenMeteoWidget"
+    options:
+      label: "<span>{icon}</span> {temp}"
+      label_alt: "{location}: Min {min_temp}, Max {max_temp}, Humidity {humidity}, Wind {wind}"
+      tooltip: true
+      update_interval: 600
+      hide_decimal: true
+      units: "metric"
+      callbacks:
+        on_left: "toggle_card"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+      icons:
+        sunnyDay: "\udb81\udd99"
+        clearNight: "\ue3c2"
+        cloudyDay: "\ue21d"
+        cloudyNight: "\ue226"
+        drizzleDay: "\ue371"
+        drizzleNight: "\ue371"
+        rainyDay: "\ue371"
+        rainyNight: "\ue371"
+        snowyDay: "\udb81\udf17"
+        snowyNight: "\udb81\udf17"
+        foggyDay: "\ue303"
+        foggyNight: "\ue346"
+        thunderstormDay: "\ue30f"
+        thunderstormNight: "\ue338"
+        default: "\udb81\udd99"
+      weather_card:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "#7e8f85"
+        alignment: "right"
+        direction: "down"
+        icon_size: 48
+        show_hourly_forecast: true
+        time_format: "12h"
+        hourly_point_spacing: 76
+        hourly_icon_size: 32
+        icon_smoothing: true
+        temp_line_width: 2
+        current_line_color: "#8EAEE8"
+        current_line_width: 1
+        current_line_style: "dot"
+        hourly_gradient:
+          enabled: true
+          top_color: "#8EAEE8"
+          bottom_color: "#2A3E68"
+        hourly_forecast_buttons:
+          enabled: true
+          default_view: "temperature"
+          temperature_icon: "\udb81\udd99"
+          rain_icon: "\udb81\udd96"
+          snow_icon: "\udb81\udd98"
+        weather_animation:
+          enabled: true
+          snow_overrides_rain: true
+          temp_line_animation_style: "both"
+          rain_effect_intensity: 1.0
+          snow_effect_intensity: 1.0
+          scale_with_chance: true
   notes:
     type: "yasb.notes.NotesWidget"
     options:
@@ -871,7 +972,7 @@ widgets:
       hide_empty: false
       callbacks:
         on_left: "toggle_media_menu"
-        on_middle: "do_nothing"
+        on_middle: "open_media_source"
         on_right: "toggle_label"
       max_field_size:
         label: 60
@@ -944,7 +1045,14 @@ widgets:
         - "\u2588"  # 80%+
       histogram_num_columns: 8
       callbacks:
-        on_right: "exec cmd /c Taskmgr"
+        on_left: "toggle_label"
+        on_middle: "exec cmd /c Taskmgr"
+        on_right: "toggle_menu"
+      menu:
+        enabled: true
+        show_graph: true
+        show_graph_grid: true
+        graph_history_size: 60
   memory:
     type: "yasb.memory.MemoryWidget"
     options:
@@ -954,7 +1062,12 @@ widgets:
       callbacks:
         on_left: "toggle_label"
         on_middle: "do_nothing"
-        on_right: "do_nothing"
+        on_right: "toggle_menu"
+      menu:
+        enabled: true
+        show_graph: true
+        show_graph_grid: true
+        graph_history_size: 60
   # traffic:
   #   type: "yasb.traffic.TrafficWidget"
   #   options:
@@ -978,6 +1091,8 @@ widgets:
       show_battery: false
       show_volume: false
       show_network: false
+      use_hook: false
+      hide_icons: []
       btn_shadow:
         enabled: true
         color: "black"
@@ -1169,6 +1284,13 @@ widgets:
       histogram_num_columns: 8
       callbacks:
         on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "toggle_menu"
+      menu:
+        enabled: true
+        show_graph: true
+        show_graph_grid: true
+        graph_history_size: 60
       animation:
         enabled: true
         type: "fadeInOut"
