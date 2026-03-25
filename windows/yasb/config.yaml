@@ -65,9 +65,9 @@ bars:
           "memory",
           "gpu",
           "traffic",
-          "volume",
-          "brightness",
           "system_monitor",
+          "language",
+          "disk",
           "power_menu"
         ]
 
@@ -96,7 +96,7 @@ widgets:
     options:
       class_name: "system-monitor"
       hide_empty: false
-      widgets: ["media", "disk", "wifi", "bluetooth", "language"]
+      widgets: ["media", "bluetooth"]
       collapse_options:
         enabled: true  # Enable collapse for system monitor
         exclude_widgets: []  # All widgets can be collapsed
