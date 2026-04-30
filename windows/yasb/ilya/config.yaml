@@ -357,6 +357,7 @@ widgets:
   cava:
     type: "yasb.cava.CavaWidget"
     options:
+      source: "auto"
       bar_height: 12
       min_bar_height: 0
       gradient: 1
