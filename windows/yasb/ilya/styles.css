@@ -1523,6 +1523,40 @@
     background-color: rgba(255, 255, 255, 0.08);
 }
 
+.glazewm-workspaces {
+    padding: 0 6px;
+}
+
+.glazewm-workspaces .ws-btn {
+    min-width: 26px;
+    padding: 0 8px;
+    margin: 0 4px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #cdd6f4;
+}
+
+.glazewm-workspaces .ws-btn:hover {
+    background-color: rgba(137, 180, 250, 0.14);
+    color: #89dceb;
+}
+
+.glazewm-workspaces .ws-btn.focused_populated,
+.glazewm-workspaces .ws-btn.focused_empty,
+.glazewm-workspaces .ws-btn.active_populated,
+.glazewm-workspaces .ws-btn.active_empty {
+    background-color: rgba(137, 180, 250, 0.2);
+    color: #ffffff;
+}
+
+.glazewm-workspaces .ws-btn.populated {
+    color: #89dceb;
+}
+
+.glazewm-workspaces .ws-btn.empty {
+    color: #a2b1c7;
+}
+
 .recycle-bin-widget .icon,
 .quick-launch-widget .icon,
 .open-meteo-widget .icon,

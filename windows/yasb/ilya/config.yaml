@@ -33,18 +33,16 @@ bars:
     widgets:
       left:
         [
-          "wm_controls",
           "bin",
           "update_check",
+          "wm_controls",
           "quick_launch",
-          "language",
           "media",
           "cava"
         ]
       center: ["github", "clock", "open_meteo"]
       right:
         [
-          "taskbar",
           "hardware_widget",
           "wallpapers",
           "volume",
@@ -99,8 +97,8 @@ widgets:
       # active_populated_label: "{name}" # Active workspace with windows
       # active_empty_label: "{name}"     # Active workspace without windows
       # NEW v1.8.5: Focused workspace distinction (multi-monitor)
-      focused_populated_label: "WS: {name}"  # Focused workspace with windows
-      focused_empty_label: "Empty: {name}"   # Focused workspace without windows
+      focused_populated_label: "{name}"      # Focused workspace with windows
+      focused_empty_label: "{name}"          # Focused workspace without windows
       # Scroll to switch workspaces
       enable_scroll_switching: true
       reverse_scroll_direction: false
@@ -491,15 +489,18 @@ widgets:
     options:
       label: "<span>\ueba1</span>"
       label_alt: "Notifications {data}"
-      token: env # GitHub Personal access tokens (classic) https://github.com/settings/tokens
-      max_notification: 50
+      tooltip: true
+      # OAuth device flow is used when token is empty.
+      # Optional fallback: set token: "env" with YASB_GITHUB_TOKEN.
+      token: ""
+      max_notification: 30
       notification_dot:
-        enabled: True
+        enabled: true
         corner: "bottom_left"
         color: "red"
-        margin: [ 1, 1 ]
-      only_unread: true
-      show_comment_count: false
+        margin: [1, 1]
+      only_unread: false
+      show_comment_count: true
       reason_filters: []
       max_field_size: 54
       update_interval: 300
