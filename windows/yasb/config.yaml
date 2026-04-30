@@ -17,13 +17,11 @@ bars:
     class_name: "yasb-bar"
     alignment:
       position: "top"
-      center: false
     animation:
       enabled: true
       duration: 800
     blur_effect:
       enabled: true
-      acrylic: true
       dark_mode: true
       round_corners: true
       border_color: "none"
@@ -53,7 +51,7 @@ bars:
         [
           "quick_launch",
           "github",
-          "notes",         
+          "notes",
           "clock",
           "open_meteo",
           "wallpapers"
@@ -85,12 +83,6 @@ widgets:
         expanded_label: "\uf054"  # Icon when expanded
         collapsed_label: "\uf053"  # Icon when collapsed
         label_position: "right"  # "left" or "right"
-      container_shadow:
-        enabled: false
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-
   system_monitor:
     type: "yasb.grouper.GrouperWidget"
     options:
@@ -103,12 +95,6 @@ widgets:
         expanded_label: "\uf054"  # Icon when expanded
         collapsed_label: "\uf053"  # Icon when collapsed
         label_position: "right"  # "left" or "right"
-      container_shadow:
-        enabled: false
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-
   # Individual Widgets
   home:
     type: "yasb.home.HomeWidget"
@@ -123,16 +109,15 @@ widgets:
         - { title: "🎮 Games", path: "C:\\Users\\nucle\\Desktop\\Desktop Apps\\Games"}
         - { title: "🎵 Spotify", path: "C:\\Users\\nucle\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Spotify.lnk"}
         - { title: "📺 Stremio", path: "C:\\Users\\nucle\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Stremio.lnk"}
-        - { title: "🎯 Steam", path: "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Steam\\Steam.lnk"} 
+        - { title: "🎯 Steam", path: "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Steam\\Steam.lnk"}
         - { title: "🌐 Zen Browser", path: "C:\\Users\\nucle\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Zen.lnk"}
-        - { title: "⚙️ iCUE", path: "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Corsair\\iCUE.lnk"}   
+        - { title: "⚙️ iCUE", path: "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Corsair\\iCUE.lnk"}
       system_menu: true
       power_menu: false
       blur: true
       round_corners: true
       round_corners_type: "normal"
       border_color: "System"
-      distance: 10
   bin:
     type: "yasb.recycle_bin.RecycleBinWidget"
     options:
@@ -146,11 +131,6 @@ widgets:
         on_left: "open_bin"
         on_right: "toggle_label"
         on_middle: "empty_bin"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [ 1, 1 ]
   update_check:
     type: "yasb.update_check.UpdateCheckWidget"
     options:
@@ -164,12 +144,6 @@ widgets:
         label: "<span>\uf0ab</span> {count}"
         interval: 60
         exclude: []
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-
   komorebi_workspaces:
     type: "komorebi.workspaces.WorkspaceWidget"
     options:
@@ -179,14 +153,12 @@ widgets:
       label_workspace_populated_btn: "{name}"
       label_default_name: ""
       label_zero_index: false
-      hide_empty_workspaces: false
       hide_if_offline: false
-      animation: true
       toggle_workspace_layer:
         enabled: false
         tiling_label: "Tiling"
         floating_label: "Floating"
-      app_icons: 
+      app_icons:
         enabled_populated: true
         enabled_active: true
         size: 12
@@ -194,13 +166,6 @@ widgets:
         hide_label: false
         hide_duplicates: false
         hide_floating: false
-      btn_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [ 1, 1 ]
-
-
   komorebi_control:
     type: "komorebi.control.KomorebiControlWidget"
     options:
@@ -223,12 +188,6 @@ widgets:
         direction: 'down'
         offset_top: 6
         offset_left: 0
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [ 1, 1 ]
-
   komorebi_stack:
     type: "komorebi.stack.StackWidget"
     options:
@@ -244,24 +203,7 @@ widgets:
       max_length_ellipsis: ".."
       hide_if_offline: false
       show_only_stack: false
-      animation: true
       enable_scroll_switching : true
-      container_shadow:
-        enabled: true
-        color: "#000000"
-        offset: [0, 1]
-        radius: 2
-      btn_shadow:
-        enabled: true
-        color: "#000000"
-        offset: [0, 1]
-        radius: 2
-      label_shadow:
-        enabled: true
-        color: "#000000"
-        offset: [0, 1]
-        radius: 2
-
   glazewm_restore:
     type: "yasb.custom.CustomWidget"
     options:
@@ -283,19 +225,12 @@ widgets:
         on_left: "exec"
         on_middle: "toggle_label"
         on_right: "toggle_label"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [ 1, 1 ]
-
   glazewm_workspaces:
     type: "glazewm.workspaces.GlazewmWorkspacesWidget"
     options:
       offline_label: "GlazeWM Offline"
       monitor_exclusive: true  # v1.9.0+ preferred workspace filtering mode
       # Kept for backward compatibility; newer versions prefer monitor_exclusive
-      hide_empty_workspaces: true
       hide_if_offline: false
       # Label customization (uses {name} or {display_name} from GlazeWM config)
       # populated_label: "{name}"        # Non-active workspace with windows
@@ -319,13 +254,6 @@ widgets:
         hide_duplicates: true     # Hide duplicate app icons
         hide_floating: false      # Hide floating window icons
       # Styling
-      btn_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-      animation: true
-
   windsurf:
     type: "yasb.vscode.VSCodeWidget"
     options:
@@ -357,16 +285,6 @@ widgets:
         on_left: "toggle_menu"
         on_middle: "do_nothing"
         on_right: "toggle_label"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-      animation:
-        enabled: true
-        type: "fadeInOut"
-        duration: 200
-
   ai_chat:
     type: "yasb.ai_chat.AiChatWidget"
     options:
@@ -418,12 +336,6 @@ widgets:
               label: "Claude 3.5 Sonnet"
             - name: "openai/gpt-4o-mini"
               label: "GPT-4o Mini"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-
   # NEW v1.8.8: Window Controls Widget (minimize/maximize/close focused window)
   window_controls:
     type: "yasb.window_controls.WindowControlsWidget"
@@ -503,16 +415,6 @@ widgets:
         offset_left: 0
         show_categories: true  # Group notifications by type (PullRequest, Issue, etc.)
         categories_order: ["PullRequest", "Issue", "CheckSuite", "Release", "Discussion"]
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-      animation:
-        enabled: true
-        duration: 500
-        type: "fadeInOut"
-
   # NEW v1.8.7: GitHub Copilot Usage Widget
   copilot:
     type: "yasb.copilot.CopilotWidget"
@@ -546,16 +448,6 @@ widgets:
         chart: true
       callbacks:
         on_left: "toggle_label"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-      animation:
-        enabled: true
-        type: "fadeInOut"
-        duration: 200
-
   # NEW v1.8.7: Brightness Widget (Monitor brightness control)
   brightness:
     type: "yasb.brightness.BrightnessWidget"
@@ -563,7 +455,6 @@ widgets:
       label: "<span>{icon}</span>"
       label_alt: "Brightness {percent}%"
       tooltip: true
-      hide_unsupported: true
       brightness_toggle_level: [0, 50, 100]
       brightness_icons:
         - "\udb80\udcde"  # Icon for 0-25% brightness
@@ -583,12 +474,6 @@ widgets:
         on_left: "toggle_label"
         on_middle: "do_nothing"
         on_right: "toggle_brightness_menu"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-
   # NEW v1.8.7: Language Widget
   language:
     type: "yasb.language.LanguageWidget"
@@ -611,13 +496,6 @@ widgets:
         offset_left: 0
         show_layout_icon: true
         layout_icon: "\uf11c"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-
-
   quick_launch:
     type: "yasb.quick_launch.QuickLaunchWidget"
     options:
@@ -626,7 +504,10 @@ widgets:
       max_results: 60
       show_icons: true
       icon_size: 32
+      home_page: true
       compact_mode: false
+      compact_text: false
+      remember_last_query: true
       providers:
         apps:
           enabled: true
@@ -635,41 +516,118 @@ widgets:
           show_recent: true
           max_recent: 8
           show_description: true
+        bookmarks:
+          enabled: true
+          prefix: "*"
+          priority: 1
+          browser: "all"
+          profile: "Default"
+        calculator:
+          enabled: true
+          prefix: "="
+          priority: 2
+        clipboard_history:
+          enabled: true
+          prefix: "cb"
+          priority: 3
+          max_items: 30
+          show_preview: true
+        color:
+          enabled: true
+          prefix: "c:"
+          priority: 4
+        currency:
+          enabled: true
+          prefix: "$"
+          priority: 5
+        dev_tools:
+          enabled: true
+          prefix: "dev"
+          priority: 6
+        emoji:
+          enabled: true
+          prefix: ":"
+          priority: 7
         file_search:
           enabled: true
           prefix: "/"
-          priority: 1
+          priority: 8
           backend: "auto"
           show_path: true
-        web_search:
-          enabled: true
-          prefix: "?"
-          priority: 2
-          engine: "google"
-        system_commands:
-          enabled: true
-          prefix: ">"
-          priority: 3
         github_notifications:
           enabled: true
           prefix: "gh"
-          priority: 4
+          priority: 9
           # OAuth device flow is used when token is empty.
           # Optional fallback: token: "env" with YASB_GITHUB_TOKEN.
           token: ""
+        hacker_news:
+          enabled: true
+          prefix: "hn"
+          priority: 10
+          cache_ttl: 300
+          max_items: 30
+        ip_info:
+          enabled: true
+          prefix: "ip"
+          priority: 11
+        kill_process:
+          enabled: true
+          prefix: "!"
+          priority: 12
+        port_viewer:
+          enabled: true
+          prefix: "pv"
+          priority: 13
+          tcp_listening_only: true
+          include_established: false
+        settings:
+          enabled: true
+          prefix: "@"
+          priority: 14
+        snippets:
+          enabled: true
+          prefix: ";"
+          priority: 15
+          type_delay: 200
         ssh:
           enabled: true
           prefix: "ssh"
-          priority: 5
+          priority: 16
           ssh_config_path: "~/.ssh/config"
+        system_commands:
+          enabled: true
+          prefix: ">"
+          priority: 17
+        unit_converter:
+          enabled: true
+          prefix: "~"
+          priority: 18
+        vscode:
+          enabled: true
+          prefix: "vsc"
+          priority: 19
+        web_search:
+          enabled: true
+          prefix: "?"
+          priority: 20
+          engine: "google"
+        window_switcher:
+          enabled: true
+          prefix: "win"
+          priority: 21
         windows_terminal:
           enabled: true
           prefix: "wt"
-          priority: 6
+          priority: 22
+        world_clock:
+          enabled: true
+          prefix: "tz"
+          priority: 23
         wsl:
           enabled: true
           prefix: "wsl"
-          priority: 7
+          priority: 24
           show_online: true
       popup:
         width: 720
@@ -682,7 +640,7 @@ widgets:
       callbacks:
         on_left: "toggle_quick_launch"
       keybindings:
-        - keys: "alt+space"
+        - keys: "ctrl+space"
           action: "toggle_quick_launch"
   clock:
     type: "yasb.clock.ClockWidget"
@@ -705,15 +663,6 @@ widgets:
         on_left: "toggle_calendar"
         on_middle: "toggle_label"
         on_right: "next_timezone"
-      animation:
-        enabled: true
-        duration: 500
-        type: "fadeInOut"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
   # Legacy WeatherWidget backup (pre-1.9.0). Kept for easy rollback.
   weather_legacy:
     type: "yasb.weather.WeatherWidget"
@@ -751,7 +700,6 @@ widgets:
         border_color: "#7e8f85"
         alignment: "right"
         direction: "down"
-        distance: 6
         icon_size: 48
         # NEW v1.8.5: Hourly forecast options
         show_hourly_forecast: true
@@ -865,15 +813,6 @@ widgets:
         on_left: "toggle_menu"
         on_middle: "do_nothing"
         on_right: "toggle_label"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-      animation:
-        enabled: true
-        duration: 600
-        type: "fadeInOut"
   wallpapers:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
@@ -896,21 +835,14 @@ widgets:
         orientation: "portrait"
         image_spacing: 8
         lazy_load: true
-        lazy_load_delay: 80
         lazy_load_fadein: 400
         image_corner_radius: 20
-        enable_cache: true
         # NEW v1.8.6: Custom gallery position (optional)
         # offset_top: 0
         # offset_left: 0
       run_after:
         - "wal -i '{image}'"
         - "pwsh -File C:\\Users\\nucle\\.config\\yasb\\inject-wal-colors.ps1"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [ 1, 1 ]
   # cava:
   #   type: "yasb.cava.CavaWidget"
   #   options:
@@ -927,11 +859,6 @@ widgets:
   #     framerate: 25
   #     sleep_timer: 30
   #     hide_empty: true
-  #     container_padding:
-  #       top: 0
-  #       left: 4
-  #       bottom: 0
-  #       right: 4
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
     options:
@@ -956,14 +883,7 @@ widgets:
         on_right: "close_app"
       animation:
         enabled: true
-        type: "fadeInOut"
         duration: 200
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-
   media:
     type: "yasb.media.MediaWidget"
     options:
@@ -1013,11 +933,6 @@ widgets:
         play: "▶"
         pause: "⏸"
         next_track: "⏭"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 1
-        offset: [ 1, 1 ]
       scrolling_label:
         enabled: false
         update_interval_ms: 50
@@ -1025,7 +940,7 @@ widgets:
         separator: " | "
         label_padding: 1
         always_scroll: false
-        
+
   # CPU, Memory, and Disk Widgets
   cpu:
     type: "yasb.cpu.CpuWidget"
@@ -1088,16 +1003,23 @@ widgets:
       pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
       show_unpinned: false
       show_unpinned_button: true
+      show_in_popup: true
+      icons_per_row: 4
       show_battery: false
       show_volume: false
       show_network: false
-      use_hook: false
+      use_hook: true
       hide_icons: []
-      btn_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [ 1, 1 ]
+      tooltip: true
+      popup:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
@@ -1128,12 +1050,6 @@ widgets:
         app_icons:
           toggle_down: "\uf078"  # Icon when collapsed
           toggle_up: "\uf077"    # Icon when expanded
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-
   traffic:
     type: "yasb.traffic.TrafficWidget"
     options:
@@ -1154,12 +1070,6 @@ widgets:
       callbacks:
         on_left: "toggle_menu"
         on_right: "toggle_label"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-
   wifi:
     type: "yasb.wifi.WifiWidget"
     options:
@@ -1182,11 +1092,6 @@ widgets:
         on_left: "toggle_menu"
         on_middle: "exec cmd.exe /c start ms-settings:network"
         on_right: "toggle_label"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
       menu_config:
         blur: true
         round_corners: true
@@ -1205,7 +1110,7 @@ widgets:
       label_device_separator: ", "
       max_length: 10
       max_length_ellipsis: "..."
-      icons: 
+      icons:
         bluetooth_on: "\udb80\udcaf"
         bluetooth_off: "\udb80\udcb2"
         bluetooth_connected: "\udb80\udcb1"
@@ -1215,11 +1120,6 @@ widgets:
       callbacks:
         on_left: "toggle_label"
         on_right: "exec cmd.exe /c start ms-settings:bluetooth"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [ 1, 1 ]
   disk:
     type: "yasb.disk.DiskWidget"
     options:
@@ -1227,14 +1127,13 @@ widgets:
         label_alt: "<span>\uf473</span>"
         group_label:
           volume_labels: ["C", "D", "E", "F", "H", "I", "J"]
-          show_label_name: true 
+          show_label_name: true
           blur: True
           round_corners: True
           round_corners_type: "normal"
           border_color: "#7e8f85"
           alignment: "right"
           direction: "down"
-          distance: 6
         callbacks:
           on_left: "toggle_group"
   power_menu:
@@ -1254,12 +1153,6 @@ widgets:
         restart: ["\uead2", "Restart"]
         hibernate: ["\ueaf7", "Hibernate"]
         cancel: ["\uea76", "Cancel"]
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-
   gpu:
     type: "yasb.gpu.GpuWidget"
     options:
@@ -1291,20 +1184,6 @@ widgets:
         show_graph: true
         show_graph_grid: true
         graph_history_size: 60
-      animation:
-        enabled: true
-        type: "fadeInOut"
-        duration: 200
-      container_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [ 1, 1 ]
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [ 1, 1 ]
       progress_bar:
         enabled: true
         position: "right"
@@ -1333,10 +1212,6 @@ widgets:
       window_animation:
         fade_in_duration: 200
         fade_out_duration: 200
-      animation:
-        enabled: true
-        type: "fadeInOut"
-        duration: 200
       callbacks:
         on_left: "toggle_launchpad"
         on_middle: "do_nothing"
@@ -1346,18 +1221,3 @@ widgets:
         edit_app: "F2"
         show_context_menu: "Shift+F10"
         delete_app: "Delete"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-      app_title_shadow:
-        enabled: true
-        color: "#000000CC"
-        offset: [0, 2]
-        radius: 4
-      app_icon_shadow:
-        enabled: true
-        color: "#000000AA"
-        offset: [0, 8]
-        radius: 16
