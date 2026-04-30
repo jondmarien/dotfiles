@@ -1,0 +1,78 @@
+[
+  {
+    "title": "Spotify",
+    "path": "C:\\Users\\nucle\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Spotify.lnk",
+    "icon": "C:\\Users\\nucle\\.config\\yasb\\launchpad\\icons\\spotify_1774426597641.png",
+    "type": "app",
+    "group": "Media",
+    "id": 1774426597642
+  },
+  {
+    "title": "Google Chrome",
+    "path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Google Chrome.lnk",
+    "icon": "C:\\Users\\nucle\\.config\\yasb\\launchpad\\icons\\google_chrome_1774426584429.png",
+    "type": "app",
+    "group": "Media",
+    "id": 1774426584429
+  },
+  {
+    "title": "Zen",
+    "path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Zen.lnk",
+    "icon": "C:\\Users\\nucle\\.config\\yasb\\launchpad\\icons\\zen_1774426574155.png",
+    "type": "app",
+    "group": "Browsing",
+    "id": 1774426574155
+  },
+  {
+    "title": "Steam",
+    "path": "C:\\Users\\nucle\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Steam\\Steam.lnk",
+    "icon": "C:\\Users\\nucle\\.config\\yasb\\launchpad\\icons\\steam_1774426561079.png",
+    "type": "app",
+    "group": "Gaming",
+    "id": 1774426561080
+  },
+  {
+    "title": "Flow Launcher",
+    "path": "C:\\Users\\nucle\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Flow Launcher\\Flow Launcher.lnk",
+    "icon": "C:\\Users\\nucle\\.config\\yasb\\launchpad\\icons\\flow_launcher_1765928088017.png",
+    "type": "app",
+    "id": 1765928088018
+  },
+  {
+    "title": "Cursor",
+    "path": "C:\\Users\\nucle\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Cursor\\Cursor.lnk",
+    "icon": "C:\\Users\\nucle\\.config\\yasb\\launchpad\\icons\\cursor_1774426608519.png",
+    "type": "app",
+    "group": "Coding",
+    "id": 1774426608519
+  },
+  {
+    "title": "Task Manager",
+    "path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Task Manager.lnk",
+    "icon": "C:\\Users\\nucle\\.config\\yasb\\launchpad\\icons\\task_manager_1765927935549.png",
+    "type": "app",
+    "id": 1765927935550
+  },
+  {
+    "title": "WhatsApp",
+    "path": "explorer.exe shell:AppsFolder\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App",
+    "icon": "C:\\Users\\nucle\\.config\\yasb\\launchpad\\icons\\whatsapp_1765254019780.png",
+    "type": "app",
+    "id": 1765254019783
+  },
+  {
+    "title": "Windsurf - Next",
+    "path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windsurf - Next\\Windsurf - Next.lnk",
+    "icon": "C:\\Users\\nucle\\.config\\yasb\\launchpad\\icons\\windsurf_-_next_1765160373023.png",
+    "type": "app",
+    "group": "Coding",
+    "id": 1765160373024
+  },
+  {
+    "title": "Discord",
+    "path": "C:\\Users\\nucle\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Discord Inc\\Discord.lnk",
+    "icon": "C:\\Users\\nucle\\.config\\yasb\\launchpad\\icons\\discord_1765160362446.png",
+    "type": "app",
+    "id": 1765160362446
+  }
+]

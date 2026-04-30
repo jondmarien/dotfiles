@@ -3015,12 +3015,17 @@ Example: "Windows Media" becomes "windows-media" */
 /* -------------------------------------------------------------------------------------------------- */
 
 .yasb-bar {
-  background: linear-gradient(90deg, rgba(6, 10, 8, 0.96), rgba(35, 51, 78, 0.72));
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  background: rgba(6, 10, 8, 0.96);
+  border-bottom: 1px solid rgba(87, 148, 138, 0.72);
+  box-shadow:
+    0 1px 0 rgba(48, 80, 78, 0.72),
+    0 8px 24px rgba(0, 0, 0, 0.35),
+    0 0 18px rgba(87, 148, 138, 0.22);
 }
 
 .dark.yasb-bar {
-  background: linear-gradient(90deg, rgba(6, 10, 8, 0.98), rgba(42, 83, 99, 0.62));
+  background: rgba(6, 10, 8, 0.98);
+  border-bottom: 1px solid rgba(87, 148, 138, 0.78);
 }
 
 .widget-container,

@@ -1,0 +1,741 @@
+watch_stylesheet: true
+watch_config: true
+debug: false
+
+komorebi:
+  start_command: "komorebic start --whkd"
+  stop_command: "komorebic stop --whkd"
+  reload_command: "komorebic stop --whkd && komorebic start --whkd"
+
+bars:
+  status-bar:
+    enabled: true
+    screens: ['*'] 
+    class_name: "yasb-bar"
+    alignment:
+      position: "top"
+    blur_effect:
+      enabled: true
+      dark_mode: true
+      round_corners: false
+      border_color: None
+    window_flags:
+      always_on_top: false
+      windows_app_bar: true
+    dimensions:
+      width: "100%"
+      height: 34
+    padding:
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+    widgets:
+      left:
+        [
+          "wm_controls",
+          "bin",
+          "update_check",
+          "quick_launch",
+          "language",
+          "media",
+          "cava"
+        ]
+      center: ["github", "clock", "open_meteo"]
+      right:
+        [
+          "taskbar",
+          "hardware_widget",
+          "wallpapers",
+          "volume",
+          "notes",
+          "launchpad",
+          "power_menu"
+        ]
+widgets:
+  wm_controls:
+    type: "yasb.grouper.GrouperWidget"
+    options:
+      class_name: "wm-controls"
+      hide_empty: false
+      widgets: ["komorebi_workspaces"]
+      collapse_options:
+        enabled: false
+        exclude_widgets: []
+        expanded_label: "\uf054"
+        collapsed_label: "\uf053"
+        label_position: "right"
+  bin:
+    type: "yasb.recycle_bin.RecycleBinWidget"
+    options:
+      label: "<span>{icon}</span>({items_size})"
+      icons:
+        bin_empty: "\udb82\ude7a"
+        bin_filled: "\udb82\ude79"
+      show_confirmation: true
+      callbacks:
+        on_left: "open_bin"
+        on_right: "toggle_label"
+        on_middle: "empty_bin"
+  quick_launch:
+    type: "yasb.quick_launch.QuickLaunchWidget"
+    options:
+      label: "<span>\uf002</span>"
+      search_placeholder: "Search apps, files, web, windows..."
+      max_results: 60
+      show_icons: true
+      icon_size: 32
+      home_page: true
+      compact_mode: false
+      compact_text: false
+      remember_last_query: true
+      providers:
+        apps:
+          enabled: true
+          prefix: "*"
+          priority: 0
+          show_recent: true
+          max_recent: 8
+          show_description: true
+        bookmarks:
+          enabled: true
+          prefix: "*"
+          priority: 1
+          browser: "all"
+          profile: "Default"
+        calculator:
+          enabled: true
+          prefix: "="
+          priority: 2
+        clipboard_history:
+          enabled: true
+          prefix: "cb"
+          priority: 3
+          max_items: 30
+          show_preview: true
+        color:
+          enabled: true
+          prefix: "c:"
+          priority: 4
+        currency:
+          enabled: true
+          prefix: "$"
+          priority: 5
+        dev_tools:
+          enabled: true
+          prefix: "dev"
+          priority: 6
+        emoji:
+          enabled: true
+          prefix: ":"
+          priority: 7
+        file_search:
+          enabled: true
+          prefix: "/"
+          priority: 8
+          backend: "auto"
+          show_path: true
+        github_notifications:
+          enabled: true
+          prefix: "gh"
+          priority: 9
+          token: ""
+        hacker_news:
+          enabled: true
+          prefix: "hn"
+          priority: 10
+          cache_ttl: 300
+          max_items: 30
+        ip_info:
+          enabled: true
+          prefix: "ip"
+          priority: 11
+        kill_process:
+          enabled: true
+          prefix: "!"
+          priority: 12
+        port_viewer:
+          enabled: true
+          prefix: "pv"
+          priority: 13
+          tcp_listening_only: true
+          include_established: false
+        settings:
+          enabled: true
+          prefix: "@"
+          priority: 14
+        snippets:
+          enabled: true
+          prefix: ";"
+          priority: 15
+          type_delay: 200
+        ssh:
+          enabled: true
+          prefix: "ssh"
+          priority: 16
+          ssh_config_path: "~/.ssh/config"
+        system_commands:
+          enabled: true
+          prefix: ">"
+          priority: 17
+        unit_converter:
+          enabled: true
+          prefix: "~"
+          priority: 18
+        vscode:
+          enabled: true
+          prefix: "vsc"
+          priority: 19
+        web_search:
+          enabled: true
+          prefix: "?"
+          priority: 20
+          engine: "google"
+        window_switcher:
+          enabled: true
+          prefix: "win"
+          priority: 21
+        windows_terminal:
+          enabled: true
+          prefix: "wt"
+          priority: 22
+        world_clock:
+          enabled: true
+          prefix: "tz"
+          priority: 23
+        wsl:
+          enabled: true
+          prefix: "wsl"
+          priority: 24
+          show_online: true
+      popup:
+        width: 720
+        height: 480
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        dark_mode: true
+      callbacks:
+        on_left: "toggle_quick_launch"
+      keybindings:
+        - keys: "ctrl+space"
+          action: "toggle_quick_launch"
+  traffic:
+    type: "yasb.traffic.TrafficWidget"
+    options:
+      label: "\ueab4 {download_speed} | \ueab7 {upload_speed}"
+      label_alt: "Download {download_speed} | Upload {upload_speed}"
+      update_interval: 5000
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        alignment: "left"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+      callbacks:
+        on_left: "toggle_menu"
+        on_right: "toggle_label"
+  update_check:
+    type: "yasb.update_check.UpdateCheckWidget"
+    options:
+      winget_update:
+        enabled: true
+        label: "<span>\uf0ab</span> {count}"
+        interval: 60
+        exclude: []
+  launchpad:
+    type: "yasb.launchpad.LaunchpadWidget"
+    options:
+      label: "<span>\udb85\udcde</span>"
+      search_placeholder: "Search apps..."
+      app_icon_size: 48
+      window:
+        fullscreen: false
+        width: 1024
+        height: 768
+        overlay_block: true
+      window_style:
+        enable_blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+      window_animation:
+        fade_in_duration: 120
+        fade_out_duration: 100
+      group_apps: false
+      callbacks:
+        on_left: "toggle_launchpad"
+  disk:
+    type: "yasb.disk.DiskWidget"
+    options:
+      label: "<span>\uf473</span>"
+      label_alt: "<span>\uf473</span>"
+      group_label:
+        volume_labels: ["C", "D", "E", "F"]
+        show_label_name: true 
+        blur: True
+        round_corners: True
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+      callbacks:
+        on_left: "toggle_group"
+  language:
+    type: "yasb.language.LanguageWidget"
+    options:
+      label: "\uf11c {lang[language_code]} ({lang[country_code]})"
+      label_alt: "{lang[full_name]}"
+      update_interval: 5
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+      language_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_layout_icon: true
+        layout_icon: "\uf11c"
+  cava:
+    type: "yasb.cava.CavaWidget"
+    options:
+      bar_height: 12
+      min_bar_height: 0
+      gradient: 1
+      foreground: "#89b4fa"
+      gradient_color_1: '#74c7ec'
+      gradient_color_2: '#89b4fa'
+      gradient_color_3: '#cba6f7'
+      bars_number: 16
+      bar_spacing: 2
+      bar_width: 4
+      bar_type: "bars"
+      framerate: 60
+      hide_empty: true
+  komorebi_control:
+    type: "komorebi.control.KomorebiControlWidget"
+    options:
+      label: "<span>\udb80\uddd9</span>"
+      icons:
+        start: "\uead3"
+        stop: "\uead7"
+        reload: "\uead2"
+      run_ahk: false
+      run_whkd: false
+      run_masir: false
+      show_version: true
+      komorebi_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: 'normal'
+        border_color: 'System'
+        alignment: 'left'
+        direction: 'down'
+        offset_top: 6
+        offset_left: 0
+  komorebi_workspaces:
+    type: "komorebi.workspaces.WorkspaceWidget"
+    options:
+      label_offline: "Komorebi Offline"
+      label_workspace_btn: "\udb81\udc3d"
+      label_workspace_active_btn: "\udb81\udc3e"
+      label_workspace_populated_btn: "\udb81\udc3e"
+      label_default_name: ""
+      label_zero_index: false
+      hide_if_offline: true
+      toggle_workspace_layer:
+        enabled: false
+        tiling_label: "Tiling"
+        floating_label: "Floating"
+      app_icons: 
+        enabled_populated: false
+        enabled_active: false
+        size: 12
+        max_icons: 0
+        hide_label: false
+        hide_duplicates: false
+        hide_floating: false
+  notes:
+    type: "yasb.notes.NotesWidget"
+    options:
+      label: "<span>\udb82\udd0c</span> {count}"
+      label_alt: "{count} notes"
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        max_title_size: 150
+        show_date_time: true
+      icons:
+        note: "\udb82\udd0c"
+        delete: "\ueab8"
+        copy: "\uebcc"
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+  memory:
+    type: "yasb.memory.MemoryWidget"
+    options:
+      label: "{virtual_mem_free}/{virtual_mem_total}"
+      label_alt: "VIRT: {virtual_mem_percent}% SWAP: {swap_mem_percent}%"
+      update_interval: 5000
+      progress_bar:
+        enabled: true
+        position: "left"
+        size: 14
+        thickness: 2
+        color: "#91d7e3"
+        background_color: "#242739" 
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "do_nothing"
+      memory_thresholds:
+        low: 25
+        medium: 50
+        high: 90
+  cpu:
+    type: "yasb.cpu.CpuWidget"
+    options:
+      label: "CPU"
+      label_alt: "CPU {info[percent][total]}%"
+      progress_bar:
+        enabled: true
+        position: "left"
+        size: 14
+        thickness: 2
+        color: "#91d7e3"
+        background_color: "#242739" 
+      update_interval: 2000
+      callbacks:
+        on_right: "do_nothing"
+  hardware_widget:
+    type: "yasb.grouper.GrouperWidget"
+    options:
+      class_name: "hardware-widget"
+      widgets: [
+        "memory",
+        "cpu",
+        "gpu",
+        "traffic",
+        "disk"
+      ]
+  github:
+    type: "yasb.github.GithubWidget"
+    options:
+      label: "<span>\ueba1</span>"
+      label_alt: "Notifications {data}"
+      token: env # GitHub Personal access tokens (classic) https://github.com/settings/tokens
+      max_notification: 50
+      notification_dot:
+        enabled: True
+        corner: "bottom_left"
+        color: "red"
+        margin: [ 1, 1 ]
+      only_unread: true
+      show_comment_count: false
+      reason_filters: []
+      max_field_size: 54
+      update_interval: 300
+      menu:
+        blur: True
+        round_corners: True
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        show_categories: true
+        categories_order: ["PullRequest", "Issue", "CheckSuite", "Release", "Discussion"]
+  media:
+    type: "yasb.media.MediaWidget"
+    options:
+      label: "<span>\uf001</span>"
+      label_alt: "<span>\udb80\udf87</span> {title}"
+      hide_empty: true
+      callbacks:
+        on_left: "toggle_media_menu"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+      max_field_size:
+        label: 40
+        label_alt: 80
+      show_thumbnail: false
+      controls_only: false
+      controls_left: true
+      thumbnail_alpha: 80
+      thumbnail_padding: 0
+      thumbnail_corner_radius: 8
+      thumbnail_edge_fade: true
+      scrolling_label:
+        enabled: false
+        update_interval_ms: 100
+        style: "left"
+        separator: " | "
+        label_padding: 0
+        ease_slope: 20
+        ease_pos: 0.8
+        ease_min: 0.5
+      icons:
+        prev_track: "\uf048"
+        next_track: "\uf051"
+        play: "\uf04b"
+        pause: "\uf04d"
+      media_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "small"
+        border_color: "system"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        thumbnail_corner_radius: 4
+        thumbnail_size: 80
+        max_title_size: 80
+        max_artist_size: 20
+        show_source: true
+      media_menu_icons:
+        play: "\uf04b"
+        pause: "\uf04c"
+        prev_track: "\uf048"
+        next_track: "\uf051"
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%a, %d %b - %H:%M}"
+      label_alt: "{%A, %d %B %Y - %H:%M}"
+      timezones: []
+      update_interval: 1000
+      calendar:
+        alignment: "center"
+        blur: True
+        round_corners: True
+        round_corners_type: "small"
+        border_color: "System"
+        direction: "down"
+        show_holidays: true
+        show_week_numbers: False
+        holiday_color: "#ff9f00"
+      callbacks:
+        on_left: "toggle_calendar"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+  volume:
+    type: "yasb.volume.VolumeWidget"
+    options:
+      label: "<span>{icon}</span> {level}"
+      label_alt: "{volume}"
+      volume_icons:
+        - "\ueee8"
+        - "\uf026"
+        - "\uf027"
+        - "\uf027"
+        - "\uf028"
+      audio_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_apps: true
+        show_app_labels: false
+        show_app_icons: true
+        show_apps_expanded: false
+        app_icons:
+          toggle_down: "\uf078" 
+          toggle_up: "\uf077"
+      callbacks:
+        on_left: "toggle_volume_menu"
+        on_right: "toggle_mute"
+  power_menu:
+    type: "yasb.power_menu.PowerMenuWidget"
+    options:
+      label: "\uf011"
+      uptime: true
+      show_user: true
+      menu_style: "popup"
+      popup:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+      buttons:
+        shutdown: ["\uf011", "Shut Down"]
+        restart: ["\uead2", "Restart"]
+        sleep: ["\u23fe", "Sleep"]
+        signout: ["\udb80\udf43", "Sign out"]
+        lock: ["\uea75", "Lock"]
+        hibernate: ["\uf28e", "Hibernate"]
+        cancel: ["", "Cancel"]
+  open_meteo:
+    type: "yasb.open_meteo.OpenMeteoWidget"
+    options:
+      label: "<span>{icon}</span> {temp}"
+      label_alt: "{location}: Min {min_temp}, Max {max_temp}, Humidity {humidity}, Wind {wind}"
+      tooltip: true
+      update_interval: 600
+      hide_decimal: true
+      units: "metric"
+      callbacks:
+        on_left: "toggle_card"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+      icons:
+        sunnyDay: "\udb81\udd99"
+        clearNight: "\ue3c2"
+        cloudyDay: "\ue21d"
+        cloudyNight: "\ue226"
+        drizzleDay: "\ue371"
+        drizzleNight: "\ue371"
+        rainyDay: "\ue371"
+        rainyNight: "\ue371"
+        snowyDay: "\udb81\udf17"
+        snowyNight: "\udb81\udf17"
+        foggyDay: "\ue303"
+        foggyNight: "\ue346"
+        thunderstormDay: "\ue30f"
+        thunderstormNight: "\ue338"
+        default: "\udb81\udd99"
+      weather_card:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        icon_size: 48
+        show_hourly_forecast: true
+        time_format: "12h"
+        hourly_point_spacing: 76
+        hourly_icon_size: 32
+        icon_smoothing: true
+        temp_line_width: 2
+        current_line_color: "#8EAEE8"
+        current_line_width: 1
+        current_line_style: "dot"
+        hourly_gradient:
+          enabled: true
+          top_color: "#8EAEE8"
+          bottom_color: "#2A3E68"
+        hourly_forecast_buttons:
+          enabled: true
+          default_view: "temperature"
+          temperature_icon: "\udb81\udd99"
+          rain_icon: "\udb81\udd96"
+          snow_icon: "\udb81\udd98"
+        weather_animation:
+          enabled: true
+          snow_overrides_rain: true
+          temp_line_animation_style: "both"
+          rain_effect_intensity: 1.0
+          snow_effect_intensity: 1.0
+          scale_with_chance: true
+  wallpapers:
+    type: "yasb.wallpapers.WallpapersWidget"
+    options:
+      label: "<span>\udb83\ude09</span>"
+      image_path: "C:\\Users\\nucle\\Downloads\\wALLpapers"
+      change_automatically: false
+      update_interval: 60
+      gallery:
+        enabled: true
+        blur: true
+        gallery_columns: 4
+        image_width: 220
+        image_per_page: 8
+        show_buttons: false
+        orientation: "portrait"
+        image_spacing: 8
+        lazy_load: true
+        lazy_load_fadein: 400
+        image_corner_radius: 20
+      run_after:
+        - "wal -i '{image}'"
+        - "pwsh -File C:\\Users\\nucle\\.config\\yasb\\inject-wal-colors.ps1"
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      icon_size: 18
+      show_only_visible: false
+      strict_filtering: true
+      tooltip: true
+      monitor_exclusive: true
+      hide_empty: true
+      title_label:
+        enabled: false
+        show: "focused"
+        min_length: 10
+        max_length: 30
+      ignore_apps:
+        processes: []
+        titles: []
+        classes: []
+      callbacks:
+        on_left: "toggle_window"
+        on_middle: "do_nothing"
+        on_right: "close_app"
+      animation:
+        enabled: true
+        duration: 200
+  gpu:
+    type: "yasb.gpu.GpuWidget"
+    options:
+      label: "<span>\uf4bc</span> {info[utilization]}%"
+      label_alt: "<span>\uf4bc</span> {info[temp]}°C | {info[power_draw]}W | {info[mem_used]} / {info[mem_total]}"
+      update_interval: 5000
+      gpu_thresholds:
+        low: 25
+        medium: 50
+        high: 90
+      histogram_icons:
+        - "\u2581"
+        - "\u2581"
+        - "\u2582"
+        - "\u2583"
+        - "\u2584"
+        - "\u2585"
+        - "\u2586"
+        - "\u2587"
+        - "\u2588"
+      histogram_num_columns: 8
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "toggle_menu"
+      menu:
+        enabled: true
+        show_graph: true
+        show_graph_grid: true
+        graph_history_size: 60
+      progress_bar:
+        enabled: true
+        position: "right"
+        size: 18
+        thickness: 2
+        color: "#89b4fa"
+        background_color: "#242739"
+        animation: true
