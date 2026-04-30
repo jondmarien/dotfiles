@@ -27,7 +27,7 @@
 .power-menu-widget .label {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     padding-left: 5px;
@@ -138,7 +138,7 @@
 .launchpad-widget {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -466,7 +466,7 @@
 .language-widget {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -541,7 +541,7 @@
 .hardware-widget .container {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -568,7 +568,7 @@
 .media-widget .label {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 	color: #ffffff;
@@ -597,7 +597,7 @@
 .github-widget {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 	color: #fff;
@@ -671,7 +671,7 @@
 .komorebi-control-widget {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -749,7 +749,7 @@
 .clock-widget {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     padding: 0 4px 0 0px;
@@ -1187,7 +1187,7 @@
 .update-check-widget {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     padding: 0 6px 0 6px;
@@ -1209,7 +1209,7 @@
 .notes-widget {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     padding-right: 5px;
@@ -1332,7 +1332,7 @@
 .volume-widget {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -1499,11 +1499,10 @@
 .quick-launch-widget,
 .open-meteo-widget,
 .wallpapers-widget,
-.taskbar-widget,
-.gpu-widget {
+.taskbar-widget {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -1527,8 +1526,7 @@
 .recycle-bin-widget .icon,
 .quick-launch-widget .icon,
 .open-meteo-widget .icon,
-.wallpapers-widget .icon,
-.gpu-widget .icon {
+.wallpapers-widget .icon {
     font-size: 14px;
     color: #89b4fa;
 }
@@ -1536,8 +1534,7 @@
 .recycle-bin-widget .label,
 .quick-launch-widget .label,
 .open-meteo-widget .label,
-.wallpapers-widget .label,
-.gpu-widget .label {
+.wallpapers-widget .label {
     padding: 0 6px;
 }
 
@@ -1547,7 +1544,7 @@
 .gpu-popup,
 .taskbar-preview {
     background-color: rgba(17, 17, 27, 0.86);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 10px;
 }
 
@@ -1649,22 +1646,26 @@
     color: #cdd6f4;
 }
 
+/* GPU */
+.gpu-widget {
+    padding: 0 8px;
+}
+
+.gpu-widget .widget-container .label {
+    font-size: 13px;
+    color: #cdd6f4;
+}
+
+.gpu-widget .widget-container .icon {
+    font-size: 14px;
+    color: #89b4fa;
+}
+
 .gpu-widget .progress-circle {
-    margin-left: 6px;
+    margin-right: 6px;
 }
 
-.gpu-widget .label.status-low {
-    color: #a6e3a1;
-}
-
-.gpu-widget .label.status-medium {
-    color: #f9e2af;
-}
-
-.gpu-widget .label.status-high {
-    color: #fab387;
-}
-
-.gpu-widget .label.status-critical {
-    color: #f38ba8;
-}
+.gpu-widget .widget-container .label.status-low { color: #a6e3a1; }
+.gpu-widget .widget-container .label.status-medium { color: #f9e2af; }
+.gpu-widget .widget-container .label.status-high { color: #fab387; }
+.gpu-widget .widget-container .label.status-critical { color: #f38ba8; }
