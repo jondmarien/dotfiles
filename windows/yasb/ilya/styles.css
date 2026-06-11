@@ -562,8 +562,8 @@
 
 /* MEDIA */
 .media-widget {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 .media-widget .label {
     background-color: rgba(20, 20, 30, 0.5);
@@ -571,26 +571,59 @@
     border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-	color: #ffffff;
-    padding: 0px;
-	padding-left: 10px;
-	padding-right: 10px;
+    color: #ffffff;
+    padding: 0 10px;
 }
 
-.media-menu .btn, .media-menu .title, .media-menu .artist { padding-left: 10px; font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif; }
-
-.media-menu .btn.prev:hover, .media-menu .btn.next:hover { color: #f38ba8; }
-
+/* Media menu popup */
+.media-menu {
+    min-width: 280px;
+}
+.media-menu .title {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Segoe UI";
+    color: #cdd6f4;
+    padding-left: 10px;
+}
+.media-menu .artist {
+    font-size: 12px;
+    font-family: "Segoe UI";
+    color: rgba(205, 214, 244, 0.5);
+    padding-left: 10px;
+}
+.media-menu .btn {
+    font-size: 18px;
+    font-family: "Segoe Fluent Icons";
+    color: rgba(205, 214, 244, 0.6);
+    background: transparent;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+.media-menu .btn:hover {
+    color: #cdd6f4;
+    background-color: rgba(203, 166, 247, 0.1);
+}
+.media-menu .btn.play:hover,
+.media-menu .btn.pause:hover {
+    color: #cba6f7;
+    background-color: rgba(203, 166, 247, 0.15);
+}
+.media-menu .btn.prev:hover,
+.media-menu .btn.next:hover {
+    color: #89b4fa;
+    background-color: rgba(137, 180, 250, 0.12);
+}
 .media-menu .source {
     font-size: 11px;
-    color: #000;
-    padding-left: 10px;
-    border-radius: 3px;
+    color: #11111b;
+    border-radius: 4px;
     background-color: #bac2de;
-    padding: 2px 4px;
-    font-weight: 600;
-    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
-	margin-bottom: 10px;
+    padding: 2px 7px;
+    font-weight: 700;
+    font-family: "Segoe UI";
+    margin-bottom: 8px;
 }
 
 /* GITHUB */
@@ -741,7 +774,7 @@
 }
 
 /* Progress bar customization */
-.memory-widget .progress-circle {
+.memory-widget .progress-container {
     margin-right: 6px;
 }
 
@@ -1042,129 +1075,143 @@
 
 /* TRAFFIC */
 .traffic-menu {
-    background-color: rgba(24, 25, 27, 0.85);
-    min-width: 280px;
+    min-width: 300px;
 }
 .traffic-menu .header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: rgba(24, 25, 27, 0.8);
+    background: rgba(20, 20, 30, 0.25);
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(116, 199, 236, 0.12);
 }
 .traffic-menu .header .title {
-    padding: 8px;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 700;
     font-family: 'Segoe UI';
-    color: #ffffff
+    color: #cdd6f4;
+    letter-spacing: 0.2px;
 }
 .traffic-menu .header .reset-button {
     font-size: 11px;
-    padding: 4px 8px;
-    margin-right: 8px;
+    padding: 3px 8px;
     font-family: 'Segoe UI';
     border-radius: 4px;
     font-weight: 600;
-    background-color: transparent;
-    border: none;
+    background-color: rgba(116, 199, 236, 0.08);
+    border: 1px solid rgba(116, 199, 236, 0.18);
+    color: #74c7ec;
 }
-.traffic-menu .reset-button:hover {
+.traffic-menu .header .reset-button:hover {
+    color: #cdd6f4;
+    background-color: rgba(116, 199, 236, 0.15);
+    border: 1px solid rgba(116, 199, 236, 0.3);
+}
+.traffic-menu .header .reset-button:pressed {
     color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(116, 199, 236, 0.2);
+    border: 1px solid rgba(116, 199, 236, 0.4);
 }
-.traffic-menu .reset-button:pressed {
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-/* Speed column styles */
+
+/* Speed columns */
 .traffic-menu .download-speed,
 .traffic-menu .upload-speed {
-    background-color: transparent;
-    padding: 4px 10px;
-    margin-right: 12px;
-    margin-left: 12px;
-    margin-top: 16px;
-    margin-bottom: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-.traffic-menu .download-speed {
-    margin-left: 12px;
-    margin-right: 12px;
+    background-color: rgba(116, 199, 236, 0.05);
+    border: 1px solid rgba(116, 199, 236, 0.1);
+    border-top: 2px solid rgba(116, 199, 236, 0.35);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 10px 10px 4px 10px;
 }
 .traffic-menu .speed-separator {
     max-width: 1px;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin: 32px 0 16px 0;
+    background-color: rgba(116, 199, 236, 0.12);
+    margin: 20px 0 8px 0;
 }
 .traffic-menu .upload-speed-value,
 .traffic-menu .download-speed-value {
-    font-size: 24px;
-    font-weight: 900;
+    font-size: 26px;
+    font-weight: 700;
     font-family: 'Segoe UI';
-    color: #bcc2c5;
+    color: #cdd6f4;
 }
 .traffic-menu .upload-speed-unit,
 .traffic-menu .download-speed-unit {
-    font-size: 13px;
+    font-size: 12px;
     font-family: 'Segoe UI';
-    font-weight: 600;
-    padding-top: 4px;
+    font-weight: 700;
+    color: #74c7ec;
+    padding-top: 6px;
 }
 .traffic-menu .upload-speed-placeholder,
 .traffic-menu .download-speed-placeholder {
-    color: #747474;
-    font-size: 11px;
+    color: rgba(205, 214, 244, 0.35);
+    font-size: 10px;
     font-family: 'Segoe UI';
-    padding: 0 0 4px 0;
+    font-weight: 400;
+    padding: 3px 0 0 0;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
 }
 
 /* Section and data styles */
 .traffic-menu .section-title {
-    font-size: 12px;
-    font-weight: 600;
-    color: #7c8192;
-    margin-bottom: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #74c7ec;
+    margin-bottom: 6px;
     font-family: 'Segoe UI';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
 }
 .traffic-menu .session-section,
 .traffic-menu .today-section,
 .traffic-menu .alltime-section {
-    margin: 8px 8px 0 8px;
-    padding: 0 10px 10px 10px;
-    background-color: transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(116, 199, 236, 0.04);
+    border: 1px solid rgba(116, 199, 236, 0.08);
+    border-left: 2px solid rgba(116, 199, 236, 0.3);
+    border-radius: 8px;
+    margin: 4px 10px;
+    padding: 8px 12px;
 }
 .traffic-menu .data-text {
-    font-size: 13px;
-    color: #afb5cc;
-    padding: 2px 0;
+    font-size: 12px;
+    color: rgba(205, 214, 244, 0.45);
+    padding: 3px 0;
     font-family: 'Segoe UI';
-
+    font-weight: 400;
 }
 .traffic-menu .data-value {
-    font-weight: 600;
-    font-size: 13px;
+    font-weight: 700;
+    font-size: 12px;
     font-family: 'Segoe UI';
-    padding: 2px 0;
+    color: #cdd6f4;
+    padding: 3px 0;
 }
 
-/* Interface and Internet info styles */
-.traffic-menu .interface-info,
-.traffic-menu .internet-info {
-    font-size: 12px;
-    color: #6f7486;
-    padding: 8px 0;
+/* Interface and Internet info */
+.traffic-menu .interface-info {
+    font-size: 11px;
+    color: rgba(205, 214, 244, 0.3);
+    padding: 6px 14px 4px 14px;
     font-family: 'Segoe UI';
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 .traffic-menu .internet-info {
-    background-color: rgba(68, 68, 68, 0.1);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 14px 8px 14px;
+    font-family: 'Segoe UI';
+    border-radius: 0 0 10px 10px;
+    color: rgba(205, 214, 244, 0.35);
+    background-color: transparent;
 }
 .traffic-menu .internet-info.connected {
-    background-color: rgba(166, 227, 161, 0.096);
+    background-color: rgba(166, 227, 161, 0.06);
     color: #a6e3a1;
 }
 .traffic-menu .internet-info.disconnected {
-    background-color: rgba(243, 139, 168, 0.1);
+    background-color: rgba(243, 139, 168, 0.06);
     color: #f38ba8;
 }
 
@@ -1179,7 +1226,7 @@
 .cpu-widget .widget-container .label.status-critical { color: #f38ba8; /* Red */ }
 
 /* Progress bar customization */
-.cpu-widget .progress-circle {
+.cpu-widget .progress-container {
     margin-right: 6px;
 }
 
@@ -1576,15 +1623,22 @@
 .open-meteo-card,
 .wallpapers-gallery-window,
 .gpu-popup,
+.cpu-popup,
+.memory-popup,
+.traffic-menu,
+.media-menu,
+.server-menu,
+.pomodoro-menu,
+.claude-usage-menu,
 .taskbar-preview {
-    background-color: rgba(17, 17, 27, 0.86);
+    background-color: rgba(17, 17, 27, 0.25);
     border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 10px;
 }
 
 .quick-launch-popup .search {
     padding: 10px 14px;
-    background-color: rgba(20, 20, 30, 0.65);
+    background-color: rgba(20, 20, 30, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -1695,7 +1749,263 @@
     color: #89b4fa;
 }
 
-.gpu-widget .progress-circle {
+.gpu-widget .progress-container {
+    margin-right: 6px;
+}
+
+/* SERVER MONITOR */
+.server-widget {
+    padding: 0 6px;
+    background-color: rgba(20, 20, 30, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(137, 180, 250, 0.16);
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.server-widget .icon {
+    font-size: 14px;
+    color: #a6e3a1;
+}
+.server-widget .warning .icon { color: #f9e2af; }
+.server-widget .error .icon { color: #f38ba8; }
+
+.server-menu {
+    min-width: 340px;
+}
+.server-menu-header {
+    background: rgba(20, 20, 30, 0.25);
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(166, 227, 161, 0.1);
+}
+.server-menu-header .refresh-time {
+    font-size: 11px;
+    font-family: 'Segoe UI';
+    font-weight: 400;
+    color: rgba(166, 227, 161, 0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+.server-menu-header .reload-button {
+    font-size: 15px;
+    color: rgba(205, 214, 244, 0.5);
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+.server-menu-header .reload-button:hover {
+    color: #a6e3a1;
+    background-color: rgba(166, 227, 161, 0.1);
+}
+.server-menu-header .loader-line { color: #a6e3a1; }
+.server-menu-container {
+    background-color: transparent;
+    padding: 8px 10px 10px 10px;
+}
+.server-menu-container .row {
+    font-family: 'Segoe UI';
+    padding: 8px 12px;
+    border-radius: 6px;
+    min-width: 310px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    margin: 2px 0;
+}
+.server-menu-container .row:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.06);
+    transition: all 0.12s ease;
+}
+.server-menu-container .name {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0 0 2px 0;
+    color: #cdd6f4;
+    font-family: 'Segoe UI';
+}
+.server-menu-container .status {
+    font-size: 14px;
+    padding-right: 4px;
+    padding-left: 8px;
+}
+.server-menu-container .details {
+    font-size: 11px;
+    font-weight: 400;
+    padding: 0;
+    color: rgba(205, 214, 244, 0.4);
+    font-family: 'Segoe UI';
+}
+.server-menu-container .row.online .status { color: #a6e3a1; }
+.server-menu-container .row.offline .status { color: #f38ba8; }
+.server-menu-container .row.offline .name { color: #f38ba8; }
+.server-menu-container .row.offline .details { color: rgba(243, 139, 168, 0.5); }
+.server-menu-container .row.warning .status { color: #f9e2af; }
+.server-menu-container .row.warning .name { color: #f9e2af; }
+.server-menu-container .placeholder {
+    font-family: 'Segoe UI';
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(205, 214, 244, 0.3);
+    padding: 24px 8px;
+    min-width: 310px;
+    background-color: transparent;
+}
+
+/* POMODORO */
+.pomodoro-widget {
+    background-color: rgba(20, 20, 30, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(137, 180, 250, 0.16);
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 0 8px;
+}
+.pomodoro-widget .icon {
+    font-size: 12px;
+    padding-right: 4px;
+}
+.pomodoro-widget .label { color: #cdd6f4; }
+.pomodoro-widget .label.work,
+.pomodoro-widget .icon.work { color: #cba6f7; }
+.pomodoro-widget .label.break,
+.pomodoro-widget .icon.break { color: #a6e3a1; }
+.pomodoro-widget .label.paused,
+.pomodoro-widget .icon.paused { color: rgba(205, 214, 244, 0.35); }
+
+.pomodoro-menu {
+    min-width: 220px;
+}
+.pomodoro-menu .header {
+    background: rgba(20, 20, 30, 0.25);
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(203, 166, 247, 0.12);
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Segoe UI";
+    color: #cdd6f4;
+    max-height: none;
+}
+.pomodoro-menu .status {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Segoe UI";
+    color: #cdd6f4;
+    padding: 16px 14px 4px 14px;
+}
+.pomodoro-menu .session {
+    font-size: 11px;
+    font-family: "Segoe UI";
+    font-weight: 400;
+    color: rgba(205, 214, 244, 0.45);
+    padding: 0 14px 12px 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+.pomodoro-menu .button {
+    background-color: rgba(203, 166, 247, 0.08);
+    color: #cdd6f4;
+    border: 1px solid rgba(203, 166, 247, 0.12);
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-family: "Segoe UI";
+    font-size: 12px;
+    font-weight: 600;
+    margin: 3px 6px;
+}
+.pomodoro-menu .button.start {
+    background-color: rgba(203, 166, 247, 0.12);
+    color: #cba6f7;
+    border-color: rgba(203, 166, 247, 0.25);
+}
+.pomodoro-menu .button.pause {
+    background-color: rgba(166, 227, 161, 0.12);
+    color: #a6e3a1;
+    border-color: rgba(166, 227, 161, 0.25);
+}
+.pomodoro-menu .button.reset {
+    background-color: rgba(255, 255, 255, 0.04);
+    color: rgba(205, 214, 244, 0.5);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+.pomodoro-menu .button:hover {
+    background-color: rgba(203, 166, 247, 0.18);
+    color: #cdd6f4;
+    border-color: rgba(203, 166, 247, 0.3);
+}
+.pomodoro-menu .button:pressed {
+    background-color: rgba(203, 166, 247, 0.25);
+}
+
+/* CLAUDE USAGE */
+.claude-usage {
+    background-color: rgba(20, 20, 30, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(137, 180, 250, 0.16);
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 0 8px;
+}
+.claude-usage .label {
+    color: #cdd6f4;
+    font-size: 12px;
+}
+.claude-usage-menu {
+    min-width: 240px;
+}
+.claude-usage-menu .header {
+    background: rgba(20, 20, 30, 0.25);
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(203, 166, 247, 0.12);
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Segoe UI";
+    color: #cdd6f4;
+}
+.claude-usage-menu .section .progress {
+    background-color: rgba(36, 39, 57, 0.8);
+    border-radius: 4px;
+}
+.claude-usage-menu .section .progress.low .fill {
+    background-color: #a6e3a1;
+}
+.claude-usage-menu .section .progress.medium .fill {
+    background-color: #f9e2af;
+}
+.claude-usage-menu .section .progress.high .fill {
+    background-color: #f38ba8;
+}
+.claude-usage-menu .section .footer .reset,
+.claude-usage-menu .section .footer .percent {
+    color: rgba(205, 214, 244, 0.65);
+    font-size: 11px;
+    font-family: "Segoe UI";
+}
+.claude-usage-menu .section .date {
+    color: #89b4fa;
+    font-size: 11px;
+    font-family: "Segoe UI";
+}
+
+.clock-widget .label.timer {
+    color: #cba6f7;
+}
+
+/* GPU */
+.gpu-widget {
+    padding: 0 8px;
+}
+
+.gpu-widget .widget-container .label {
+    font-size: 13px;
+    color: #cdd6f4;
+}
+
+.gpu-widget .widget-container .icon {
+    font-size: 14px;
+    color: #89b4fa;
+}
+
+.gpu-widget .progress-container {
     margin-right: 6px;
 }
 
@@ -1703,3 +2013,218 @@
 .gpu-widget .widget-container .label.status-medium { color: #f9e2af; }
 .gpu-widget .widget-container .label.status-high { color: #fab387; }
 .gpu-widget .widget-container .label.status-critical { color: #f38ba8; }
+
+/* CPU POPUP */
+.cpu-popup {
+    min-width: 380px;
+}
+.cpu-popup .header {
+    background: rgba(20, 20, 30, 0.25);
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(137, 180, 250, 0.12);
+}
+.cpu-popup .header .text {
+    font-size: 14px;
+    font-family: "Segoe UI";
+    font-weight: 600;
+    color: #cdd6f4;
+}
+.cpu-popup .header .pin-btn {
+    font-size: 13px;
+    background: transparent;
+    font-family: "Segoe Fluent Icons";
+    border: none;
+    padding: 4px 6px;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.35);
+}
+.cpu-popup .header .pin-btn:hover { color: rgba(255, 255, 255, 0.7); }
+.cpu-popup .header .pin-btn.pinned { color: #89b4fa; }
+.cpu-popup .graph-container {
+    background: transparent;
+    min-height: 64px;
+}
+.cpu-popup .cpu-graph { color: #89b4fa; }
+.cpu-popup .cpu-graph-grid { color: rgba(137, 180, 250, 0.06); }
+.cpu-popup .graph-title {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: "Segoe UI";
+    padding: 0 0 4px 14px;
+}
+.cpu-popup .stats {
+    background: transparent;
+    padding: 12px;
+}
+.cpu-popup .stats .stat-item {
+    background-color: rgba(137, 180, 250, 0.04);
+    border: 1px solid rgba(137, 180, 250, 0.08);
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin: 6px;
+}
+.cpu-popup .stats .stat-label {
+    font-size: 11px;
+    color: rgba(205, 214, 244, 0.5);
+    font-family: "Segoe UI";
+    font-weight: 400;
+    padding: 4px 4px 2px 4px;
+}
+.cpu-popup .stats .stat-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #cdd6f4;
+    font-family: "Segoe UI";
+    padding: 0 4px 10px 4px;
+}
+
+/* MEMORY POPUP */
+.memory-popup {
+    min-width: 380px;
+}
+.memory-popup .header {
+    background: rgba(20, 20, 30, 0.25);
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(145, 215, 227, 0.12);
+}
+.memory-popup .header .text {
+    font-size: 14px;
+    font-family: "Segoe UI";
+    font-weight: 600;
+    color: #cdd6f4;
+}
+.memory-popup .header .pin-btn {
+    font-size: 13px;
+    background: transparent;
+    font-family: "Segoe Fluent Icons";
+    border: none;
+    padding: 4px 6px;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.35);
+}
+.memory-popup .header .pin-btn:hover { color: rgba(255, 255, 255, 0.7); }
+.memory-popup .header .pin-btn.pinned { color: #91d7e3; }
+.memory-popup .graph-container {
+    background: transparent;
+    min-height: 64px;
+}
+.memory-popup .memory-graph { color: #91d7e3; }
+.memory-popup .memory-graph-grid { color: rgba(145, 215, 227, 0.06); }
+.memory-popup .graph-title {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: "Segoe UI";
+    padding: 0 0 4px 14px;
+}
+.memory-popup .stats {
+    background: transparent;
+    padding: 12px;
+}
+.memory-popup .stats .stat-item {
+    background-color: rgba(145, 215, 227, 0.04);
+    border: 1px solid rgba(145, 215, 227, 0.08);
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin: 6px;
+}
+.memory-popup .stats .stat-label {
+    font-size: 11px;
+    color: rgba(205, 214, 244, 0.5);
+    font-family: "Segoe UI";
+    font-weight: 400;
+    padding: 4px 4px 2px 4px;
+}
+.memory-popup .stats .stat-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #cdd6f4;
+    font-family: "Segoe UI";
+    padding: 0 4px 10px 4px;
+}
+
+/* GPU POPUP */
+.gpu-popup {
+    min-width: 380px;
+}
+.gpu-popup .header {
+    background: rgba(20, 20, 30, 0.25);
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(203, 166, 247, 0.12);
+}
+.gpu-popup .header .text {
+    font-size: 14px;
+    font-family: "Segoe UI";
+    font-weight: 600;
+    color: #cdd6f4;
+}
+.gpu-popup .header .pin-btn {
+    font-size: 13px;
+    background: transparent;
+    font-family: "Segoe Fluent Icons";
+    border: none;
+    padding: 4px 6px;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.35);
+}
+.gpu-popup .header .pin-btn:hover { color: rgba(255, 255, 255, 0.7); }
+.gpu-popup .header .pin-btn.pinned { color: #cba6f7; }
+.gpu-popup .graph-container {
+    background: transparent;
+    min-height: 64px;
+}
+.gpu-popup .gpu-graph { color: #cba6f7; }
+.gpu-popup .gpu-graph-grid { color: rgba(203, 166, 247, 0.06); }
+.gpu-popup .gpu-temp-graph { color: #fab387; }
+.gpu-popup .gpu-temp-graph-grid { color: rgba(250, 179, 135, 0.06); }
+.gpu-popup .graph-title {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: "Segoe UI";
+    padding: 0 0 4px 14px;
+    margin-top: 12px;
+}
+.gpu-popup .graph-title.first { margin-top: 0; }
+.gpu-popup .stats {
+    background: transparent;
+    padding: 12px;
+}
+.gpu-popup .stats .stat-item {
+    background-color: rgba(203, 166, 247, 0.04);
+    border: 1px solid rgba(203, 166, 247, 0.08);
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin: 6px;
+}
+.gpu-popup .stats .stat-label {
+    font-size: 11px;
+    color: rgba(205, 214, 244, 0.5);
+    font-family: "Segoe UI";
+    font-weight: 400;
+    padding: 4px 4px 2px 4px;
+}
+.gpu-popup .stats .stat-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #cdd6f4;
+    font-family: "Segoe UI";
+    padding: 0 4px 10px 4px;
+}
+
+/* BURPCORD */
+.burpcord-widget {
+    background-color: rgba(20, 20, 30, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(137, 180, 250, 0.16);
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 0 8px;
+}
+.burpcord-widget .label {
+    color: #cdd6f4;
+    font-size: 13px;
+}
+.burpcord-widget .label span {
+    color: #fe640b;
+    font-size: 14px;
+    margin-right: 2px;
+}

@@ -2,6 +2,15 @@ watch_stylesheet: true
 watch_config: true
 debug: false
 
+tooltip:
+  offset: 5
+  blur_effect:
+    enabled: true
+    dark_mode: true
+    round_corners: true
+    round_corners_type: "normal"
+    border_color: "System"
+
 komorebi:
   start_command: "komorebic start --whkd"
   stop_command: "komorebic stop --whkd"
@@ -40,10 +49,11 @@ bars:
           "media",
           "cava"
         ]
-      center: ["github", "clock", "open_meteo"]
+      center: ["burpcord", "github", "clock", "open_meteo", "pomodoro", "claude_usage"]
       right:
         [
           "hardware_widget",
+          "server_monitor",
           "wallpapers",
           "volume",
           "notes",
@@ -233,6 +243,7 @@ widgets:
           enabled: true
           prefix: "vsc"
           priority: 19
+          state_storage_path: "C:\\Users\\nucle\\AppData\\Roaming\\Windsurf\\User\\globalStorage\\state.vscdb"
         web_search:
           enabled: true
           prefix: "?"
@@ -266,14 +277,88 @@ widgets:
       callbacks:
         on_left: "toggle_quick_launch"
       keybindings:
-        - keys: "ctrl+space"
+        - keys: "ctrl+alt+space"
           action: "toggle_quick_launch"
+  pomodoro:
+    type: "yasb.pomodoro.PomodoroWidget"
+    options:
+      label: "<span>{icon}</span> {remaining}"
+      label_alt: "<span>{icon}</span> {session}/{total_sessions} · {status}"
+      work_duration: 25
+      break_duration: 5
+      long_break_duration: 15
+      long_break_interval: 4
+      auto_start_breaks: true
+      auto_start_work: false
+      sound_notification: true
+      show_notification: true
+      hide_on_break: false
+      session_target: 0
+      icons:
+        work: "\uf252"
+        break: "\uf253"
+        paused: "\uf254"
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        circle_background_color: "#09ffffff"
+        circle_work_progress_color: "#cba6f7"
+        circle_break_progress_color: "#a6e3a1"
+        circle_thickness: 8
+        circle_size: 160
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "toggle_timer"
+        on_right: "toggle_label"
+  server_monitor:
+    type: "yasb.server_monitor.ServerMonitor"
+    options:
+      label: "<span>\uf233</span>"
+      label_alt: "{online}/{total} online"
+      ssl_check: true
+      ssl_verify: false
+      ssl_warning: 30
+      timeout: 5
+      update_interval: 500
+      desktop_notifications:
+        ssl: true
+        offline: true
+      servers:
+        - name: "CTF Prod"
+          url: "5.161.177.107"
+        - name: "ctf.chron0.tech"
+          url: "ctf.chron0.tech"
+        - name: "chron0.tech"
+          url: "chron0.tech"
+        - name: "d-sports.org"
+          url: "d-sports.org"
+        - name: "app.d-sports.org"
+          url: "app.d-sports.org"
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+      callbacks:
+        on_left: "toggle_menu"
+        on_right: "toggle_label"
   traffic:
     type: "yasb.traffic.TrafficWidget"
     options:
       label: "\ueab4 {download_speed} | \ueab7 {upload_speed}"
       label_alt: "Download {download_speed} | Upload {upload_speed}"
       update_interval: 5000
+      speed_unit: "bytes"
       menu:
         blur: true
         round_corners: true
@@ -441,24 +526,38 @@ widgets:
   memory:
     type: "yasb.memory.MemoryWidget"
     options:
-      label: "{virtual_mem_free}/{virtual_mem_total}"
+      label: "{virtual_mem_used}/{virtual_mem_total}"
       label_alt: "VIRT: {virtual_mem_percent}% SWAP: {swap_mem_percent}%"
       update_interval: 5000
       progress_bar:
         enabled: true
+        progress_type: "circular"
         position: "left"
         size: 14
         thickness: 2
         color: "#91d7e3"
-        background_color: "#242739" 
+        background_color: "#242739"
       callbacks:
         on_left: "toggle_label"
-        on_middle: "do_nothing"
-        on_right: "do_nothing"
+        on_middle: "toggle_label"
+        on_right: "toggle_menu"
       memory_thresholds:
         low: 25
         medium: 50
         high: 90
+      menu:
+        enabled: true
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_graph: true
+        show_graph_grid: true
+        graph_history_size: 60
   cpu:
     type: "yasb.cpu.CpuWidget"
     options:
@@ -466,14 +565,30 @@ widgets:
       label_alt: "CPU {info[percent][total]}%"
       progress_bar:
         enabled: true
+        progress_type: "circular"
         position: "left"
         size: 14
         thickness: 2
         color: "#91d7e3"
-        background_color: "#242739" 
+        background_color: "#242739"
       update_interval: 2000
       callbacks:
-        on_right: "do_nothing"
+        on_left: "toggle_label"
+        on_middle: "toggle_label"
+        on_right: "toggle_menu"
+      menu:
+        enabled: true
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_graph: true
+        show_graph_grid: true
+        graph_history_size: 60
   hardware_widget:
     type: "yasb.grouper.GrouperWidget"
     options:
@@ -544,34 +659,36 @@ widgets:
         ease_pos: 0.8
         ease_min: 0.5
       icons:
-        prev_track: "\uf048"
-        next_track: "\uf051"
-        play: "\uf04b"
-        pause: "\uf04d"
+        prev_track: "\ue892"
+        next_track: "\ue893"
+        play: "\ue768"
+        pause: "\ue769"
       media_menu:
         blur: true
         round_corners: true
-        round_corners_type: "small"
+        round_corners_type: "normal"
         border_color: "system"
         alignment: "right"
         direction: "down"
         offset_top: 6
         offset_left: 0
-        thumbnail_corner_radius: 4
-        thumbnail_size: 80
-        max_title_size: 80
+        thumbnail_corner_radius: 8
+        thumbnail_size: 120
+        max_title_size: 60
         max_artist_size: 20
         show_source: true
       media_menu_icons:
-        play: "\uf04b"
-        pause: "\uf04c"
-        prev_track: "\uf048"
-        next_track: "\uf051"
+        play: "\ue768"
+        pause: "\ue769"
+        prev_track: "\ue892"
+        next_track: "\ue893"
+        mute: "\ue994"
+        unmute: "\ue74f"
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-      label: "{%a, %d %b - %H:%M}"
-      label_alt: "{%A, %d %B %Y - %H:%M}"
+      label: "{%a, %d %b - %I:%M %p}"
+      label_alt: "{%A, %d %B %Y - %I:%M %p}"
       timezones: []
       update_interval: 1000
       calendar:
@@ -586,19 +703,19 @@ widgets:
         holiday_color: "#ff9f00"
       callbacks:
         on_left: "toggle_calendar"
-        on_middle: "do_nothing"
-        on_right: "toggle_label"
+        on_middle: "toggle_timer"
+        on_right: "toggle_alarm"
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
       label: "<span>{icon}</span> {level}"
       label_alt: "{volume}"
-      volume_icons:
-        - "\ueee8"
-        - "\uf026"
-        - "\uf027"
-        - "\uf027"
-        - "\uf028"
+      icons:
+        muted: "\ueee8"
+        "10": "\uf026"
+        "30": "\uf027"
+        "60": "\uf027"
+        "100": "\uf028"
       audio_menu:
         blur: true
         round_corners: true
@@ -775,18 +892,70 @@ widgets:
       histogram_num_columns: 8
       callbacks:
         on_left: "toggle_label"
-        on_middle: "do_nothing"
+        on_middle: "toggle_label"
         on_right: "toggle_menu"
       menu:
         enabled: true
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
         show_graph: true
         show_graph_grid: true
         graph_history_size: 60
       progress_bar:
         enabled: true
+        progress_type: "circular"
         position: "left"
         size: 14
         thickness: 2
         color: "#91d7e3"
         background_color: "#242739"
         animation: true
+  claude_usage:
+    type: "yasb.claude_usage.ClaudeUsageWidget"
+    options:
+      label: "<span>\U000f06a9</span> {five_hour}%"
+      label_alt: "<span>\U000f06a9</span> 7d {seven_day}% · {seven_day_reset}"
+      update_interval: 60
+      cache_ttl: 120
+      tooltip: true
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "center"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+  burpcord:
+   type: "yasb.custom.CustomWidget"
+   options:
+     label: "<span>\uf188</span> {data[activity]}"
+     label_alt: "{data[detail]} | {data[state]}"
+     class_name: "burpcord-widget"
+     exec_options:
+       run_cmd: "pwsh.exe -NoProfile -ExecutionPolicy Bypass -NonInteractive -File C:\\Users\\nucle\\.config\\yasb\\scripts\\burpcord-status.ps1"
+       run_interval: 8000
+       return_format: "json"
+       hide_empty: false
+       use_shell: false
+     tooltip: true
+     tooltip_label: "Status: {data[status]}\nActivity: {data[activity]}\nDetail: {data[detail]}"
+     callbacks:
+       on_left: "toggle_label"
+       on_middle: "do_nothing"
+       on_right: "do_nothing"
+     animation:
+       enabled: true
+       type: "fadeInOut"
+       duration: 200
