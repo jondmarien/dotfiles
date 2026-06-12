@@ -1546,6 +1546,7 @@
 .quick-launch-widget,
 .open-meteo-widget,
 .wallpapers-widget,
+.claude-usage,
 .taskbar-widget {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
@@ -1607,7 +1608,9 @@
 .recycle-bin-widget .icon,
 .quick-launch-widget .icon,
 .open-meteo-widget .icon,
-.wallpapers-widget .icon {
+.wallpapers-widget .icon,
+.claude-usage .icon,
+.claude-usage .label span {
     font-size: 14px;
     color: #89b4fa;
 }
@@ -1615,7 +1618,8 @@
 .recycle-bin-widget .label,
 .quick-launch-widget .label,
 .open-meteo-widget .label,
-.wallpapers-widget .label {
+.wallpapers-widget .label,
+.claude-usage .label {
     padding: 0 6px;
 }
 
@@ -1938,35 +1942,70 @@
 
 /* CLAUDE USAGE */
 .claude-usage {
-    background-color: rgba(20, 20, 30, 0.5);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(137, 180, 250, 0.16);
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     padding: 0 8px;
+    transition: all 0.2s ease;
+}
+.claude-usage:hover {
+    border-color: rgba(250, 179, 135, 0.35);
+}
+.claude-usage .icon,
+.claude-usage .label span {
+    color: #fab387;
+    transition: color 0.2s ease;
+}
+.claude-usage:hover .icon,
+.claude-usage:hover .label span {
+    color: #f9c89b;
 }
 .claude-usage .label {
     color: #cdd6f4;
     font-size: 12px;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
 }
+
 .claude-usage-menu {
-    min-width: 240px;
+    min-width: 280px;
+    background-color: rgba(17, 17, 27, 0.4);
 }
 .claude-usage-menu .header {
     background: rgba(20, 20, 30, 0.25);
-    padding: 10px 14px;
-    border-bottom: 1px solid rgba(203, 166, 247, 0.12);
+    padding: 12px 16px 10px 16px;
+    border-bottom: 1px solid rgba(250, 179, 135, 0.15);
     font-size: 14px;
     font-weight: 600;
-    font-family: "Segoe UI";
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
     color: #cdd6f4;
 }
-.claude-usage-menu .section .progress {
-    background-color: rgba(36, 39, 57, 0.8);
-    border-radius: 4px;
+.claude-usage-menu .section {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
-.claude-usage-menu .section .progress.low .fill {
+.claude-usage-menu .section:last-child {
+    border-bottom: none;
+    padding-bottom: 14px;
+}
+.claude-usage-menu .section .title {
+    color: #cdd6f4;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.claude-usage-menu .section .progress {
+    background-color: #313244;
+    border-radius: 5px;
+    min-height: 10px;
+    max-height: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+.claude-usage-menu .section .progress .fill {
     background-color: #a6e3a1;
+    border-radius: 5px;
+    min-height: 10px;
+    max-height: 10px;
 }
 .claude-usage-menu .section .progress.medium .fill {
     background-color: #f9e2af;
@@ -1974,16 +2013,32 @@
 .claude-usage-menu .section .progress.high .fill {
     background-color: #f38ba8;
 }
-.claude-usage-menu .section .footer .reset,
-.claude-usage-menu .section .footer .percent {
-    color: rgba(205, 214, 244, 0.65);
+.claude-usage-menu .section .footer {
+    padding-top: 6px;
+}
+.claude-usage-menu .section .footer .reset {
+    color: rgba(205, 214, 244, 0.45);
     font-size: 11px;
-    font-family: "Segoe UI";
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+}
+.claude-usage-menu .section .footer .percent {
+    color: #a6e3a1;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.claude-usage-menu .section .footer .percent.medium {
+    color: #f9e2af;
+}
+.claude-usage-menu .section .footer .percent.high {
+    color: #f38ba8;
 }
 .claude-usage-menu .section .date {
-    color: #89b4fa;
-    font-size: 11px;
-    font-family: "Segoe UI";
+    color: #6c7086;
+    font-size: 10px;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    padding-top: 4px;
 }
 
 .clock-widget .label.timer {

@@ -920,7 +920,7 @@ widgets:
     type: "yasb.claude_usage.ClaudeUsageWidget"
     options:
       label: "<span>\U000f06a9</span> {five_hour}%"
-      label_alt: "<span>\U000f06a9</span> 7d {seven_day}% · {seven_day_reset}"
+      label_alt: "<span>\U000f06a9</span> {seven_day}% · {seven_day_reset}"
       update_interval: 60
       cache_ttl: 120
       tooltip: true
