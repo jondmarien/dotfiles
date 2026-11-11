@@ -1074,6 +1074,11 @@ widgets:
       label: "<span>{icon}</span>"
       label_alt: "<span>{icon}</span> {device_name}"
       tooltip: true
+      # Nerd Font glyphs: the defaults are Segoe Fluent codepoints, which render as "git" in JetBrainsMono NFP
+      icons:
+        bluetooth_on: "\uDB80\uDCAF"
+        bluetooth_off: "\uDB80\uDCB2"
+        bluetooth_connected: "\uDB80\uDCB1"
       callbacks:
         on_left: "toggle_menu"
         on_middle: "do_nothing"
