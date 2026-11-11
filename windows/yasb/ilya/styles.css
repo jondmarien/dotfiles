@@ -59,7 +59,8 @@
 /* YASB 2.0.6-2.0.8 widgets: same pill as notes/volume. Popups use YASB defaults. */
 .bluetooth-widget,
 .notification-widget,
-.control-center-widget {
+.control-center-widget,
+.media-lite-widget {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(137, 180, 250, 0.16);

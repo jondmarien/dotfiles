@@ -40,7 +40,7 @@ bars:
       bottom: 0
       right: 0
     widgets:
-      left: ["bin", "update_check", "wm_controls", "quick_launch", "window_switcher", "media", "audio_visualizer"]
+      left: ["bin", "update_check", "wm_controls", "quick_launch", "window_switcher", "media_lite", "audio_visualizer"]
       center: ["github", "clock", "open_meteo", "pomodoro", "claude_usage", "codex_usage"]
       right: ["hardware_widget", "wallpapers", "volume", "notes", "launchpad", "bluetooth", "notifications", "control_center", "power_menu"]
 widgets:
@@ -680,6 +680,36 @@ widgets:
         next_track: "\uE893"
         mute: "\uE994"
         unmute: "\uE74F"
+  # YASB 2.0.6 trial: replaces `media` on the bar. To roll back, swap "media_lite" -> "media" in bars.status-bar.widgets.left.
+  media_lite:
+    type: "yasb.media_lite.MediaWidget"
+    options:
+      show_thumbnail: true
+      show_title: true
+      show_artist: true
+      scrolling_label: false
+      image_size: 28
+      thumbnail_corner_radius: 6
+      max_label_size: 20
+      tooltip: true
+      callbacks:
+        on_left: "toggle_media_menu"
+        on_middle: "do_nothing"
+        on_right: "do_nothing"
+      media_menu:
+        blur: true
+        artwork_background: true
+        artwork_blur_radius: 24
+        artwork_dim: 0.55
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "left"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        image_size: 160
+        thumbnail_corner_radius: 12
   clock:
     type: "yasb.clock.ClockWidget"
     options:
