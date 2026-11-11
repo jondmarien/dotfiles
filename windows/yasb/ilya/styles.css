@@ -1,3 +1,8 @@
+/* System colors service (YASB 2.0.5+): generated from the Windows accent color.
+   Enabled via `system_colors: true` in config.yaml. Import only; existing hardcoded
+   colors below are intentionally unchanged. Use var(--yasb-accent*) here if/when desired. */
+@import "yasb_colors.css";
+
 * {
 	font-size: 12px;
 	color: #ffffff;
@@ -17,7 +22,35 @@
 	transition: all 0.2s ease;
 }
 .widget:hover {
-	color: #89dceb;
+	/* Follows the Windows accent (system_colors). Was #89dceb. */
+	color: var(--yasb-accent-light2);
+}
+
+/* Accent-on-hover for widget icons (system_colors).
+   Each `.X-widget:hover .icon` carries an extra :hover pseudo-class, so it
+   out-specifies that widget's own `.X-widget .icon` color rule and actually wins.
+   clock + claude_usage are intentionally left out: they already have deliberate
+   hover colors (mauve / peach). Remove a line to opt a widget out. */
+.volume-widget:hover .icon,
+.launchpad-widget:hover .icon,
+.recycle-bin-widget:hover .icon,
+.quick-launch-widget:hover .icon,
+.window-switcher-widget:hover .icon,
+.open-meteo-widget:hover .icon,
+.wallpapers-widget:hover .icon,
+.update-check-widget:hover .icon,
+.notes-widget:hover .icon,
+.media-widget:hover .label,
+.github-widget:hover .icon,
+.github-widget:hover .label,
+.burpcord-widget:hover .label,
+.burpcord-widget:hover .label span,
+.disk-widget:hover .icon,
+.disk-widget:hover .label,
+.cpu-widget:hover .widget-container .icon,
+.gpu-widget:hover .widget-container .icon,
+.server-widget:hover .icon {
+	color: var(--yasb-accent-light2);
 }
 .widget .label { padding: 2px 2px 1px 2px; }
 .widget .label.alt { padding: 1px 8px 1px 8px; }
@@ -795,8 +828,10 @@
     transition: all 0.2s ease;
 }
 
-.clock-widget:hover .icon {
-    color: #cba6f7;
+.clock-widget:hover .icon,
+.clock-widget:hover .label {
+    /* accent on hover (was #cba6f7 mauve) */
+    color: var(--yasb-accent-light2);
 }
 
 .clock-widget .icon.alarm {
@@ -1074,6 +1109,19 @@
 .active-alarm-window .button:hover { background-color: rgba(255, 255, 255, 0.3); }
 
 /* TRAFFIC */
+/* Bar label: download is wrapped in a <span> (rendered as .icon) -> green,
+   upload is plain text (rendered as .label) -> red. The traffic widget strips
+   span class= attributes, so this icon/text split is how we color them apart. */
+.traffic-widget .icon {
+    color: #a6e3a1; /* download = green */
+    margin-right: 8px;
+    font-size: 11px;
+}
+.traffic-widget .label {
+    color: #f38ba8; /* upload = red */
+    font-size: 11px;
+}
+
 .traffic-menu {
     min-width: 300px;
 }
@@ -1544,9 +1592,12 @@
 .wm-controls .container,
 .recycle-bin-widget,
 .quick-launch-widget,
+.window-switcher-widget,
 .open-meteo-widget,
 .wallpapers-widget,
 .claude-usage,
+.codex-usage,
+.audio-visualizer-widget,
 .taskbar-widget {
     background-color: rgba(20, 20, 30, 0.5);
     backdrop-filter: blur(8px);
@@ -1607,6 +1658,7 @@
 
 .recycle-bin-widget .icon,
 .quick-launch-widget .icon,
+.window-switcher-widget .icon,
 .open-meteo-widget .icon,
 .wallpapers-widget .icon,
 .claude-usage .icon,
@@ -1617,6 +1669,7 @@
 
 .recycle-bin-widget .label,
 .quick-launch-widget .label,
+.window-switcher-widget .label,
 .open-meteo-widget .label,
 .wallpapers-widget .label,
 .claude-usage .label {
@@ -1624,6 +1677,7 @@
 }
 
 .quick-launch-popup .container,
+.window-switcher-popup,
 .open-meteo-card,
 .wallpapers-gallery-window,
 .gpu-popup,
@@ -1638,6 +1692,43 @@
     background-color: rgba(17, 17, 27, 0.25);
     border: 1px solid rgba(137, 180, 250, 0.16);
     border-radius: 10px;
+}
+
+/* WINDOW SWITCHER popup internals (matches taskbar/quick-launch item styling) */
+#ws_scroll,
+#ws_viewport,
+#ws_container {
+    background: transparent;
+    border: none;
+}
+
+.window-switcher-popup {
+    padding: 8px;
+}
+
+.window-switcher-popup .item {
+    padding: 8px;
+    margin: 2px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.window-switcher-popup .item:hover {
+    background-color: rgba(137, 180, 250, 0.16);
+    border-color: rgba(137, 180, 250, 0.32);
+}
+
+.window-switcher-popup .item.active {
+    background-color: rgba(137, 180, 250, 0.22);
+    border-color: rgba(137, 180, 250, 0.42);
+}
+
+.window-switcher-popup .title {
+    font-size: 12px;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #cdd6f4;
+    padding-top: 6px;
 }
 
 .quick-launch-popup .search {
@@ -1768,7 +1859,7 @@
 }
 .server-widget .icon {
     font-size: 14px;
-    color: #a6e3a1;
+    color: var(--yasb-accent-light2);
 }
 .server-widget .warning .icon { color: #f9e2af; }
 .server-widget .error .icon { color: #f38ba8; }
@@ -1940,10 +2031,38 @@
     background-color: rgba(203, 166, 247, 0.25);
 }
 
+/* TOOLTIP (global hover popups, matches widget menus) */
+.tooltip {
+    background-color: rgba(17, 17, 27, 0.92);
+    border: 1px solid rgba(250, 179, 135, 0.15);
+    border-radius: 6px;
+    padding: 6px 10px;
+    color: #cdd6f4;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* AUDIO VISUALIZER */
+.audio-visualizer-widget .widget-container {
+    padding: 0;
+    margin: 0;
+}
+.audio-visualizer-widget .audio-visualizer-canvas {
+    -qproperty-fillbrush: linear-gradient(to top, #74c7ec, #89b4fa 50%, #cba6f7);
+}
+
 /* CLAUDE USAGE */
 .claude-usage {
     padding: 0 8px;
     transition: all 0.2s ease;
+}
+/* Expired-token warning glyph (shown via {stale} only when the token has expired) */
+.claude-usage .stale {
+    font-family: "JetBrainsMono NFP";
+    color: #f38ba8;
+    font-size: 13px;
+    margin-left: 4px;
 }
 .claude-usage:hover {
     border-color: rgba(250, 179, 135, 0.35);
@@ -1963,6 +2082,18 @@
     font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 600;
 }
+/* colorize_percent: bar percentage coloured by usage level (matches the popup bars) */
+.claude-usage .percent {
+    font-size: 12px;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.claude-usage .percent.low { color: #a6e3a1; }
+.claude-usage .percent.medium { color: #f9e2af; }
+.claude-usage .percent.high { color: #fab387; }
+.claude-usage .percent.critical { color: #f38ba8; }
+.claude-usage .percent.unknown { color: #cdd6f4; }
 
 .claude-usage-menu {
     min-width: 280px;
@@ -1972,10 +2103,23 @@
     background: rgba(20, 20, 30, 0.25);
     padding: 12px 16px 10px 16px;
     border-bottom: 1px solid rgba(250, 179, 135, 0.15);
+}
+.claude-usage-menu .header .text {
     font-size: 14px;
     font-weight: 600;
     font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
     color: #cdd6f4;
+}
+.claude-usage-menu .header .refresh {
+    background: transparent;
+    border: none;
+    font-family: "JetBrainsMono NFP";
+    font-size: 15px;
+    color: rgba(205, 214, 244, 0.55);
+    padding: 0 2px;
+}
+.claude-usage-menu .header .refresh:hover {
+    color: #fab387;
 }
 .claude-usage-menu .section {
     padding: 12px 16px;
@@ -1999,18 +2143,18 @@
     border-radius: 5px;
     min-height: 10px;
     max-height: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.04);
 }
 .claude-usage-menu .section .progress .fill {
     background-color: #a6e3a1;
     border-radius: 5px;
-    min-height: 10px;
-    max-height: 10px;
 }
 .claude-usage-menu .section .progress.medium .fill {
     background-color: #f9e2af;
 }
 .claude-usage-menu .section .progress.high .fill {
+    background-color: #fab387;
+}
+.claude-usage-menu .section .progress.critical .fill {
     background-color: #f38ba8;
 }
 .claude-usage-menu .section .footer {
@@ -2032,6 +2176,9 @@
     color: #f9e2af;
 }
 .claude-usage-menu .section .footer .percent.high {
+    color: #fab387;
+}
+.claude-usage-menu .section .footer .percent.critical {
     color: #f38ba8;
 }
 .claude-usage-menu .section .date {
@@ -2039,6 +2186,379 @@
     font-size: 10px;
     font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
     padding-top: 4px;
+}
+
+/* API status dot (bar) — colored by level */
+.claude-usage .status {
+    font-family: "JetBrainsMono NFP";
+    font-size: 10px;
+    margin-right: 5px;
+}
+.claude-usage .status.none { color: #a6e3a1; }
+.claude-usage .status.minor { color: #f9e2af; }
+.claude-usage .status.major { color: #fab387; }
+.claude-usage .status.critical { color: #f38ba8; }
+.claude-usage .status.unknown { color: #6c7086; }
+
+/* API status line (menu) */
+.claude-usage-menu .status-row {
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.claude-usage-menu .status-row .dot {
+    font-family: "JetBrainsMono NFP";
+    font-size: 11px;
+    margin-right: 7px;
+}
+.claude-usage-menu .status-row .dot.none { color: #a6e3a1; }
+.claude-usage-menu .status-row .dot.minor { color: #f9e2af; }
+.claude-usage-menu .status-row .dot.major { color: #fab387; }
+.claude-usage-menu .status-row .dot.critical { color: #f38ba8; }
+.claude-usage-menu .status-row .dot.unknown { color: #6c7086; }
+.claude-usage-menu .status-row .status-text {
+    color: rgba(205, 214, 244, 0.7);
+    font-size: 12px;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Tokens section */
+.claude-usage-menu .section.tokens .period-toggle {
+    padding-bottom: 6px;
+}
+.claude-usage-menu .section.tokens .period-btn {
+    background: transparent;
+    border: none;
+    color: rgba(205, 214, 244, 0.45);
+    font-size: 11px;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    /* No left padding so "Session" lines up with the 16px edge; spacing comes from the right. */
+    padding: 2px 14px 2px 0;
+}
+.claude-usage-menu .section.tokens .period-btn:hover {
+    color: #cdd6f4;
+}
+.claude-usage-menu .section.tokens .period-btn.active {
+    color: #fab387;
+    font-weight: 600;
+}
+.claude-usage-menu .section.tokens .token-total {
+    color: #cdd6f4;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 2px 0;
+}
+.claude-usage-menu .section.tokens .token-graph {
+    color: #89b4fa;
+    min-height: 44px;
+    padding-top: 4px;
+}
+.claude-usage-menu .section.tokens .token-graph-grid {
+    color: rgba(255, 255, 255, 0.05);
+}
+.claude-usage-menu .section.tokens .model-usage {
+    padding-bottom: 12px;
+}
+.claude-usage-menu .section.tokens .model-name {
+    color: rgba(205, 214, 244, 0.75);
+    font-size: 12px;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.claude-usage-menu .section.tokens .model-total {
+    color: rgba(205, 214, 244, 0.55);
+    font-size: 12px;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    padding-left: 8px;
+}
+.claude-usage-menu .section.tokens .model-rows .progress {
+    min-height: 6px;
+    max-height: 6px;
+    border-radius: 3px;
+}
+.claude-usage-menu .section.tokens .model-rows .progress .fill {
+    border-radius: 3px;
+}
+.claude-usage-menu .section.tokens .model-rows .progress.model-0 .fill { background-color: #cba6f7; }
+.claude-usage-menu .section.tokens .model-rows .progress.model-1 .fill { background-color: #f5c2e7; }
+.claude-usage-menu .section.tokens .model-rows .progress.model-2 .fill { background-color: #fab387; }
+.claude-usage-menu .section.tokens .model-rows .progress.model-3 .fill { background-color: #a6e3a1; }
+.claude-usage-menu .section.tokens .model-rows .progress.model-4 .fill { background-color: #89b4fa; }
+.claude-usage-menu .header .pin-btn {
+    background: transparent;
+    border: none;
+    font-family: "Segoe Fluent Icons";
+    font-size: 13px;
+    color: rgba(205, 214, 244, 0.55);
+    padding: 0 4px;
+}
+.claude-usage-menu .header .pin-btn:hover {
+    color: #fab387;
+}
+.claude-usage-menu .header .pin-btn.pinned {
+    color: #cba6f7;
+}
+
+/* CODEX USAGE */
+.codex-usage .label {
+    color: #cdd6f4;
+    font-size: 12px;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    padding-left: 5px;
+}
+.codex-usage .progress-container { margin-left: 3px; }
+
+.codex-usage-menu {
+    min-width: 340px;
+    background-color: rgba(17, 17, 27, 0.4);
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.codex-usage-menu .header {
+    padding: 9px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.codex-usage-menu .header .text {
+    color: #cdd6f4;
+    font-size: 14px;
+    font-weight: 600;
+}
+.codex-usage-menu .header .refresh-status {
+    color: rgba(205, 214, 244, 0.55);
+    font-size: 12px;
+    padding-right: 6px;
+}
+.codex-usage-menu .header .refresh-status.busy { color: rgba(205, 214, 244, 0.72); }
+.codex-usage-menu .header .refresh-status.success { color: #a6e3a1; }
+.codex-usage-menu .header .refresh-status.error { color: #f38ba8; }
+.codex-usage-menu .header .refresh {
+    font-family: "Segoe Fluent Icons";
+    color: rgba(205, 214, 244, 0.72);
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    min-width: 28px;
+    max-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    padding: 0;
+    margin: 0;
+}
+.codex-usage-menu .header .refresh:hover {
+    color: #a6e3a1;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.codex-usage-menu .section {
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.codex-usage-menu .section .title {
+    color: #cdd6f4;
+    font-size: 12px;
+    font-weight: 600;
+    padding-bottom: 6px;
+}
+.codex-usage-menu .section .progress {
+    background-color: #313244;
+    border-radius: 4px;
+    min-height: 8px;
+    max-height: 8px;
+}
+.codex-usage-menu .section .progress .fill {
+    background-color: #a6e3a1;
+    border-radius: 4px;
+}
+.codex-usage-menu .section .progress.low .fill { background-color: #f9e2af; }
+.codex-usage-menu .section .progress.critical .fill { background-color: #f38ba8; }
+.codex-usage-menu .section .stats { padding-top: 7px; }
+.codex-usage-menu .section .used {
+    color: rgba(205, 214, 244, 0.62);
+    font-size: 12px;
+}
+.codex-usage-menu .section .remaining {
+    color: #cdd6f4;
+    font-size: 14px;
+    font-weight: 600;
+}
+.codex-usage-menu .section .remaining.good { color: #a6e3a1; }
+.codex-usage-menu .section .remaining.low { color: #f9e2af; }
+.codex-usage-menu .section .remaining.critical { color: #f38ba8; }
+.codex-usage-menu .section .timing { padding-top: 6px; }
+.codex-usage-menu .section .reset {
+    color: rgba(205, 214, 244, 0.68);
+    font-size: 12px;
+}
+.codex-usage-menu .section .date {
+    color: #6c7086;
+    font-size: 12px;
+}
+
+.codex-usage-menu .pager { background-color: transparent; }
+.codex-usage-menu .page-nav {
+    padding: 5px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.codex-usage-menu .page-button,
+.codex-usage-menu .month-nav {
+    font-family: "Segoe Fluent Icons";
+    color: rgba(205, 214, 244, 0.68);
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    min-width: 26px;
+    max-width: 26px;
+    min-height: 26px;
+    max-height: 26px;
+    padding: 0;
+}
+.codex-usage-menu .page-button:hover,
+.codex-usage-menu .month-nav:hover {
+    color: #cdd6f4;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+.codex-usage-menu .page-button:disabled,
+.codex-usage-menu .month-nav:disabled {
+    color: rgba(205, 214, 244, 0.22);
+}
+.codex-usage-menu .page-indicator {
+    color: rgba(205, 214, 244, 0.82);
+    font-size: 12px;
+    font-weight: 600;
+}
+.codex-usage-menu .page-stack { background-color: transparent; }
+.codex-usage-menu .page { padding: 12px 16px; }
+.codex-usage-menu .empty-state {
+    color: rgba(205, 214, 244, 0.55);
+    font-size: 12px;
+    padding: 18px 0;
+}
+
+.codex-usage-menu .overview-tokens { padding-bottom: 12px; }
+.codex-usage-menu .section-title,
+.codex-usage-menu .activity-title {
+    color: rgba(205, 214, 244, 0.68);
+    font-size: 12px;
+    font-weight: 600;
+}
+.codex-usage-menu .section-title { padding-bottom: 8px; }
+.codex-usage-menu .periods { padding-bottom: 4px; }
+.codex-usage-menu .period-name {
+    color: rgba(205, 214, 244, 0.5);
+    font-size: 11px;
+}
+.codex-usage-menu .period-value {
+    color: #cdd6f4;
+    font-size: 16px;
+    font-weight: 600;
+}
+.codex-usage-menu .details {
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.codex-usage-menu .details .name {
+    color: rgba(205, 214, 244, 0.56);
+    font-size: 12px;
+}
+.codex-usage-menu .details .value {
+    color: #cdd6f4;
+    font-size: 12px;
+}
+.codex-usage-menu .details .status.live { color: #a6e3a1; }
+.codex-usage-menu .details .status.stale { color: #f9e2af; }
+.codex-usage-menu .details .error {
+    color: #f38ba8;
+    font-size: 11px;
+    max-height: 30px;
+    padding-top: 5px;
+}
+
+.codex-usage-menu .reset-credits-count {
+    color: rgba(205, 214, 244, 0.55);
+    font-size: 11px;
+}
+.codex-usage-menu .reset-credit-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+    min-height: 44px;
+    max-height: 44px;
+    padding: 6px 10px;
+}
+.codex-usage-menu .reset-credit-title {
+    color: #cdd6f4;
+    font-size: 12px;
+    font-weight: 600;
+}
+.codex-usage-menu .reset-credit-expiration {
+    color: rgba(205, 214, 244, 0.52);
+    font-size: 11px;
+}
+
+.codex-usage-menu .model-row {
+    min-height: 27px;
+    max-height: 27px;
+}
+.codex-usage-menu .model-name {
+    color: rgba(205, 214, 244, 0.82);
+    font-size: 12px;
+    min-width: 96px;
+    max-width: 96px;
+}
+.codex-usage-menu .model-value {
+    color: rgba(205, 214, 244, 0.65);
+    font-size: 12px;
+    min-width: 52px;
+    max-width: 52px;
+}
+.codex-usage-menu .model-bar {
+    background-color: #313244;
+    border-radius: 3px;
+    min-height: 7px;
+    max-height: 7px;
+}
+.codex-usage-menu .model-bar .fill { background-color: #cba6f7; border-radius: 3px; }
+.codex-usage-menu .row-2 .model-bar .fill { background-color: #f5c2e7; }
+.codex-usage-menu .row-3 .model-bar .fill { background-color: #fab387; }
+.codex-usage-menu .row-4 .model-bar .fill { background-color: #a6e3a1; }
+.codex-usage-menu .row-5 .model-bar .fill { background-color: #89b4fa; }
+
+.codex-usage-menu .month-label {
+    color: #cdd6f4;
+    font-size: 12px;
+    font-weight: 600;
+    min-width: 106px;
+    max-width: 106px;
+}
+.codex-usage-menu .heatmap .weekday {
+    color: rgba(205, 214, 244, 0.5);
+    font-size: 11px;
+    min-width: 20px;
+    max-width: 20px;
+    padding-bottom: 2px;
+}
+.codex-usage-menu .history-note {
+    color: rgba(205, 214, 244, 0.5);
+    font-size: 11px;
+    padding-top: 6px;
+}
+.codex-usage-menu .heatmap .cell {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 3px;
+    min-width: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    max-height: 20px;
+}
+.codex-usage-menu .heatmap .cell.level-1 { background-color: #40593f; }
+.codex-usage-menu .heatmap .cell.level-2 { background-color: #4f7a4d; }
+.codex-usage-menu .heatmap .cell.level-3 { background-color: #6ba368; }
+.codex-usage-menu .heatmap .cell.level-4 { background-color: #a6e3a1; }
+.codex-usage-menu .heatmap .cell.future,
+.codex-usage-menu .heatmap .cell.outside { background-color: transparent; }
+.codex-usage-menu .heatmap .cell.unavailable {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .clock-widget .label.timer {
