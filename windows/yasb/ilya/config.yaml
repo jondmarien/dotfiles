@@ -412,7 +412,7 @@ widgets:
       label: "<span>\uF473</span>"
       label_alt: "<span>\uF473</span>"
       group_label:
-        volume_labels: ["C", "D", "E", "F"]
+        volume_labels: ["C", "D", "E", "F", "H", "J"]
         show_label_name: true
         blur: true
         round_corners: true
