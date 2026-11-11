@@ -16,6 +16,17 @@
     background: rgba(20, 20, 30, 0.01);
     backdrop-filter: blur(10px);
 }
+/* Adaptive bar (style: "adaptive"): the near-transparent bar fill above would make islands invisible.
+   Note: deleting a -qproperty- line keeps its old value until YASB restarts. */
+.yasb-bar.adaptive {
+    background: rgba(20, 20, 30, 0.85);
+    border: none;
+    -qproperty-railheight: 4;
+    -qproperty-islandradius: 12; /* max (34 - 4) / 2 = 15 */
+    -qproperty-grouppadding: 6;
+    -qproperty-borderwidth: 1;
+    -qproperty-bordercolor: rgba(137, 180, 250, 0.16);
+}
 .widget {
 	padding: 0 10px;
 	margin: 0 2px;

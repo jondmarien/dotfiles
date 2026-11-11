@@ -20,6 +20,8 @@ bars:
     enabled: true
     screens: ['*']
     class_name: "yasb-bar"
+    # YASB 2.0.7 trial: per-group islands. Roll back by deleting this line (or revert the commit).
+    style: "adaptive"
     alignment:
       position: "top"
     blur_effect:
