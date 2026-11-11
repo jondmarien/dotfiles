@@ -2834,3 +2834,255 @@
     font-size: 14px;
     margin-right: 2px;
 }
+
+/* ==========================================================================
+   YASB 2.0.6-2.0.8 POPUPS (control center, notifications, bluetooth, media lite)
+   Themed to match audio/notes/media menus: Catppuccin text, lavender hover,
+   mauve active. Fluent icon codepoints need Segoe Fluent Icons, not the
+   global JetBrainsMono NFP.
+   ========================================================================== */
+.control-center-menu,
+.notification-menu,
+.bluetooth-menu,
+.media-lite-menu {
+    background-color: rgba(17, 17, 27, 0.4);
+    font-family: "Segoe UI";
+    color: #cdd6f4;
+}
+
+/* Shared Fluent icon font */
+.control-center-menu .section.system-controls .button,
+.control-center-menu .section.quick-actions .button .icon,
+.control-center-menu .section.sliders .slider .icon,
+.control-center-menu .section.sliders .slider .source-selector,
+.control-center-menu .section.power .button .icon,
+.control-center-menu .section.media .button,
+.notification-menu .header .dnd,
+.notification-menu .header .clear-all,
+.notification-menu .contents .section-header .clear-app,
+.notification-menu .contents .item .dismiss,
+.notification-menu .contents .empty .icon,
+.bluetooth-menu .bluetooth-item .icon,
+.bluetooth-menu .bluetooth-item .battery-icon,
+.bluetooth-menu .footer .scan-icon,
+.media-lite-menu .btn,
+.media-lite-menu .volume-button {
+    font-family: "Segoe Fluent Icons";
+}
+
+/* Shared muted secondary text */
+.control-center-menu .section.power .button .subtext,
+.control-center-menu .section.media .subtext,
+.notification-menu .contents .item .time,
+.notification-menu .contents .item .attribution,
+.notification-menu .footer .label,
+.bluetooth-menu .section-title,
+.bluetooth-menu .bluetooth-item .status,
+.bluetooth-menu .bluetooth-item .battery,
+.media-lite-menu .artist,
+.media-lite-menu .playback-time {
+    color: rgba(205, 214, 244, 0.5);
+    font-size: 11px;
+}
+
+/* Shared hover: lavender, same as .audio-menu devices */
+.control-center-menu .section.system-controls .button:hover,
+.control-center-menu .section.quick-actions .button .icon:hover,
+.control-center-menu .section.sliders .slider .source-selector:hover,
+.control-center-menu .section.power .plan-name:hover,
+.control-center-menu .section.power .mode-name:hover,
+.control-center-menu .section.media .button:hover,
+.notification-menu .header .dnd:hover,
+.notification-menu .header .clear-all:hover,
+.notification-menu .contents .item:hover,
+.notification-menu .contents .more:hover,
+.bluetooth-menu .bluetooth-item:hover,
+.bluetooth-menu .footer .scan-icon:hover,
+.media-lite-menu .btn:hover {
+    background-color: rgba(180, 190, 254, 0.2);
+    color: #b4befe;
+}
+
+/* Shared active/on state: mauve */
+.control-center-menu .section.quick-actions .button.active .icon,
+.notification-menu .header .dnd.active,
+.bluetooth-menu .bluetooth-item.active,
+.media-lite-menu .btn.shuffle.active,
+.media-lite-menu .btn.repeat.active {
+    background-color: rgba(203, 166, 247, 0.15);
+    color: #cba6f7;
+}
+
+/* Shared disabled */
+.control-center-menu .section.quick-actions .button.disabled .icon,
+.control-center-menu .section.quick-actions .button.disabled .title,
+.control-center-menu .section.media .button.disabled,
+.control-center-menu .section.power .mode-name.disabled,
+.media-lite-menu .btn.disabled {
+    color: rgba(205, 214, 244, 0.25);
+    background-color: transparent;
+}
+
+/* Control center */
+.control-center-menu { min-width: 340px; }
+.control-center-menu .section { padding: 8px 12px; }
+.control-center-menu .section.system-controls .button,
+.control-center-menu .section.media .button {
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+    padding: 6px;
+    font-size: 14px;
+}
+.control-center-menu .section.quick-actions .button {
+    background-color: transparent;
+    border: none;
+    margin: 4px;
+}
+.control-center-menu .section.quick-actions .button .icon {
+    background-color: rgba(255, 255, 255, 0.062);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+}
+.control-center-menu .section.quick-actions .button .title {
+    font-size: 11px;
+    color: rgba(205, 214, 244, 0.7);
+    padding-top: 4px;
+}
+.control-center-menu .section.sliders .slider .icon { font-size: 14px; color: #89b4fa; }
+.control-center-menu .section.sliders .slider .value { font-size: 11px; color: rgba(205, 214, 244, 0.7); }
+.control-center-menu .section.sliders .slider .source-selector {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    padding: 4px;
+}
+.control-center-menu .section.power .plan-name,
+.control-center-menu .section.power .mode-name {
+    background-color: rgba(255, 255, 255, 0.062);
+    border: none;
+    border-radius: 8px;
+    margin: 4px;
+    padding: 6px 8px;
+}
+.control-center-menu .section.power .button .title { font-size: 12px; }
+.control-center-menu .section.media { background-color: rgba(255, 255, 255, 0.062); border-radius: 8px; margin: 8px 12px; }
+.control-center-menu .section.media .title { font-size: 13px; color: #cdd6f4; }
+.control-center-menu .context-menu {
+    background-color: #202020;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 0;
+    font-family: "Segoe UI";
+    font-size: 12px;
+}
+.control-center-menu .context-menu::item { background-color: transparent; padding: 6px 12px; margin: 2px 6px; border-radius: 4px; }
+.control-center-menu .context-menu::item:selected { background-color: #3a3a3a; }
+.control-center-menu .context-menu::separator { height: 1px; background-color: #404040; margin: 4px 8px; }
+
+/* Notifications */
+.notification-menu { min-width: 380px; max-width: 380px; }
+.notification-menu .header { padding: 8px 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+.notification-menu .header .title { font-size: 14px; font-weight: 600; color: #cdd6f4; }
+.notification-menu .header .dnd,
+.notification-menu .header .clear-all {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 6px;
+}
+.notification-menu .contents .section-header { padding: 8px 12px 4px 12px; }
+.notification-menu .contents .section-header .name { font-size: 12px; color: #89b4fa; }
+.notification-menu .contents .section-header .clear-app,
+.notification-menu .contents .item .dismiss { background-color: transparent; border: none; border-radius: 4px; }
+.notification-menu .contents .section-header .clear-app:hover,
+.notification-menu .contents .item .dismiss:hover { background-color: rgba(243, 139, 168, 0.15); color: #f38ba8; }
+.notification-menu .contents .item {
+    background-color: rgba(255, 255, 255, 0.062);
+    border-radius: 6px;
+    margin: 2px 8px;
+    padding: 8px;
+}
+.notification-menu .contents .item .avatar { border-radius: 24px; }
+.notification-menu .contents .item .title { font-size: 12px; font-weight: 600; color: #cdd6f4; }
+.notification-menu .contents .item .body { font-size: 12px; color: rgba(205, 214, 244, 0.8); }
+.notification-menu .contents .item .hero,
+.notification-menu .contents .item .image { border-radius: 6px; }
+.notification-menu .contents .more { color: #89b4fa; font-size: 11px; padding: 4px 12px; border-radius: 4px; }
+.notification-menu .contents .empty .icon { font-size: 28px; color: rgba(205, 214, 244, 0.3); }
+.notification-menu .contents .empty .text { color: rgba(205, 214, 244, 0.5); }
+.notification-menu .contents .empty .link { color: #89b4fa; }
+.notification-menu .footer { padding: 8px 12px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.notification-menu .footer .label:hover { color: #b4befe; }
+.notification-widget .icon.new-notification,
+.notification-widget .label.new-notification { color: #f9e2af; }
+
+/* Bluetooth */
+.bluetooth-menu { min-width: 320px; }
+.bluetooth-menu .header { padding: 8px 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+.bluetooth-menu .header .title { font-size: 14px; font-weight: 600; color: #cdd6f4; }
+.bluetooth-menu .header .progress-bar,
+.bluetooth-menu .progress-bar { background-color: #89b4fa; max-height: 2px; }
+.bluetooth-menu .error-message { color: #f38ba8; padding: 8px 12px; }
+.bluetooth-menu .section-title { padding: 8px 12px 4px 12px; }
+.bluetooth-menu .bluetooth-item {
+    background-color: transparent;
+    border-radius: 6px;
+    margin: 2px 8px;
+    padding: 6px 8px;
+}
+.bluetooth-menu .bluetooth-item .icon { font-size: 16px; color: #89b4fa; }
+.bluetooth-menu .bluetooth-item .name { font-size: 12px; color: #cdd6f4; }
+.bluetooth-menu .bluetooth-item .battery-icon.empty,
+.bluetooth-menu .bluetooth-item .battery-icon.low { color: #f38ba8; }
+.bluetooth-menu .bluetooth-item .battery-icon.medium { color: #f9e2af; }
+.bluetooth-menu .bluetooth-item .battery-icon.high,
+.bluetooth-menu .bluetooth-item .battery-icon.full { color: #a6e3a1; }
+.bluetooth-menu .bluetooth-item .connect {
+    background-color: rgba(255, 255, 255, 0.062);
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    color: #cdd6f4;
+}
+.bluetooth-menu .bluetooth-item .connect:hover { background-color: rgba(180, 190, 254, 0.2); color: #b4befe; }
+.bluetooth-menu .footer { padding: 8px 12px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.bluetooth-menu .footer .settings-button { background-color: transparent; border: none; color: #89b4fa; }
+.bluetooth-menu .footer .settings-button:hover { color: #b4befe; }
+.bluetooth-menu .footer .scan-icon { background-color: transparent; border: none; border-radius: 4px; padding: 4px; }
+.bluetooth-widget .icon.bt-off { color: rgba(205, 214, 244, 0.35); }
+.bluetooth-widget .icon.bt-connected { color: #89b4fa; }
+
+/* Media lite (popup mirrors .media-menu buttons) */
+.media-lite-menu { min-width: 280px; }
+.media-lite-menu .title { font-size: 14px; font-weight: 600; color: #cdd6f4; }
+.media-lite-menu .artist { font-size: 12px; }
+.media-lite-menu .source {
+    font-size: 11px;
+    color: #11111b;
+    border-radius: 4px;
+    background-color: #bac2de;
+    padding: 2px 7px;
+    font-weight: 700;
+}
+.media-lite-menu .btn,
+.media-lite-menu .volume-button {
+    font-size: 18px;
+    color: rgba(205, 214, 244, 0.6);
+    background: transparent;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+.media-lite-menu .btn.play:hover { color: #cba6f7; background-color: rgba(203, 166, 247, 0.15); }
+.media-lite-menu .btn.prev:hover,
+.media-lite-menu .btn.next:hover { color: #89b4fa; background-color: rgba(137, 180, 250, 0.12); }
+.media-lite-menu .volume-button.muted { color: #f38ba8; }
+.media-lite-menu .volume-slider-popup { background-color: rgba(17, 17, 27, 0.9); border-radius: 6px; }
+.media-lite-menu .progress-slider::groove,
+.media-lite-menu .volume-slider::groove { background: rgba(255, 255, 255, 0.1); height: 4px; border-radius: 2px; }
+.media-lite-menu .progress-slider::sub-page,
+.media-lite-menu .volume-slider::sub-page { background: #cba6f7; border-radius: 2px; }
+.media-lite-widget .title { color: #cdd6f4; }
+.media-lite-widget .artist { color: rgba(205, 214, 244, 0.5); font-size: 11px; }
