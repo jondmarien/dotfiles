@@ -1036,7 +1036,7 @@ widgets:
   control_center:
     type: "yasb.control_center.ControlCenterWidget"
     options:
-      label: "<span></span>"
+      label: "<span>\uDB81\uDE2E</span>"
       tooltip: true
       popup:
         alignment: "right"
