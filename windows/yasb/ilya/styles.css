@@ -49,9 +49,28 @@
 .disk-widget:hover .label,
 .cpu-widget:hover .widget-container .icon,
 .gpu-widget:hover .widget-container .icon,
-.server-widget:hover .icon {
+.server-widget:hover .icon,
+.bluetooth-widget:hover .icon,
+.notification-widget:hover .icon,
+.control-center-widget:hover .icon {
 	color: var(--yasb-accent-light2);
 }
+
+/* YASB 2.0.6-2.0.8 widgets: same pill as notes/volume. Popups use YASB defaults. */
+.bluetooth-widget,
+.notification-widget,
+.control-center-widget {
+    background-color: rgba(20, 20, 30, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(137, 180, 250, 0.16);
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.bluetooth-widget .icon,
+.notification-widget .icon,
+.control-center-widget .icon { color: #74b0ff; font-size: 14px; }
 .widget .label { padding: 2px 2px 1px 2px; }
 .widget .label.alt { padding: 1px 8px 1px 8px; }
 .clock-widget .label { padding-left: 8px;}

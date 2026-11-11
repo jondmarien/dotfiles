@@ -42,7 +42,7 @@ bars:
     widgets:
       left: ["bin", "update_check", "wm_controls", "quick_launch", "window_switcher", "media", "audio_visualizer"]
       center: ["github", "clock", "open_meteo", "pomodoro", "claude_usage", "codex_usage"]
-      right: ["hardware_widget", "wallpapers", "volume", "notes", "launchpad", "power_menu"]
+      right: ["hardware_widget", "wallpapers", "volume", "notes", "launchpad", "bluetooth", "notifications", "control_center", "power_menu"]
 widgets:
   wm_controls:
     type: "yasb.grouper.GrouperWidget"
@@ -68,11 +68,8 @@ widgets:
         return_format: "string"
         hide_empty: true
         use_shell: false
-      # NEW v1.8.5: Tooltip support for custom widgets
-      tooltip:
-        enabled: false
-        tooltip_label: "GlazeWM Restore - Click to fix workspace state"  # Can use {data} placeholders like: "{data[key]}"
-        tooltip_delay: 400  # Delay in ms before tooltip appears
+      tooltip: false
+      tooltip_label: "GlazeWM Restore - Click to fix workspace state"  # Can use {data} placeholders like: "{data[key]}"
       callbacks:
         on_left: "exec"
         on_middle: "toggle_label"
@@ -274,10 +271,15 @@ widgets:
         round_corners_type: "normal"
         border_color: "System"
         dark_mode: true
+      # YASB 2.0.8: live window thumbnails in the switcher popup
+      preview:
+        enabled: true
+        width: 240
       callbacks:
         on_left: "toggle_window_switcher"
       keybindings:
-        - keys: "alt+tab+w"
+        # YASB 2.0.8: modifier binding acts like Alt+Tab (hold alt, tap w to cycle, release to switch)
+        - keys: "alt+w"
           action: "toggle_window_switcher"
           screen: "cursor"
   pomodoro:
@@ -823,6 +825,10 @@ widgets:
       image_path: "E:\\-- DESKTOP -- MOVE LATER\\wALLpapers"
       change_automatically: false
       update_interval: 60
+      # YASB 2.0.7+: animated transition when the wallpaper changes
+      engine:
+        enabled: true
+        animation: "split"
       gallery:
         type: "strip"
         image_width: 220
@@ -995,10 +1001,60 @@ widgets:
         on_left: "toggle_label"
         on_middle: "do_nothing"
         on_right: "do_nothing"
-      animation:
-        enabled: true
-        type: "fadeInOut"
-        duration: 200
+  control_center:
+    type: "yasb.control_center.ControlCenterWidget"
+    options:
+      label: "<span></span>"
+      tooltip: true
+      popup:
+        alignment: "right"
+        direction: "down"
+        border_color: "System"
+        round_corners: true
+        round_corners_type: "normal"
+        offset_top: 6
+      callbacks:
+        on_left: "toggle_menu"
+  notifications:
+    type: "yasb.notifications.NotificationsWidget"
+    options:
+      label: "<span></span> {count}"
+      label_alt: "{count} notifications"
+      hide_empty: true
+      tooltip: false
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        app_icon_size: 16
+      callbacks:
+        on_left: "toggle_menu"
+        on_right: "toggle_notification"
+        on_middle: "toggle_label"
+  bluetooth:
+    type: "yasb.bluetooth.BluetoothWidget"
+    options:
+      label: "<span>{icon}</span>"
+      label_alt: "<span>{icon}</span> {device_name}"
+      tooltip: true
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+      menu_config:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
 tooltip:
   offset: 5
   blur_effect:
